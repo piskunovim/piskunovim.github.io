@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-15T20:06:27+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Igor Piskunov</title><subtitle>Be proud of every step that leads you forward and keep run so, that no one can overtake you.</subtitle><entry><title type="html">One Year Changelog</title><link href="http://localhost:4000/pblog/2019/03/01/one-year-changelog.html" rel="alternate" type="text/html" title="One Year Changelog" /><published>2019-03-01T13:27:38+03:00</published><updated>2019-03-01T13:27:38+03:00</updated><id>http://localhost:4000/pblog/2019/03/01/one-year-changelog</id><content type="html" xml:base="http://localhost:4000/pblog/2019/03/01/one-year-changelog.html">&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;I know you missed me. So I'm back and I would like to share with you something that happened with me last year.&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;spring-2018&quot;&gt;Spring 2018&lt;/h3&gt;
+&lt;p&gt;I am a mentor. I have a new guy “to play with” and I know what to do with it. He is 19 and in two month he will live our company, but I believe it should be his best experience of work. He knows how to write code, and my goal is to bring him to the next step: to give him idea of how he could be better. By this I mean that I know where I am now, but at the same time I should understand where I can go and what I can do in my current position. It’s not so obvious, but the idea of finding a new ways can bring you extremely valuable habits.&lt;/p&gt;
+
+&lt;p&gt;Let’s say you’re staying near the wall somewhere inside the labyrint. You can decide that this is the end of the labyrinth and you’re the winner. But at the same time you could try to find another way and decide that this is the dead end and nothing more. And here is the difference. Our life is a huge labyrinth with unlimited number of dead ends. And in order to be successful in this game you should get more information about its rules. May be you can just break walls, who knows, but you’ll never know this if you’ll never try.
+And yeah, about mentorship. I really appreciate this time we spent together. It was not my first experience, but every time it’s like an great journey.&lt;/p&gt;
+
+&lt;h3 id=&quot;summer-2018&quot;&gt;Summer 2018&lt;/h3&gt;
+&lt;p&gt;No doubt it was time of Amazon MWS. Direction of development in our company has been changed and now we’re creating new cool services in order to sell more with Amazon. Unfortunately I cannot tell you more but that was my first experience with Amazon API. And here I found little cons.&lt;/p&gt;
+
+&lt;p&gt;First of all I want to say that I like Amazon and I appreciate work that they do. But requests to their API is highly limited. I understand why and I agree that it makes sense, but it was really restraining for us.&lt;/p&gt;
+
+&lt;p&gt;For example, we can process only 6 orders per minute. Let’s say if we have 1000 orders per day, then we need to wait 2 hours 46 minutes to pass them through Amazon API. &lt;a href=&quot;https://docs.developer.amazonservices.com/en_US/orders-2013-09-01/Orders_GetOrder.html&quot;&gt;Seriously&lt;/a&gt;. Anyway we can deal with that.&lt;/p&gt;
+
+&lt;h3 id=&quot;autumn-2018&quot;&gt;Autumn 2018&lt;/h3&gt;
+&lt;p&gt;Even if you did your job well, there always can be the place for misunderstanding and mistrust. It’s time of a strong words and a big changes. Obviously, any changes in your life serves for the best purposes. At the same time it could hurt. Maybe not you, but someone else.&lt;/p&gt;
+
+&lt;p&gt;Direction of software development has been changed to SEO optimization and deep understanding of search engines for manipulation with them. That affected everyone who wants to concentrate on products instead of solving tasks of advertising and promotion.&lt;/p&gt;
+
+&lt;p&gt;There is only one way to solve such issue. Stop doing shit you don’t like.&lt;/p&gt;
+
+&lt;h3 id=&quot;winter-2018-2019&quot;&gt;Winter 2018-2019&lt;/h3&gt;
+&lt;p&gt;Atlassian. I heard a lot about this company and used their products couple of times. But I’ve never thought about to be a part of its developers community. Times change. Right now I’m working in direction of Atlassian Cloud. And to say that I’ve got a new impression about this company would be an understatement.&lt;/p&gt;
+
+&lt;p&gt;There are lots of messy places in Atlassian Development. They have two UI libraries that don’t cover their style guide. Their API has three versions with different aproaches to work with. And it’s absolutely ok to find inside ther code such comment:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/* Actually it works not like described in docs. You can find description of the process here #issue_number. */&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;I was surprised to see that in such a big company with a huge number of customers. Anyway it’s a matter of habit. I really like to work with their processes and I think it’s a good possibility to help them and to their developers community(our developers community*).&lt;/p&gt;
+
+&lt;h3 id=&quot;now-spring-2019&quot;&gt;Now (Spring 2019)&lt;/h3&gt;
+
+&lt;p&gt;I really appreciate you here with me. Thank you for this. I will try to bring more content to you, cause I really like our communication. I have an idea for my new little project. But lets talk about it next time. Keep doing what you love and let’s keep in touch.&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">I know you missed me. So I'm back and I would like to share with you something that happened with me last year.</summary></entry><entry><title type="html">Balanced Way To Keep Productive</title><link href="http://localhost:4000/pblog/2018/02/18/balanced-way-to-keep-motivated.html" rel="alternate" type="text/html" title="Balanced Way To Keep Productive" /><published>2018-02-18T01:27:38+03:00</published><updated>2018-02-18T01:27:38+03:00</updated><id>http://localhost:4000/pblog/2018/02/18/balanced-way-to-keep-motivated</id><content type="html" xml:base="http://localhost:4000/pblog/2018/02/18/balanced-way-to-keep-motivated.html">&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*While you reading this, I've implemented something new.*
+&lt;/code&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Best regards, Igor
+&lt;/code&gt;&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">*While you reading this, I've implemented something new.* Best regards, Igor</summary></entry><entry><title type="html">LoopBack - REST APIs with no coding</title><link href="http://localhost:4000/pblog/2017/12/12/loopback-rest-apis-with-no-coding.html" rel="alternate" type="text/html" title="LoopBack - REST APIs with no coding" /><published>2017-12-12T15:48:03+03:00</published><updated>2017-12-12T15:48:03+03:00</updated><id>http://localhost:4000/pblog/2017/12/12/loopback-rest-apis-with-no-coding</id><content type="html" xml:base="http://localhost:4000/pblog/2017/12/12/loopback-rest-apis-with-no-coding.html">&lt;blockquote&gt;
+  &lt;p&gt;Article is in the process of writing. Last update: 12-12-2017.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;LoopBack is an open-source framework serving as platform for building APIs and microservices in Node.js
+Due its friendly environment whole the process of creating API has become pretty easy.&lt;/p&gt;
+
+&lt;p&gt;LoopBack officially-supported connectors for the following databases:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Cloudant&lt;/li&gt;
+  &lt;li&gt;DashDB&lt;/li&gt;
+  &lt;li&gt;DB2&lt;/li&gt;
+  &lt;li&gt;DB2 for iSeries&lt;/li&gt;
+  &lt;li&gt;DB2 for z/OS&lt;/li&gt;
+  &lt;li&gt;Informix&lt;/li&gt;
+  &lt;li&gt;MongoDB&lt;/li&gt;
+  &lt;li&gt;MySQL&lt;/li&gt;
+  &lt;li&gt;Oracle&lt;/li&gt;
+  &lt;li&gt;PostgreSQL&lt;/li&gt;
+  &lt;li&gt;Redis&lt;/li&gt;
+  &lt;li&gt;SQL Server&lt;/li&gt;
+  &lt;li&gt;SQLite3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here I’ll try to cover some questions about this framework. Current version is 3.x (we are not covering 4.x development preview).&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;where-should-i-start&quot;&gt;Where should I start?&lt;/h3&gt;
+
+&lt;p&gt;As in any other framework, everything starts with &lt;a href=&quot;http://loopback.io/doc/en/lb3/index.html&quot;&gt;documentation&lt;/a&gt;. This article is based on docs, so it’s pretty good if you are ok with that.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-initialize&quot;&gt;How to initialize?&lt;/h3&gt;
+
+&lt;p&gt;First of all you need to go through this &lt;a href=&quot;http://loopback.io/getting-started/&quot;&gt;“Getting Started” guide&lt;/a&gt;. If you’ll not, it’s ok because I’ll show you something pretty similar here. To be strict we must do it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Install loopback-cli:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ npm install -g loopback-cli&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Create directory for the project:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ mkdir test-loopback&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Initialise project (do inside created directory):&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ lb app&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;After “lb app” command set all default options. Then dependencies will be installed.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Start the project&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ node .&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ npm start&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;(Use command line hints to find out which address and port will be used for your project)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Don’t forget to check out “/explore” link (by default: localhost:3000/explore).&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-create-a-model-to-persist-data&quot;&gt;How to create a model to persist data?&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Create new model command:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lb model&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;(Use command line hints to create your first model)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;For test project I’ve created model “repertoire” with properties:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;name&quot;: {
+  &quot;type&quot;: &quot;string&quot;,
+  &quot;required&quot;: true
+},
+&quot;date&quot;: {
+  &quot;type&quot;: &quot;date&quot;
+},
+&quot;description&quot;: {
+  &quot;type&quot;: &quot;string&quot;
+},
+&quot;genre&quot;: {
+  &quot;type&quot;: &quot;string&quot;
+},
+&quot;active&quot;: {
+  &quot;type&quot;: &quot;boolean&quot;,
+  &quot;default&quot;: false
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Finally we’ll check some files to see the changes:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/server/model-config.json&lt;/code&gt;&lt;/em&gt;  - here was added some basic parameters about your model&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/common/models/repertoire.json&lt;/code&gt;&lt;/em&gt; - here you can see the model definition with base “PersistedModel” that we ingeireted from.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/common/models/repertoire.js&lt;/code&gt;&lt;/em&gt; - can be used to customise the model behaviour.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;persist-in-memory-data-to-a-file&quot;&gt;Persist in-memory data to a file&lt;/h3&gt;
+
+&lt;p&gt;The default datasource (&lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/server/datasources.json&lt;/code&gt;&lt;/em&gt;) for LoopBack uses a connector that persists the data in memory. This means that the data will be losted after you’ll restart application.&lt;/p&gt;
+
+&lt;p&gt;In development mode this will be useful to persist this data temporarily. To do so we need to add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;file&lt;/code&gt; proprety inside &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;db&lt;/code&gt; property in &lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/server/datasources.json&lt;/code&gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ok, example:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;db&quot;: {
+    &quot;name&quot;: &quot;db&quot;,
+    &quot;connector&quot;: &quot;memory&quot;,
+    &quot;file&quot;: &quot;repertoire.json&quot;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;setup-a-development-mode&quot;&gt;Setup a development mode&lt;/h3&gt;
+
+&lt;p&gt;We do this by installing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nodemon&lt;/code&gt; as a dev dependency:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ npm install --save-dev nodemon&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;And creating a script &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dev&lt;/code&gt; inside &lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/package.json&lt;/code&gt;&lt;/em&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;scripts&quot;{
+	&quot;dev&quot;: &quot;nodemon server/server.js --watch common --watch server&quot;
+	...
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After that we can execute dev-script by running:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ npm run dev&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;When running in develpoment mode the server will be automatically restarted when there are changes detected in the &lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/common&lt;/code&gt;&lt;/em&gt; or &lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/server&lt;/code&gt;&lt;/em&gt; directories. To know more about &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nodemon&lt;/code&gt; see &lt;a href=&quot;https://github.com/remy/nodemon#nodemon&quot;&gt;Nodemon Documentation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;discovery-models-from-relational-databases&quot;&gt;Discovery models from relational databases&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Setup your mysql data in &lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/server/datasources.json&lt;/code&gt;&lt;/em&gt; file:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+  &quot;db&quot;: {
+    &quot;name&quot;: &quot;db&quot;,
+    &quot;connector&quot;: &quot;memory&quot;
+  },
+  &quot;accountDs&quot;: {
+    &quot;host&quot;: &quot;mysqlServerName&quot;,
+    &quot;port&quot;: 3306,
+    &quot;database&quot;: &quot;databaseName&quot;,
+    &quot;username&quot;: &quot;username&quot;,
+    &quot;password&quot;: &quot;password!&quot;,
+    &quot;name&quot;: &quot;repertoireDB&quot;,
+    &quot;connector&quot;: &quot;mysql&quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Create the models folder if doesn’t exist:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/common/models&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;script.js&lt;/code&gt; on &lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/project/server/bin&lt;/code&gt;&lt;/em&gt; folder to discover and build models:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var path = require('path');
+var fs = require('fs');
+var app = require(path.resolve(__dirname, '../server'));
+var outputPath = path.resolve(__dirname, '../../common/models');
+
+var dataSource = app.dataSources.accountDs;
+
+function schemaCB(err, schema) {
+  if(schema) {
+    console.log(&quot;Auto discovery success: &quot; + schema.name);
+    var outputName = outputPath + '/' +schema.name + '.json';
+    fs.writeFile(outputName, JSON.stringify(schema, null, 2), function(err) {
+      if(err) {
+        console.log(err);
+      } else {
+        console.log(&quot;JSON saved to &quot; + outputName);
+      }
+    });
+  }
+  if(err) {
+    console.error(err);
+    return;
+  }
+  return;
+};
+
+dataSource.discoverSchema('tableName',{schema:'schemaName'},schemaCB);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">Article is in the process of writing. Last update: 12-12-2017.</summary></entry><entry><title type="html">Command Line Habits - Grep</title><link href="http://localhost:4000/pblog/2017/12/10/command-line-habits-grep.html" rel="alternate" type="text/html" title="Command Line Habits - Grep" /><published>2017-12-10T20:16:25+03:00</published><updated>2017-12-10T20:16:25+03:00</updated><id>http://localhost:4000/pblog/2017/12/10/command-line-habits-grep</id><content type="html" xml:base="http://localhost:4000/pblog/2017/12/10/command-line-habits-grep.html">&lt;p&gt;Grep is considered as one of the most useful commands on Unix-like operating systems. Here you’ll get basics that can be useful in your work.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;search-the-contents-of-files&quot;&gt;Search the contents of files&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep [pattern] [file(s)]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Example:&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; grep &quot;import&quot; *js
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;case-insensitive-search&quot;&gt;Case-insensitive search&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -i [pattern] [file(s)]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Example:&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; grep -i &quot;apiservice&quot; *Service.js
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;search-recursevly-inside-directory&quot;&gt;Search recursevly inside directory&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -r [pattern] [path]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Example:&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;-&amp;gt; Find “api” instances in the current directory recursevly&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; grep -r &quot;api&quot; . 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;find-files-by-pattern&quot;&gt;Find files by pattern&lt;/h3&gt;
+
+&lt;p&gt;Sometimes there is a need to search inside files that could be selected by part of their name or extension.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;find [path] -name [pattern]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Examples:&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; find . -name &quot;*Service.js&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;combining-find-and-grep-with-xargs&quot;&gt;Combining find and grep with xargs&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xargs&lt;/code&gt; is a command used to build and execute commands. By default it’s using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;echo&lt;/code&gt; command.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Example:&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;-&amp;gt; Outputs the strings of find result&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; find . -name &quot;*js&quot; | xargs
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;-&amp;gt; Outputs “todo” instances for files that ends with “Service.js”&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; find . -name &quot;*Service.js&quot; | xargs grep &quot;todo&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;-&amp;gt; Same as previous command. You can use it, but using “find” is preferable from the side that we can test its output and be sure that pattern is ok&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; grep -r --include=&quot;*Service.js&quot; &quot;todo&quot; . 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;search-contents-of-git-repository&quot;&gt;Search contents of git repository&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git grep [pattern]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Example:&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;-&amp;gt; Searching “version” string in your project tracked files&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;`git grep version`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;show-context-around-grep-search&quot;&gt;Show context around grep search&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Grep mark up options:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-n&lt;/code&gt; : each output line is preceded by its relative line number in the file, starting at line 1&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--color(-colour)&lt;/code&gt; : mark up the matching text with the expression stored in GREP_COLOR environment variable&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Grep context options:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-A [num]&lt;/code&gt; : print “num” lines of trailing context after each match&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-B [num]&lt;/code&gt; : print “num” lines of leading context before each match&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-C [num]&lt;/code&gt; : print “num” lines of leading and trailing context surrounding each match. By default is 2 and is equivalent to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-A 2 -B 2&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;regular-expressions&quot;&gt;Regular expressions&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Basic:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.&lt;/code&gt; : any character&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\&lt;/code&gt; : escaping character (like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\.&lt;/code&gt; for dot)&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt; : zero or more occurences of the regular expression&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Extended:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;To use extended regular expressions with grep, you’ll need to either escape them with backslashes or turn on extended regular expressions with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-E&lt;/code&gt; option.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;?&lt;/code&gt; : matches zero or one occurence of the one-character regular expression&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; : matches one or more occurence of the one-character regular expression&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;|&lt;/code&gt; : separate alternatives&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;^&lt;/code&gt; : matches the begining of a line&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$&lt;/code&gt; : matches the end of a line&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[]&lt;/code&gt; : mathes any one character in that string&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;()&lt;/code&gt; : for grouping expressions&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;find-matches-excluding-a-pattern&quot;&gt;Find matches excluding a pattern&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt; find [path] -name [pattern] | grep -v [pattern]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-v&lt;/code&gt; : option for inverse&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">Grep is considered as one of the most useful commands on Unix-like operating systems. Here you’ll get basics that can be useful in your work.</summary></entry><entry><title type="html">Command Line Habits - Vim</title><link href="http://localhost:4000/pblog/2017/12/08/command-line-habits-vim.html" rel="alternate" type="text/html" title="Command Line Habits - Vim" /><published>2017-12-08T21:26:47+03:00</published><updated>2017-12-08T21:26:47+03:00</updated><id>http://localhost:4000/pblog/2017/12/08/command-line-habits-vim</id><content type="html" xml:base="http://localhost:4000/pblog/2017/12/08/command-line-habits-vim.html">&lt;p&gt;Using Vim is a good habit for developers of any level. Today we’re going to look through the set of basic commands that’s widely used in Vim.&lt;/p&gt;
+
+&lt;h3 id=&quot;startquit-vim&quot;&gt;Start/Quit Vim&lt;/h3&gt;
+
+&lt;p&gt;Enter “vim” command in your terminal. This command will start vim editor in normal mode&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&amp;gt; vim&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In order to quit vim we need to activate command mode. For this you should press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shift+:&lt;/code&gt;(or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shift+;&lt;/code&gt;) . Then enter the command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;quit&lt;/code&gt;(or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;q&lt;/code&gt;) and press Enter.&lt;/p&gt;
+
+&lt;h3 id=&quot;vim-modes&quot;&gt;Vim Modes&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;default&lt;/strong&gt;: normal mode (for navigation and text manipulation) &lt;br /&gt;
+&lt;strong&gt;command mode&lt;/strong&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shift+:&lt;/code&gt;): to enter commands (including search and filter)  &lt;br /&gt;
+&lt;strong&gt;insert mode&lt;/strong&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i&lt;/code&gt;):  to insert text &lt;br /&gt; 
+&lt;strong&gt;visual mode&lt;/strong&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v&lt;/code&gt;): to select blocks of text from the file (the only 
+   way to select a block of text)&lt;/p&gt;
+
+&lt;p&gt;To exit back to normal mode from any other mode press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ESC&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;navigation&quot;&gt;Navigation&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;h&lt;/code&gt;: left &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;j&lt;/code&gt;: down &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;k&lt;/code&gt;: up &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;l&lt;/code&gt;: right &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;w&lt;/code&gt;: one word forward &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;b&lt;/code&gt;: one word back &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gg&lt;/code&gt;: set cursor to the beginning of file &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;G&lt;/code&gt;: set cursor into the end of file&lt;/p&gt;
+
+&lt;h3 id=&quot;saving-files&quot;&gt;Saving Files&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:write(:w)&lt;/code&gt;: save command for existed files &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:write &amp;lt;filename with extension&amp;gt;(:w &amp;lt;filename with extension&amp;gt;)&lt;/code&gt;: save command for new files (also can be used “vim &lt;filename with=&quot;&quot; extension=&quot;&quot;&gt;&quot; in terminal) &lt;br /&gt;&lt;/filename&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:wq&lt;/code&gt;(or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:x&lt;/code&gt;): save file and quit vim&lt;/p&gt;
+
+&lt;h3 id=&quot;normal-mode-built-in-commands&quot;&gt;Normal mode built-in commands&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dd&lt;/code&gt;: delete line &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;D&lt;/code&gt;: delete line, but preserve whitespace &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dw&lt;/code&gt;: delete the word &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cw&lt;/code&gt;: delete the word and activate insert mode &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Combinations&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;d5w&lt;/code&gt;: delete 5 words &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c3j&lt;/code&gt;: replace 3 lines and activate insert mode &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C&lt;/code&gt;: replace the rest of line(starting cursor point) and activate insert mode &lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;combining-commands&quot;&gt;Combining commands&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cit&lt;/code&gt;: change inside tag contents (between opening and closing tags) &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ci{&lt;/code&gt;: change inside curly braces &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ci&quot;&lt;/code&gt;: change inside quotes (not including quotes) &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ci[&lt;/code&gt;: change inside square brackets &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ci(&lt;/code&gt;: change inside parentheses &lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;copy-and-paste&quot;&gt;Copy and Paste&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y&lt;/code&gt;: copy(yank) text (visual mode) &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;d&lt;/code&gt;: cut text (visual mode) &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p&lt;/code&gt;: paste text (normal mode) &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yy(or Y)&lt;/code&gt;: yank current line, including newline character (normal mode)&lt;/p&gt;
+
+&lt;h3 id=&quot;searching&quot;&gt;Searching&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/pattern&lt;/code&gt;: search forward for pattern &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;?pattern&lt;/code&gt;: search backward &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;: repeat forward search &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;N&lt;/code&gt;: repeat backward&lt;/p&gt;
+
+&lt;h3 id=&quot;buffer-usage&quot;&gt;Buffer Usage&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:e config.json&lt;/code&gt;: edit config.json file &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:buffers&lt;/code&gt; (or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:ls&lt;/code&gt;): list the current buffers (including numbers)  &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:b &amp;lt;num&amp;gt;&lt;/code&gt;: display the buffer with the given num. &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:bd&lt;/code&gt;: delete the current buffer (will fail if unsaved)  &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:b#&lt;/code&gt;(or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl+6&lt;/code&gt;): switching to the previously edited buffer &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:set hidden&lt;/code&gt;: Allow switching buffers without saving.&lt;/p&gt;
+
+&lt;h3 id=&quot;configure-vim&quot;&gt;Configure Vim&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:syntax on&lt;/code&gt;: enables syntax highlighting &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:syntax off&lt;/code&gt;: disables sntax highlighting &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:set number&lt;/code&gt;: enables line numbers &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:set nonumber&lt;/code&gt;: disables line numbers &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:set relativemunber&lt;/code&gt;: enables relative line numbers &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:set norelativenumber&lt;/code&gt;: disables relative line numbers &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:set number relative numbers&lt;/code&gt;: enables both options of line numbers&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;help option-list&lt;/code&gt;: more options to set&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">Using Vim is a good habit for developers of any level. Today we’re going to look through the set of basic commands that’s widely used in Vim.</summary></entry><entry><title type="html">Wedding day &amp;amp; New friend</title><link href="http://localhost:4000/pblog/2017/11/14/wedding-day.html" rel="alternate" type="text/html" title="Wedding day &amp;amp; New friend" /><published>2017-11-14T21:31:10+03:00</published><updated>2017-11-14T21:31:10+03:00</updated><id>http://localhost:4000/pblog/2017/11/14/wedding-day</id><content type="html" xml:base="http://localhost:4000/pblog/2017/11/14/wedding-day.html">&lt;p&gt;&lt;img src=&quot;https://pp.userapi.com/c840521/v840521264/21422/DmEKBSjBySU.jpg&quot; width=&quot;480&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;My wife Irina is sitting to my left. We are traveling in a limousine Hammer with our friends Yuri, Nadia, Ilya, Anna, Nikolay and Christina. The rock of the 80s plays on the radio, the rays of the November sun make their way through the clouds. 
+“Golden autumn” finally came to Krasnodar.&lt;/p&gt;
+
+&lt;p&gt;I do not like to exaggerate the meanings of certain moments in life. But believe, whatever person you are, creating your family will be one of the happiest days in your life.&lt;/p&gt;
+
+&lt;p&gt;In fact, this is the next stage of working on yourself, which allows you to do things that you can not do alone. To create something more.&lt;/p&gt;
+
+&lt;iframe src=&quot;//vk.com/video_ext.php?oid=198559388&amp;amp;id=456239069&amp;amp;hash=1b2bf89fd82f78b6&amp;amp;hd=1&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h3 id=&quot;google-home&quot;&gt;Google Home&lt;/h3&gt;
+
+&lt;p&gt;I would like to take this opportunity to share with you the use of the new gadget, which is unknown when it appears officially in Russia.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://pp.userapi.com/c824502/v824502111/2468e/RFIhyBBUWKM.jpg&quot; width=&quot;480&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In a very short time, we became friends despite the fact that there is still a lot of work to expand the functionality. Reminders, alarm, timer, playing music, communication, playing in the company. The interface of communication is surprisingly much better than you can imagine.&lt;/p&gt;
+
+&lt;p&gt;To know the weather outside or the status of traffic jams, you do not need to open the application, just ask. I you need to order a taxi - ask Google Home to do it (of course if you don’t live in Russia). And of course there is a wonderful guide from Google that will lead you to extend possibilities of your home assistant.&lt;/p&gt;
+
+&lt;p&gt;I want to note: listening to music on the device is a pleasure. The support of Chromecast and many other devices is also pleasing. And for sure, I’ll make another one post about this device(from programming perspective). Anyway it’s a really new experience in interface, that for sure will get progress.&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html"></summary></entry><entry><title type="html">What you should have known about JS eight years ago</title><link href="http://localhost:4000/pblog/2017/11/02/js-eight-years-ago.html" rel="alternate" type="text/html" title="What you should have known about JS eight years ago" /><published>2017-11-02T14:25:57+03:00</published><updated>2017-11-02T14:25:57+03:00</updated><id>http://localhost:4000/pblog/2017/11/02/js-eight-years-ago</id><content type="html" xml:base="http://localhost:4000/pblog/2017/11/02/js-eight-years-ago.html">&lt;blockquote&gt;
+  &lt;p&gt;I want to notify, before we start, that we are not talking about implementation here, but just about some reasons why so many framework has been implemented and on what concepts they are based on.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
+
+&lt;p&gt;This article is dedicated to those who find it difficult to navigate in the JavaScript(JS) world . To those who are looking for an answer to the question “why is it so difficult?” and doesn’t know how to find the answer.&lt;/p&gt;
+
+&lt;p&gt;Everything is very simple, if you know the reason. That’s why I want to go back to the past with you and consider the reasons for the decisions that were made and what tools we received as a result of these decisions. Such an approach can help you to learn many of the mysteries of the universe. But not all…&lt;/p&gt;
+
+&lt;h3 id=&quot;everything-has-a-beginning&quot;&gt;Everything has a beginning&lt;/h3&gt;
+
+&lt;p&gt;8 years ago(now is 2017) there was a man who taught people how to work with JS and opened the way of using JS on the server side. His name Ryan Dahl. One of the main problems of that time was that JavaScript is single-threaded. It’s still single-threaded, nothing has been changed except an approach.&lt;/p&gt;
+
+&lt;p&gt;The solution to this problem comes from asynchrony. It allows JS to execute code in one thread, and we can not wait for the execution of a particular part of our application. And we can process the result of a specific query when it comes(in callback).&lt;/p&gt;
+
+&lt;h3 id=&quot;two-way-binding&quot;&gt;Two-way binding&lt;/h3&gt;
+
+&lt;p&gt;Meanwhile, programmers  already successfully using AJAX. Nothing new in this abbreviation, but naturaly they wanted to go further. At this step we can notice  a division to front-end and back-end for JS.&lt;/p&gt;
+
+&lt;p&gt;The next problem for Front-end was that in order to insert data from the JS object it is necessary to refer to a specific field, take its identifier and perform the substitution. And so we need to repeat this with each field/object that we want to change /substitute. This is a lot of code, which is at the same time pretty simple.&lt;/p&gt;
+
+&lt;p&gt;Hence the idea of ​​a “two-way binding” came out, between the model and the view. They observe each other’s changes. When data in the model changes, the view reflects the change, and when data in the view changes, the model is updated as well. So here comes a lot of frameworks around this idea: Angular, React, Knockout, Vue, Backbone and many others. They were all about the same thing, only with different points of view and approaches.&lt;/p&gt;
+
+&lt;h3 id=&quot;solving-the-problems-of-dynamic-typisation&quot;&gt;Solving the problems of dynamic typisation&lt;/h3&gt;
+
+&lt;p&gt;Time passed and programmers decided to solve another drawback of JS: dynamic typisation, which complicates debugging. So that was the idea of ​​TypeScript language, the essence of which: to compile a code written in TypeScript, into a secure “typified JS language”. But it was not the only player on this playground.  CoffeeScript and Dart also tried to solve this problem, but the final purposes and implementations was different.&lt;/p&gt;
+
+&lt;p&gt;AngularJS - uses TypeScript (= strict typing). The project is compiling into the EcmaScript format that the programmer wishes.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;EcmaScript is the standard on which JS is based.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Two-way binding has not gone anywhere, projects have become stricter in terms of structure, but at the same time all minifactors / pre-processors/ builders have become part of the project. Now you can start the server and edit the application in Live mode.&lt;/p&gt;
+
+&lt;p&gt;Angular 1.x had a serious problem: it forced programmers to learn their markup language and program controllers in too clumsy and not easy way. For comparison, KnockoutJS did two-way binding it ten times simpler and clear.&lt;/p&gt;
+
+&lt;p&gt;What’s different about VueJS: nowadays you can as well as Angular 4, that means using strict typing, builders and so on. At the same time you can add the vuejs file into your project and use it as a library (like Knockout) and it’s easy and simple.&lt;/p&gt;
+
+&lt;h3 id=&quot;nodejs--expressjs&quot;&gt;NodeJS &amp;amp; ExpressJS&lt;/h3&gt;
+
+&lt;p&gt;NodeJs is based on the Google V8 engine, which in fact is just able to do all asynchronous work. It’s changing and improving with each version. On the base level  NodeJS is working with the file system, the buffer and http. It’s quite low-level and in order to write something structured and not bulky it was a good challenge.
+So previously it was used more for light services(it’s not because no one can do something more, it’s a common view on development with NodeJS of that time).&lt;/p&gt;
+
+&lt;p&gt;Then progammer wanted to go further and ExpressJS appeared. In fact, it’s just a convenient structured framework which brought together all the common tasks that people trying to solve in NodeJS from time to time. Minimal and flexible. Make an endpoint with the simplest script takes minutes.&lt;/p&gt;
+
+&lt;p&gt;In the Back-end everything is much more prosaic.&lt;/p&gt;
+
+&lt;p&gt;There are ExpressJS and some group of developers tries to do something using it as a base. Because it is the most convenient way now. This groups extends ExpressJS capabilities, implements CMS, E-commerce and all sorts of other projects on its base.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-huge-number-of-tools&quot;&gt;A Huge Number of Tools&lt;/h3&gt;
+
+&lt;p&gt;The most difficult thing that exists in the world of JS is the awareness at what stage the tool appeared and why it was / is needed. There are a lot of jokes about this.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;NPM / Yarn&lt;/strong&gt; - package managers, appeared one after another, the last one implemented by Facebook. No difference. At all.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Grunt / Gulp&lt;/strong&gt; - the tools some of functionality of which has already been taken by Angular (Webpack) and other frameworks. They cam compress scripts, compress images, build the final JS project.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Underscore / Lodash&lt;/strong&gt; - libraries that have a lot of things on board, a couple of years ago in advertisment purposes considered to work with arrays in the “best way”. In fact, people live successfully without this libraries and don’t lose anything. But there are some other “convenient / productive written functions” in them and you can find more information about it on their websites.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;RequireJS&lt;/strong&gt; - a framework that managed the libraries to be connected to the project. To do this job once and for all.&lt;/p&gt;
+
+&lt;p&gt;A lot of things comes into JS as imitation from other languages. It tries to come with lots of good approaches. But that’s not so easy to describe in few words. You will never know everything aboug NodeJS, it’s impossible like to know everything in programming sphere. But it’s possible to become an expert in particular area in this huge world.&lt;/p&gt;
+
+&lt;p&gt;Actually, now you know more.&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">I want to notify, before we start, that we are not talking about implementation here, but just about some reasons why so many framework has been implemented and on what concepts they are based on.</summary></entry><entry><title type="html">Row Talent || Experience</title><link href="http://localhost:4000/pblog/2017/10/26/row-talent-and-experience.html" rel="alternate" type="text/html" title="Row Talent || Experience" /><published>2017-10-26T23:52:12+03:00</published><updated>2017-10-26T23:52:12+03:00</updated><id>http://localhost:4000/pblog/2017/10/26/row-talent-and-experience</id><content type="html" xml:base="http://localhost:4000/pblog/2017/10/26/row-talent-and-experience.html">&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
+
+&lt;p&gt;Until recently, I was worried about the question of what caused the success of some people or the failure of others. Perhaps you was asking yourself the same question. Why can not I do something? Why am I still not as perfect as I would like to be? When will the moment of my enlightenment come and when will I have a success?&lt;/p&gt;
+
+&lt;h3 id=&quot;the-story-about-your-first-guitar&quot;&gt;The Story About Your First Guitar&lt;/h3&gt;
+
+&lt;p&gt;To answer this question, I would like to cite the example of the ability to play the guitar. Let’s say that you never took a guitar in your hands before and now comes the moment when you listen to a lot of great songs on the radio, you take your money and go to the store. There you take the best guitar that you see. It’s yours now. Then you come home, take out the guitar and understand: “That’s all! I’m ready to start playing!”.&lt;/p&gt;
+
+&lt;p&gt;However, the first attempts to extract at least some harmonious sound lead to failure. You spend one hour on this, then another, but it doesn’t get better. Hands do not listen to you, and the sounds that the guitar produces are very far from those that could be called acceptable. But what went wrong? Just recently in the store the seller played as song for you on this guitar and you admired how awesome is your future guitar.&lt;/p&gt;
+
+&lt;p&gt;You invite your best friend, who graduated from the conservatory with a guitar class and asked him to test your new instrument. And surprise, again you hear beautiful chords, transitions using legato and now you start thinking that you will never succeed in playing like this. You don’t have the talent of your friend, so you are doomed to failure. But this judgment is a huge mistake.&lt;/p&gt;
+
+&lt;h3 id=&quot;lots-hours-of-training&quot;&gt;Lots hours of training&lt;/h3&gt;
+
+&lt;p&gt;You forget to think about how many hours did your best friend spend in order to play purely his first gamut. You don’t have the faintest idea of ​​how many hours did he play and how many failures were in his life before that. You only see the final result, which on your part is perceived like a gift . And this is a monstrous mistake!&lt;/p&gt;
+
+&lt;p&gt;Our world is arranged fairly strictly and fairly. Only by being able to compare groups of different people will it be possible to examine their skills and abilities from another more objective side.&lt;/p&gt;
+
+&lt;p&gt;For example, we take 3 groups of guitarists. In the first group, musicians have an experience of 100 hours playing the guitar, in the second 1000 hours and in the third 10,000 hours. How do you think, will be a difference in the playing between such groups of musicians? Undoubtedly yes! Moreover, it is impossible that someone from the 100 hours group will play as well as a person from a 1000 hours group. And it’s quite easy to explain.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://pp.userapi.com/c824503/v824503610/53c0/7A8gMkC6ibk.jpg&quot; alt=&quot;Time &amp;amp; Guitar&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;Remember, before you think about your successes or failures against the background of other people, start to think whether you have done everything possible. If not, do not despair, now it’s time to start. It’s never too late to change anything. Accept the defeat and do nothing - the biggest crime against yourself.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Strive and achieve!&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">Introduction</summary></entry><entry><title type="html">Hello everyone!</title><link href="http://localhost:4000/pblog/2017/10/25/welcome-to-piskunov-im.html" rel="alternate" type="text/html" title="Hello everyone!" /><published>2017-10-25T23:36:53+03:00</published><updated>2017-10-25T23:36:53+03:00</updated><id>http://localhost:4000/pblog/2017/10/25/welcome-to-piskunov-im</id><content type="html" xml:base="http://localhost:4000/pblog/2017/10/25/welcome-to-piskunov-im.html">&lt;p&gt;I appreciate that you’re here.&lt;/p&gt;
+
+&lt;p&gt;This will be a great journey in the world of creativity and productivity. It will be not easy, but we will go through all these adversities.&lt;/p&gt;
+
+&lt;p&gt;Let’s start from the beginning. My name is Igor and this is my blog. Here I’ll write various thoughts and will share with you some products.&lt;/p&gt;
+
+&lt;p&gt;You can feel free to use all materials on the website. 
+I will be very pleased. So, see you soon!&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">I appreciate that you’re here.</summary></entry></feed>
