@@ -1,4 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-05T10:35:54+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Igor Piskunov</title><subtitle>Be proud of every step that leads you forward and keep run so, that no one can overtake you.</subtitle><entry><title type="html">Three years as Atlassian developer</title><link href="http://localhost:4000/pblog/2021/11/04/three-years-as-atlassian-developer.html" rel="alternate" type="text/html" title="Three years as Atlassian developer" /><published>2021-11-04T23:27:38+03:00</published><updated>2021-11-04T23:27:38+03:00</updated><id>http://localhost:4000/pblog/2021/11/04/three-years-as-atlassian-developer</id><content type="html" xml:base="http://localhost:4000/pblog/2021/11/04/three-years-as-atlassian-developer.html">&lt;p&gt;This big headline means that over the past few years I have had a great opportunity to experience all the delights and disadvantages of the ecosystem of Atlassian products, as well as their API. In particular, everything related to the cloud part of development.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-13T23:12:25+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Igor Piskunov</title><subtitle>Be proud of every step that leads you forward and keep run so, that no one can overtake you.</subtitle><entry><title type="html">Atlassian Cloud Development | Failed to register with the host</title><link href="http://localhost:4000/pblog/2021/11/13/atlassian-cloud-development-failed-to-register-with-the-host.html" rel="alternate" type="text/html" title="Atlassian Cloud Development | Failed to register with the host" /><published>2021-11-13T23:00:00+03:00</published><updated>2021-11-13T23:00:00+03:00</updated><id>http://localhost:4000/pblog/2021/11/13/atlassian-cloud-development-failed-to-register-with-the-host</id><content type="html" xml:base="http://localhost:4000/pblog/2021/11/13/atlassian-cloud-development-failed-to-register-with-the-host.html">&lt;p&gt;When working with Jira Cloud instances, you may encounter the following error:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Failed to register with host https://&amp;lt;your-instance-name&amp;gt;.atlassian.net
+Add-on not registered; no compatible hosts detected
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here is a list of the main causes of this error:&lt;/p&gt;
+
+&lt;h3 id=&quot;1-the-connection-to-the-database-wasnt-established-correctly&quot;&gt;1. The connection to the database wasn’t established correctly.&lt;/h3&gt;
+
+&lt;p&gt;Please make sure that the credentials for your database are set correctly. Unfortunately,  a minor mistype or mistake could make this happen.&lt;/p&gt;
+
+&lt;p&gt;Also, check the schema of the AddonSettings table/collection. If the table was transferred manually, it may have been created incorrectly.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-instance-with-the-given-name-is-already-registered&quot;&gt;2. Instance with the given name is already registered.&lt;/h3&gt;
+
+&lt;p&gt;You need to check if the AddonSettings table/collection includes the clientKey of your instance. If it is the case, you should remove this row/document so nothing can block your addon to be installed.&lt;/p&gt;
+
+&lt;h3 id=&quot;3-the-endpoint-for-the-installed-callback-function-wasnt-configured-correctly&quot;&gt;3. The endpoint for the /installed callback function wasn’t configured correctly.&lt;/h3&gt;
+
+&lt;p&gt;In short: after the application exchanges handshake(keys) with the Atlassian product instance, our application needs to declare its readiness to work. This can be done by responding with a 200 or 204 code status to a GET request to the /installed endpoint. This request is performed automatically. The only thing necessary to do is to check the existence of the corresponding endpoint in the project.&lt;/p&gt;
+
+&lt;p&gt;You can read more about this &lt;a href=&quot;https://developer.atlassian.com/cloud/jira/platform/connect-app-descriptor/#lifecycle&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;4-addon-can-be-running-on-a-network-where-there-is-no-access-to-the-internet-and-ngrok-functions-for-example-an-internal-network-or-a-vpn-with-specific-settings&quot;&gt;4. Addon can be running on a network where there is no access to the internet and ngrok functions (for example, an internal network or a VPN with specific settings).&lt;/h3&gt;
+
+&lt;p&gt;It is recommended to check the availability of the addon by checking the ngrok tunnel. In case of an access error, it is recommended to connect to another network, disable (in some cases enable) VPN, or contact the administrator of your network.&lt;/p&gt;
+
+&lt;h3 id=&quot;5-certain-versions-of-the-atlassian-connect-express-package-have-a-problem-with-the-urijs-module&quot;&gt;5. Certain versions of the atlassian-connect-express package have a problem with the urijs module.&lt;/h3&gt;
+
+&lt;p&gt;In order for the error not to occur, it is necessary:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Add the following version of urijs as a dependency: &lt;br /&gt;
+&lt;span style=&quot;color:#E53935&quot;&gt;
+“urijs”: “1.19.1”
+&lt;/span&gt; &lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Install dependencies and run the application: &lt;br /&gt;
+&lt;span style=&quot;color:#E53935&quot;&gt;
+npm install &amp;amp;&amp;amp; npm start
+&lt;/span&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;6-problem-with-the-triple-slash-after-https&quot;&gt;6. Problem with the triple slash after https.&lt;/h3&gt;
+
+&lt;p&gt;If you noticed that there is a triple-slash after the protocol name then it’s suggested to check if the full address of your instance is specified in the hosts section inside credentials.json file.&lt;/p&gt;
+
+&lt;p&gt;Bear in mind that the full address must include the protocol: “https://&lt;your-instance-name&gt;.atlassian.net/&quot;.&lt;/your-instance-name&gt;&lt;/p&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+  &quot;hosts&quot;: {
+    &quot;https://instance.atlassian.net/&quot;: {
+      &quot;product&quot;: &quot;jira&quot;,
+      &quot;username&quot;: &quot;&quot;,
+      &quot;password&quot;: &quot;&quot;
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr style=&quot;margin: 35px 0 27px;&quot; /&gt;
+
+&lt;p&gt;I hope this one was helpful. &lt;br /&gt;&lt;br /&gt;Naturally, these are only those cases that occur most often. If you have a case that you would like to share, please write about it in the comments or contact me by email (mail{at}piskunov.im).&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">When working with Jira Cloud instances, you may encounter the following error:</summary></entry><entry><title type="html">Three years as Atlassian developer</title><link href="http://localhost:4000/pblog/2021/11/04/three-years-as-atlassian-developer.html" rel="alternate" type="text/html" title="Three years as Atlassian developer" /><published>2021-11-04T23:27:38+03:00</published><updated>2021-11-04T23:27:38+03:00</updated><id>http://localhost:4000/pblog/2021/11/04/three-years-as-atlassian-developer</id><content type="html" xml:base="http://localhost:4000/pblog/2021/11/04/three-years-as-atlassian-developer.html">&lt;p&gt;This big headline means that over the past few years I have had a great opportunity to experience all the delights and disadvantages of the ecosystem of Atlassian products, as well as their API. In particular, everything related to the cloud part of development.&lt;/p&gt;
 
 &lt;p&gt;“There are limitations” is the first thing any developer will tell you when it comes to Jira Сloud or Confluence Cloud. This simple statement can make you feel like an insurmountable obstacle is somewhere ahead. But, I propose to shortly figure out what exactly these words mean.&lt;/p&gt;
 
@@ -22,7 +89,7 @@
 
 &lt;h3 id=&quot;so&quot;&gt;So&lt;/h3&gt;
 
-&lt;p&gt;If we talk very succinctly about the limitations, then I described the fundamental ideas that you need to understand before starting to implement any feature in the Atlassian Cloud world. But, of course, on the way of implementation, the developer encounters various challenges that must be overcome. And it will be my pleasure to share some of the solutions to problems that you might encounter in future posts.&lt;/p&gt;
+&lt;p&gt;We talked about just one fundamental idea that you need to understand before starting to implement any feature in the Atlassian Cloud world. But, of course, on the way of implementation, the developer encounters various challenges that must be overcome. It will be my pleasure to share some of the solutions to problems that you might encounter in future posts.&lt;/p&gt;
 
 &lt;p&gt;Please subscribe and…see you. :)&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">This big headline means that over the past few years I have had a great opportunity to experience all the delights and disadvantages of the ecosystem of Atlassian products, as well as their API. In particular, everything related to the cloud part of development.</summary></entry><entry><title type="html">One Year Changelog</title><link href="http://localhost:4000/pblog/2019/03/01/one-year-changelog.html" rel="alternate" type="text/html" title="One Year Changelog" /><published>2019-03-01T13:27:38+03:00</published><updated>2019-03-01T13:27:38+03:00</updated><id>http://localhost:4000/pblog/2019/03/01/one-year-changelog</id><content type="html" xml:base="http://localhost:4000/pblog/2019/03/01/one-year-changelog.html">&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;I know you missed me. So I'm back and I would like to share with you something that happened with me last year.&lt;/code&gt;&lt;/p&gt;
 
@@ -618,11 +685,4 @@ So previously it was used more for light services(it’s not because no one can 
 
 &lt;p&gt;Remember, before you think about your successes or failures against the background of other people, start to think whether you have done everything possible. If not, do not despair, now it’s time to start. It’s never too late to change anything. Accept the defeat and do nothing - the biggest crime against yourself.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Strive and achieve!&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">Introduction</summary></entry><entry><title type="html">Hello everyone!</title><link href="http://localhost:4000/pblog/2017/10/25/welcome-to-piskunov-im.html" rel="alternate" type="text/html" title="Hello everyone!" /><published>2017-10-25T23:36:53+03:00</published><updated>2017-10-25T23:36:53+03:00</updated><id>http://localhost:4000/pblog/2017/10/25/welcome-to-piskunov-im</id><content type="html" xml:base="http://localhost:4000/pblog/2017/10/25/welcome-to-piskunov-im.html">&lt;p&gt;I appreciate that you’re here.&lt;/p&gt;
-
-&lt;p&gt;This will be a great journey in the world of creativity and productivity. It will be not easy, but we will go through all these adversities.&lt;/p&gt;
-
-&lt;p&gt;Let’s start from the beginning. My name is Igor and this is my blog. Here I’ll write various thoughts and will share with you some products.&lt;/p&gt;
-
-&lt;p&gt;You can feel free to use all materials on the website. 
-I will be very pleased. So, see you soon!&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">I appreciate that you’re here.</summary></entry></feed>
+&lt;p&gt;&lt;strong&gt;Strive and achieve!&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">Introduction</summary></entry></feed>
