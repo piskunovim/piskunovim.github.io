@@ -1,4 +1,82 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-13T23:27:58+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Igor Piskunov</title><subtitle>Be proud of every step that leads you forward and keep run so, that no one can overtake you.</subtitle><entry><title type="html">Atlassian Cloud Development | Failed to register with the host</title><link href="http://localhost:4000/pblog/2021/11/13/atlassian-cloud-development-failed-to-register-with-the-host.html" rel="alternate" type="text/html" title="Atlassian Cloud Development | Failed to register with the host" /><published>2021-11-13T23:00:00+03:00</published><updated>2021-11-13T23:00:00+03:00</updated><id>http://localhost:4000/pblog/2021/11/13/atlassian-cloud-development-failed-to-register-with-the-host</id><content type="html" xml:base="http://localhost:4000/pblog/2021/11/13/atlassian-cloud-development-failed-to-register-with-the-host.html">&lt;p&gt;When working with Jira Cloud instances, you may encounter the following error:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-16T00:46:00+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Igor Piskunov</title><subtitle>Be proud of every step that leads you forward and keep run so, that no one can overtake you.</subtitle><entry><title type="html">My lovely keyboard</title><link href="http://localhost:4000/pblog/2022/08/15/my-lovely-keyboard-device.html" rel="alternate" type="text/html" title="My lovely keyboard" /><published>2022-08-15T23:49:15+03:00</published><updated>2022-08-15T23:49:15+03:00</updated><id>http://localhost:4000/pblog/2022/08/15/my-lovely-keyboard-device</id><content type="html" xml:base="http://localhost:4000/pblog/2022/08/15/my-lovely-keyboard-device.html">&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
+
+&lt;p&gt;We live in a time when many devices pass through our hands. There are two main reasons for this: technological progress and the constant search for a device that would satisfy your needs.&lt;/p&gt;
+
+&lt;p&gt;One day, the Logitech MX case keyboard fell into my hands and since then it has become the main keyboard in my house. Today, I am the happy owner of three keyboards of the MX Keys series:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Logitech MX Keys Mini,&lt;/li&gt;
+  &lt;li&gt;Logitech MX Keys,&lt;/li&gt;
+  &lt;li&gt;Logitech Craft.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://sun9-79.userapi.com/impg/uP8dBCJA9ploA5wVTPsl1YD3iaC5buh9A7-diw/YwTmxFx1n20.jpg?size=1600x1200&amp;amp;quality=95&amp;amp;sign=e3d85a140c3e0a06f00677166cf26e92&amp;amp;type=album&quot; width=&quot;480&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And today I would like to share which one is my favorite and why.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;advantages&quot;&gt;Advantages&lt;/h3&gt;
+
+&lt;p&gt;Among the main advantages of all three keyboards for me, I highlight:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Quiet key travel.&lt;/li&gt;
+  &lt;li&gt;Ability to connect to three different devices.&lt;/li&gt;
+  &lt;li&gt;Wireless connection.&lt;/li&gt;
+  &lt;li&gt;Long life battery.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Logitech MX Keys is the balanced full scale keyboard in the series. Looks and feels like a great keyboard. Weight is average. Connection technology: Logitech Unifying (I’ll tell you a little later, this is important).&lt;/p&gt;
+
+&lt;p&gt;Logitech Craft is a copy of the Logitech MX Keys, weighted down in my opinion an absolutely useless feature called “crown” (such an input dial that you will not use even in those cases where it’s implied). The weight is heavy. Connectivity technology: Logitech Unifying.&lt;/p&gt;
+
+&lt;p&gt;Logitech MX Keys Mini is a minimized version of the main brother MX Keys. The numpad has been removed, the main letter keys haven’t been touched, and the bottom row of the keyboard has been more tightly packed. The weight is light. Connectivity technology: Bluetooth.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;about-connectivity-technologies&quot;&gt;About connectivity technologies&lt;/h3&gt;
+
+&lt;p&gt;Let’s talk about two fact that apply to all the keyboards we’re talking today:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;You cannot use any of these keyboards as a wired one.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;You can connect all these keyboards via Bluetooth.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The second item in the list means a lot of devices that you’re free to be connected easily. And the first one…well…means that we have an issue on BIOS[POST] step, when the Bluetooth driver isn’t loaded yet.&lt;/p&gt;
+
+&lt;p&gt;Some motherboards support Bluetooth loading in POST, but it will cost you extra money. Logitech MX Keys and Logitech Craft have a resolution of this issue called Logitech’s Unifying technology. All you need to do is to plug in the usb dongle from the kit inside your computer and the keyboards will be available in BIOS.&lt;/p&gt;
+
+&lt;p&gt;MX Keys Mini has no workaround. It’s truly Bluetooth keyboard and that’s it. That means, in order to use the keyboard in BIOS, you just need another keyboard.&lt;/p&gt;
+
+&lt;p&gt;Logitech Unifying technology also saves battery life, so the keyboard will work longer without charge.&lt;/p&gt;
+
+&lt;p&gt;All keyboards on a single charge last approximately 14 days. You are more likely to forget when you last charged it, and you will want to connect it yourself, than it will be discharged. The time frame is impressive.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;summary&quot;&gt;Summary&lt;/h3&gt;
+
+&lt;p&gt;In terms of form factor, I’d personally choose the MX Keys Mini. It’s a great keyboard for traveling, it has all main features of the MX Keys series, it’s ultimately comfortable to use and it has takes up little space at home. But! Doesn’t work in BIOS.&lt;/p&gt;
+
+&lt;p&gt;The most balanced option is MX Keys. Yes, I’m repeating it, but that’s true. It’s full scaled, it’s still lightweight, and it works in BIOS.&lt;/p&gt;
+
+&lt;p&gt;And, I’m sorry, but Logitech Craft is rubbish. Frankly, it’s not so different from the MX Keys, but you have to pay extra money for the noticeable weight and the “crown” spinner. And that’s not fair.&lt;/p&gt;
+
+&lt;p&gt;And the winner is: MX Keys Mini. Just because in my case, the form factor makes more sense than BIOS usage. Just look again how does it look like on table.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://sun1-13.userapi.com/impg/c6htvWLKV0O7mZUopS5i6_5Vr0yOqZMPo7rFig/WW0c_vvPkcM.jpg?size=1600x918&amp;amp;quality=95&amp;amp;sign=3ddb92c7fd835f11434a0d80a49bfbbb&amp;amp;type=album &quot; width=&quot;480&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://sun9-1.userapi.com/impg/xDI93kf4Tw45PJclZDDyzNQXs_h-kRqj04-10Q/lsr_AzJBYb8.jpg?size=1280x606&amp;amp;quality=95&amp;amp;sign=5a6540439d5dda9bff9700da83f283b1&amp;amp;type=album&quot; width=&quot;480&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;PS: Some people say that MX Key keyboards has a proverbial slant. That’s true, but in fact, you won’t notice it. I didn’t until someone told me about that.&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">Introduction</summary></entry><entry><title type="html">Atlassian Cloud Development | Failed to register with the host</title><link href="http://localhost:4000/pblog/2021/11/13/atlassian-cloud-development-failed-to-register-with-the-host.html" rel="alternate" type="text/html" title="Atlassian Cloud Development | Failed to register with the host" /><published>2021-11-13T23:00:00+03:00</published><updated>2021-11-13T23:00:00+03:00</updated><id>http://localhost:4000/pblog/2021/11/13/atlassian-cloud-development-failed-to-register-with-the-host</id><content type="html" xml:base="http://localhost:4000/pblog/2021/11/13/atlassian-cloud-development-failed-to-register-with-the-host.html">&lt;p&gt;When working with Jira Cloud instances, you may encounter the following error:&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Failed to register with host https://&amp;lt;your-instance-name&amp;gt;.atlassian.net
 Add-on not registered; no compatible hosts detected
@@ -659,30 +737,4 @@ So previously it was used more for light services(it’s not because no one can 
 
 &lt;p&gt;A lot of things comes into JS as imitation from other languages. It tries to come with lots of good approaches. But that’s not so easy to describe in few words. You will never know everything aboug NodeJS, it’s impossible like to know everything in programming sphere. But it’s possible to become an expert in particular area in this huge world.&lt;/p&gt;
 
-&lt;p&gt;Actually, now you know more.&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">I want to notify, before we start, that we are not talking about implementation here, but just about some reasons why so many framework has been implemented and on what concepts they are based on.</summary></entry><entry><title type="html">Row Talent || Experience</title><link href="http://localhost:4000/pblog/2017/10/26/row-talent-and-experience.html" rel="alternate" type="text/html" title="Row Talent || Experience" /><published>2017-10-26T23:52:12+03:00</published><updated>2017-10-26T23:52:12+03:00</updated><id>http://localhost:4000/pblog/2017/10/26/row-talent-and-experience</id><content type="html" xml:base="http://localhost:4000/pblog/2017/10/26/row-talent-and-experience.html">&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
-
-&lt;p&gt;Until recently, I was worried about the question of what caused the success of some people or the failure of others. Perhaps you was asking yourself the same question. Why can not I do something? Why am I still not as perfect as I would like to be? When will the moment of my enlightenment come and when will I have a success?&lt;/p&gt;
-
-&lt;h3 id=&quot;the-story-about-your-first-guitar&quot;&gt;The Story About Your First Guitar&lt;/h3&gt;
-
-&lt;p&gt;To answer this question, I would like to cite the example of the ability to play the guitar. Let’s say that you never took a guitar in your hands before and now comes the moment when you listen to a lot of great songs on the radio, you take your money and go to the store. There you take the best guitar that you see. It’s yours now. Then you come home, take out the guitar and understand: “That’s all! I’m ready to start playing!”.&lt;/p&gt;
-
-&lt;p&gt;However, the first attempts to extract at least some harmonious sound lead to failure. You spend one hour on this, then another, but it doesn’t get better. Hands do not listen to you, and the sounds that the guitar produces are very far from those that could be called acceptable. But what went wrong? Just recently in the store the seller played as song for you on this guitar and you admired how awesome is your future guitar.&lt;/p&gt;
-
-&lt;p&gt;You invite your best friend, who graduated from the conservatory with a guitar class and asked him to test your new instrument. And surprise, again you hear beautiful chords, transitions using legato and now you start thinking that you will never succeed in playing like this. You don’t have the talent of your friend, so you are doomed to failure. But this judgment is a huge mistake.&lt;/p&gt;
-
-&lt;h3 id=&quot;lots-hours-of-training&quot;&gt;Lots hours of training&lt;/h3&gt;
-
-&lt;p&gt;You forget to think about how many hours did your best friend spend in order to play purely his first gamut. You don’t have the faintest idea of ​​how many hours did he play and how many failures were in his life before that. You only see the final result, which on your part is perceived like a gift . And this is a monstrous mistake!&lt;/p&gt;
-
-&lt;p&gt;Our world is arranged fairly strictly and fairly. Only by being able to compare groups of different people will it be possible to examine their skills and abilities from another more objective side.&lt;/p&gt;
-
-&lt;p&gt;For example, we take 3 groups of guitarists. In the first group, musicians have an experience of 100 hours playing the guitar, in the second 1000 hours and in the third 10,000 hours. How do you think, will be a difference in the playing between such groups of musicians? Undoubtedly yes! Moreover, it is impossible that someone from the 100 hours group will play as well as a person from a 1000 hours group. And it’s quite easy to explain.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://pp.userapi.com/c824503/v824503610/53c0/7A8gMkC6ibk.jpg&quot; alt=&quot;Time &amp;amp; Guitar&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
-
-&lt;p&gt;Remember, before you think about your successes or failures against the background of other people, start to think whether you have done everything possible. If not, do not despair, now it’s time to start. It’s never too late to change anything. Accept the defeat and do nothing - the biggest crime against yourself.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Strive and achieve!&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">Introduction</summary></entry></feed>
+&lt;p&gt;Actually, now you know more.&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">I want to notify, before we start, that we are not talking about implementation here, but just about some reasons why so many framework has been implemented and on what concepts they are based on.</summary></entry></feed>
