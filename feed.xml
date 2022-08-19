@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-17T22:34:20+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Igor Piskunov</title><subtitle>Be proud of every step that leads you forward and keep run so, that no one can overtake you.</subtitle><entry><title type="html">My lovely keyboard</title><link href="http://localhost:4000/pblog/2022/08/17/my-lovely-keyboard-device.html" rel="alternate" type="text/html" title="My lovely keyboard" /><published>2022-08-17T22:33:15+03:00</published><updated>2022-08-17T22:33:15+03:00</updated><id>http://localhost:4000/pblog/2022/08/17/my-lovely-keyboard-device</id><content type="html" xml:base="http://localhost:4000/pblog/2022/08/17/my-lovely-keyboard-device.html">&lt;p&gt;This is the first post in the “Purchases I have not regretted” series. It’s not an advertisement or technical review. Please, let me know if you see something wrong in my text that could help to improve it. Thank you!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-19T21:59:35+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Igor Piskunov</title><subtitle>Be proud of every step that leads you forward and keep run so, that no one can overtake you.</subtitle><entry><title type="html">Have Fun Playing Bones By Imagine Dragons</title><link href="http://localhost:4000/pblog/2022/08/19/imagine-dragons-piano-cover.html" rel="alternate" type="text/html" title="Have Fun Playing Bones By Imagine Dragons" /><published>2022-08-19T19:59:00+03:00</published><updated>2022-08-19T19:59:00+03:00</updated><id>http://localhost:4000/pblog/2022/08/19/imagine-dragons-piano-cover</id><content type="html" xml:base="http://localhost:4000/pblog/2022/08/19/imagine-dragons-piano-cover.html">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/UGZD5apmcoE&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name></name></author><category term="pblog" /><summary type="html"></summary></entry><entry><title type="html">My lovely keyboard</title><link href="http://localhost:4000/pblog/2022/08/17/my-lovely-keyboard-device.html" rel="alternate" type="text/html" title="My lovely keyboard" /><published>2022-08-17T22:33:15+03:00</published><updated>2022-08-17T22:33:15+03:00</updated><id>http://localhost:4000/pblog/2022/08/17/my-lovely-keyboard-device</id><content type="html" xml:base="http://localhost:4000/pblog/2022/08/17/my-lovely-keyboard-device.html">&lt;p&gt;This is the first post in the “Purchases I have not regretted” series. It’s not an advertisement or technical review. Please, let me know if you see something wrong in my text that could help to improve it. Thank you!&lt;/p&gt;
 
 &lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
 
@@ -695,69 +695,4 @@ dataSource.discoverSchema('tableName',{schema:'schemaName'},schemaCB);
 
 &lt;p&gt;To know the weather outside or the status of traffic jams, you do not need to open the application, just ask. I you need to order a taxi - ask Google Home to do it (of course if you don’t live in Russia). And of course there is a wonderful guide from Google that will lead you to extend possibilities of your home assistant.&lt;/p&gt;
 
-&lt;p&gt;I want to note: listening to music on the device is a pleasure. The support of Chromecast and many other devices is also pleasing. And for sure, I’ll make another one post about this device(from programming perspective). Anyway it’s a really new experience in interface, that for sure will get progress.&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html"></summary></entry><entry><title type="html">What you should have known about JS eight years ago</title><link href="http://localhost:4000/pblog/2017/11/02/js-eight-years-ago.html" rel="alternate" type="text/html" title="What you should have known about JS eight years ago" /><published>2017-11-02T14:25:57+03:00</published><updated>2017-11-02T14:25:57+03:00</updated><id>http://localhost:4000/pblog/2017/11/02/js-eight-years-ago</id><content type="html" xml:base="http://localhost:4000/pblog/2017/11/02/js-eight-years-ago.html">&lt;blockquote&gt;
-  &lt;p&gt;I want to notify, before we start, that we are not talking about implementation here, but just about some reasons why so many framework has been implemented and on what concepts they are based on.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
-
-&lt;p&gt;This article is dedicated to those who find it difficult to navigate in the JavaScript(JS) world . To those who are looking for an answer to the question “why is it so difficult?” and doesn’t know how to find the answer.&lt;/p&gt;
-
-&lt;p&gt;Everything is very simple, if you know the reason. That’s why I want to go back to the past with you and consider the reasons for the decisions that were made and what tools we received as a result of these decisions. Such an approach can help you to learn many of the mysteries of the universe. But not all…&lt;/p&gt;
-
-&lt;h3 id=&quot;everything-has-a-beginning&quot;&gt;Everything has a beginning&lt;/h3&gt;
-
-&lt;p&gt;8 years ago(now is 2017) there was a man who taught people how to work with JS and opened the way of using JS on the server side. His name Ryan Dahl. One of the main problems of that time was that JavaScript is single-threaded. It’s still single-threaded, nothing has been changed except an approach.&lt;/p&gt;
-
-&lt;p&gt;The solution to this problem comes from asynchrony. It allows JS to execute code in one thread, and we can not wait for the execution of a particular part of our application. And we can process the result of a specific query when it comes(in callback).&lt;/p&gt;
-
-&lt;h3 id=&quot;two-way-binding&quot;&gt;Two-way binding&lt;/h3&gt;
-
-&lt;p&gt;Meanwhile, programmers  already successfully using AJAX. Nothing new in this abbreviation, but naturaly they wanted to go further. At this step we can notice  a division to front-end and back-end for JS.&lt;/p&gt;
-
-&lt;p&gt;The next problem for Front-end was that in order to insert data from the JS object it is necessary to refer to a specific field, take its identifier and perform the substitution. And so we need to repeat this with each field/object that we want to change /substitute. This is a lot of code, which is at the same time pretty simple.&lt;/p&gt;
-
-&lt;p&gt;Hence the idea of ​​a “two-way binding” came out, between the model and the view. They observe each other’s changes. When data in the model changes, the view reflects the change, and when data in the view changes, the model is updated as well. So here comes a lot of frameworks around this idea: Angular, React, Knockout, Vue, Backbone and many others. They were all about the same thing, only with different points of view and approaches.&lt;/p&gt;
-
-&lt;h3 id=&quot;solving-the-problems-of-dynamic-typisation&quot;&gt;Solving the problems of dynamic typisation&lt;/h3&gt;
-
-&lt;p&gt;Time passed and programmers decided to solve another drawback of JS: dynamic typisation, which complicates debugging. So that was the idea of ​​TypeScript language, the essence of which: to compile a code written in TypeScript, into a secure “typified JS language”. But it was not the only player on this playground.  CoffeeScript and Dart also tried to solve this problem, but the final purposes and implementations was different.&lt;/p&gt;
-
-&lt;p&gt;AngularJS - uses TypeScript (= strict typing). The project is compiling into the EcmaScript format that the programmer wishes.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;EcmaScript is the standard on which JS is based.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Two-way binding has not gone anywhere, projects have become stricter in terms of structure, but at the same time all minifactors / pre-processors/ builders have become part of the project. Now you can start the server and edit the application in Live mode.&lt;/p&gt;
-
-&lt;p&gt;Angular 1.x had a serious problem: it forced programmers to learn their markup language and program controllers in too clumsy and not easy way. For comparison, KnockoutJS did two-way binding it ten times simpler and clear.&lt;/p&gt;
-
-&lt;p&gt;What’s different about VueJS: nowadays you can as well as Angular 4, that means using strict typing, builders and so on. At the same time you can add the vuejs file into your project and use it as a library (like Knockout) and it’s easy and simple.&lt;/p&gt;
-
-&lt;h3 id=&quot;nodejs--expressjs&quot;&gt;NodeJS &amp;amp; ExpressJS&lt;/h3&gt;
-
-&lt;p&gt;NodeJs is based on the Google V8 engine, which in fact is just able to do all asynchronous work. It’s changing and improving with each version. On the base level  NodeJS is working with the file system, the buffer and http. It’s quite low-level and in order to write something structured and not bulky it was a good challenge.
-So previously it was used more for light services(it’s not because no one can do something more, it’s a common view on development with NodeJS of that time).&lt;/p&gt;
-
-&lt;p&gt;Then progammer wanted to go further and ExpressJS appeared. In fact, it’s just a convenient structured framework which brought together all the common tasks that people trying to solve in NodeJS from time to time. Minimal and flexible. Make an endpoint with the simplest script takes minutes.&lt;/p&gt;
-
-&lt;p&gt;In the Back-end everything is much more prosaic.&lt;/p&gt;
-
-&lt;p&gt;There are ExpressJS and some group of developers tries to do something using it as a base. Because it is the most convenient way now. This groups extends ExpressJS capabilities, implements CMS, E-commerce and all sorts of other projects on its base.&lt;/p&gt;
-
-&lt;h3 id=&quot;a-huge-number-of-tools&quot;&gt;A Huge Number of Tools&lt;/h3&gt;
-
-&lt;p&gt;The most difficult thing that exists in the world of JS is the awareness at what stage the tool appeared and why it was / is needed. There are a lot of jokes about this.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;NPM / Yarn&lt;/strong&gt; - package managers, appeared one after another, the last one implemented by Facebook. No difference. At all.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Grunt / Gulp&lt;/strong&gt; - the tools some of functionality of which has already been taken by Angular (Webpack) and other frameworks. They cam compress scripts, compress images, build the final JS project.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Underscore / Lodash&lt;/strong&gt; - libraries that have a lot of things on board, a couple of years ago in advertisment purposes considered to work with arrays in the “best way”. In fact, people live successfully without this libraries and don’t lose anything. But there are some other “convenient / productive written functions” in them and you can find more information about it on their websites.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;RequireJS&lt;/strong&gt; - a framework that managed the libraries to be connected to the project. To do this job once and for all.&lt;/p&gt;
-
-&lt;p&gt;A lot of things comes into JS as imitation from other languages. It tries to come with lots of good approaches. But that’s not so easy to describe in few words. You will never know everything aboug NodeJS, it’s impossible like to know everything in programming sphere. But it’s possible to become an expert in particular area in this huge world.&lt;/p&gt;
-
-&lt;p&gt;Actually, now you know more.&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">I want to notify, before we start, that we are not talking about implementation here, but just about some reasons why so many framework has been implemented and on what concepts they are based on.</summary></entry></feed>
+&lt;p&gt;I want to note: listening to music on the device is a pleasure. The support of Chromecast and many other devices is also pleasing. And for sure, I’ll make another one post about this device(from programming perspective). Anyway it’s a really new experience in interface, that for sure will get progress.&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html"></summary></entry></feed>
