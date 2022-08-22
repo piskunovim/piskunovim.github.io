@@ -123,9 +123,11 @@
 
 <p>To keep aliases between sessions, you can save them in your user’s shell configuration profile file. This can be:</p>
 
-<p>Bash – ~/.bashrc
-ZSH – ~/.zshrc
-Fish – ~/.config/fish/config.fish</p>
+<ul>
+  <li>Bash – ~/.bashrc</li>
+  <li>ZSH – ~/.zshrc</li>
+  <li>Fish – ~/.config/fish/config.fish</li>
+</ul>
 
 <p>So for example, in bash, you can open .bashrc file with your favorite editor like this:</p>
 
@@ -143,6 +145,13 @@ Fish – ~/.config/fish/config.fish</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">alias open="nautilus --browser"</code></li>
+</ul>
+
+<blockquote>
+  <p>Example usage: ‘open .’ (opens current directory in nautilus)</p>
+</blockquote>
+
+<ul>
   <li><code class="language-plaintext highlighter-rouge">alias connectServer = ssh -p (my ssh port number) myuser@myserver</code></li>
   <li><code class="language-plaintext highlighter-rouge">alias dockerClean = docker rm $(docker ps -a -q)</code></li>
   <li><code class="language-plaintext highlighter-rouge">alias upgrade='sudo apt-get update &amp;&amp; sudo apt-get upgrade'</code></li>
@@ -166,6 +175,9 @@ done
   fi
 }
 </code></pre></div>    </div>
+    <blockquote>
+      <p>Example usage: ‘weather Krasnodar’</p>
+    </blockquote>
   </li>
 </ul>
 
