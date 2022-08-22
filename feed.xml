@@ -1,4 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-19T22:33:50+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Igor Piskunov</title><subtitle>Be proud of every step that leads you forward and keep run so, that no one can overtake you.</subtitle><entry><title type="html">Have Fun Playing Bones By Imagine Dragons</title><link href="http://localhost:4000/pblog/2022/08/19/imagine-dragons-piano-cover.html" rel="alternate" type="text/html" title="Have Fun Playing Bones By Imagine Dragons" /><published>2022-08-19T19:59:00+03:00</published><updated>2022-08-19T19:59:00+03:00</updated><id>http://localhost:4000/pblog/2022/08/19/imagine-dragons-piano-cover</id><content type="html" xml:base="http://localhost:4000/pblog/2022/08/19/imagine-dragons-piano-cover.html">&lt;p&gt;It’s a great feeling when you touch the musical instrument again. I’m sure it also enjoys when you touch it. So why do we need to experience the feeling of prolonged separation? Just play and let the music fill the environment. To fill you from inside. It doesn’t matter if you’re an amateur or a professional, this’s always a great opportunity to get in touch with the incredible world of music that can enslave you.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-22T23:22:24+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Igor Piskunov</title><subtitle>Be proud of every step that leads you forward and keep run so, that no one can overtake you.</subtitle><entry><title type="html">Command Line Habits - Aliases</title><link href="http://localhost:4000/pblog/2022/08/22/command-line-habits-aliases.html" rel="alternate" type="text/html" title="Command Line Habits - Aliases" /><published>2022-08-22T22:04:00+03:00</published><updated>2022-08-22T22:04:00+03:00</updated><id>http://localhost:4000/pblog/2022/08/22/command-line-habits-aliases</id><content type="html" xml:base="http://localhost:4000/pblog/2022/08/22/command-line-habits-aliases.html">&lt;h2 id=&quot;aliases&quot;&gt;Aliases&lt;/h2&gt;
+
+&lt;p&gt;Unix-based systems supports lots of various shells that the user could use. In my work environment is widely used zsh and bash. Recently I started practicing fish (friendly interactive shell), but for now it’s only a mention.&lt;/p&gt;
+
+&lt;p&gt;Aliases are our friends when it comes to long commands that you have to type on a daily basis.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt; alias shortName=&quot;your custom command here&quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;To keep aliases between sessions, you can save them in your user’s shell configuration profile file. This can be:&lt;/p&gt;
+
+&lt;p&gt;Bash – ~/.bashrc
+ZSH – ~/.zshrc
+Fish – ~/.config/fish/config.fish&lt;/p&gt;
+
+&lt;p&gt;So for example, in bash, you can open .bashrc file with your favorite editor like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt; vim ~/.bashrc&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;To remove specific alias:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt; unalias alias_name&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;To remove all aliases:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt; unalias -a&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;my-top-10-aliases&quot;&gt;My Top 10 Aliases&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alias open=&quot;nautilus --browser&quot;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alias connectServer = ssh -p (my ssh port number) myuser@myserver&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alias dockerClean = docker rm $(docker ps -a -q)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alias upgrade='sudo apt-get update &amp;amp;&amp;amp; sudo apt-get upgrade'&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alias netconnections=&quot;netstat -tuapw --numeric-hosts --numeric-ports&quot;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alias myip=&quot;curl ident.me&quot;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alias openvpn3-start=&quot;openvpn3 session-start --config ~/openvpn3/client.ovpn&quot;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alias openvpn3-stop=&quot;~/openvpn3/disconnect_cli.sh&quot;&lt;/code&gt;
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# disconnect_cli.sh
+openvpn3 sessions-list | grep Path | awk -v OFS='\t' '{print $2}' | while read -r path; do
+  openvpn3 session-manage --path &quot;$path&quot; --disconnect
+done
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alias openvpn3-ls=&quot;openvpn3 sessions-list&quot;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alias weather=&quot;wttr&quot;&lt;/code&gt;
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wttr() {
+  if [ $# -eq 0 ]; then
+    echo &quot;No arguments provided&quot;
+  else
+    curl wttr.in/$1;
+  fi
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">Aliases</summary></entry><entry><title type="html">Have Fun Playing Bones By Imagine Dragons</title><link href="http://localhost:4000/pblog/2022/08/19/imagine-dragons-piano-cover.html" rel="alternate" type="text/html" title="Have Fun Playing Bones By Imagine Dragons" /><published>2022-08-19T19:59:00+03:00</published><updated>2022-08-19T19:59:00+03:00</updated><id>http://localhost:4000/pblog/2022/08/19/imagine-dragons-piano-cover</id><content type="html" xml:base="http://localhost:4000/pblog/2022/08/19/imagine-dragons-piano-cover.html">&lt;p&gt;It’s a great feeling when you touch the musical instrument again. I’m sure it also enjoys when you touch it. So why do we need to experience the feeling of prolonged separation? Just play and let the music fill the environment. To fill you from inside. It doesn’t matter if you’re an amateur or a professional, this’s always a great opportunity to get in touch with the incredible world of music that can enslave you.&lt;/p&gt;
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/UGZD5apmcoE&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">It’s a great feeling when you touch the musical instrument again. I’m sure it also enjoys when you touch it. So why do we need to experience the feeling of prolonged separation? Just play and let the music fill the environment. To fill you from inside. It doesn’t matter if you’re an amateur or a professional, this’s always a great opportunity to get in touch with the incredible world of music that can enslave you.</summary></entry><entry><title type="html">My lovely keyboard</title><link href="http://localhost:4000/pblog/2022/08/17/my-lovely-keyboard-device.html" rel="alternate" type="text/html" title="My lovely keyboard" /><published>2022-08-17T22:33:15+03:00</published><updated>2022-08-17T22:33:15+03:00</updated><id>http://localhost:4000/pblog/2022/08/17/my-lovely-keyboard-device</id><content type="html" xml:base="http://localhost:4000/pblog/2022/08/17/my-lovely-keyboard-device.html">&lt;p&gt;This is the first post in the “Purchases I have not regretted” series. It’s not an advertisement or technical review. Please, let me know if you see something wrong in my text that could help to improve it. Thank you!&lt;/p&gt;
 
@@ -676,25 +730,4 @@ dataSource.discoverSchema('tableName',{schema:'schemaName'},schemaCB);
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:set norelativenumber&lt;/code&gt;: disables relative line numbers &lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:set number relative numbers&lt;/code&gt;: enables both options of line numbers&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;help option-list&lt;/code&gt;: more options to set&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">Using Vim is a good habit for developers of any level. Today we’re going to look through the set of basic commands that’s widely used in Vim.</summary></entry><entry><title type="html">Wedding day &amp;amp; New friend</title><link href="http://localhost:4000/pblog/2017/11/14/wedding-day.html" rel="alternate" type="text/html" title="Wedding day &amp;amp; New friend" /><published>2017-11-14T21:31:10+03:00</published><updated>2017-11-14T21:31:10+03:00</updated><id>http://localhost:4000/pblog/2017/11/14/wedding-day</id><content type="html" xml:base="http://localhost:4000/pblog/2017/11/14/wedding-day.html">&lt;p&gt;&lt;img src=&quot;https://pp.userapi.com/c840521/v840521264/21422/DmEKBSjBySU.jpg&quot; width=&quot;480&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;My wife Irina is sitting to my left. We are traveling in a limousine Hammer with our friends Yuri, Nadia, Ilya, Anna, Nikolay and Christina. The rock of the 80s plays on the radio, the rays of the November sun make their way through the clouds. 
-“Golden autumn” finally came to Krasnodar.&lt;/p&gt;
-
-&lt;p&gt;I do not like to exaggerate the meanings of certain moments in life. But believe, whatever person you are, creating your family will be one of the happiest days in your life.&lt;/p&gt;
-
-&lt;p&gt;In fact, this is the next stage of working on yourself, which allows you to do things that you can not do alone. To create something more.&lt;/p&gt;
-
-&lt;iframe src=&quot;//vk.com/video_ext.php?oid=198559388&amp;amp;id=456239069&amp;amp;hash=1b2bf89fd82f78b6&amp;amp;hd=1&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;h3 id=&quot;google-home&quot;&gt;Google Home&lt;/h3&gt;
-
-&lt;p&gt;I would like to take this opportunity to share with you the use of the new gadget, which is unknown when it appears officially in Russia.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://pp.userapi.com/c824502/v824502111/2468e/RFIhyBBUWKM.jpg&quot; width=&quot;480&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In a very short time, we became friends despite the fact that there is still a lot of work to expand the functionality. Reminders, alarm, timer, playing music, communication, playing in the company. The interface of communication is surprisingly much better than you can imagine.&lt;/p&gt;
-
-&lt;p&gt;To know the weather outside or the status of traffic jams, you do not need to open the application, just ask. I you need to order a taxi - ask Google Home to do it (of course if you don’t live in Russia). And of course there is a wonderful guide from Google that will lead you to extend possibilities of your home assistant.&lt;/p&gt;
-
-&lt;p&gt;I want to note: listening to music on the device is a pleasure. The support of Chromecast and many other devices is also pleasing. And for sure, I’ll make another one post about this device(from programming perspective). Anyway it’s a really new experience in interface, that for sure will get progress.&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;help option-list&lt;/code&gt;: more options to set&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">Using Vim is a good habit for developers of any level. Today we’re going to look through the set of basic commands that’s widely used in Vim.</summary></entry></feed>
