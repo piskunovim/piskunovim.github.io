@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Music</title>
-  <meta name="description" content="Be proud of every step that leads you forward and keep run so, that no one can overtake you.">
+  <title>Command Line Habits - Aliases</title>
+  <meta name="description" content="Aliases">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://piskunov.im/music/">
+  <link rel="canonical" href="http://piskunov.im/pblog/2022/08/22/command-line-habits-aliases.html">
   <link rel="alternate" type="application/rss+xml" title="Igor Piskunov" href="/feed.xml">
   
   
@@ -105,21 +105,87 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <article class="post">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">Music</h1>
+    <h1 class="post-title" itemprop="name headline">Command Line Habits - Aliases</h1>
+    <p class="post-meta">
+      <time datetime="2022-08-22T22:04:00+03:00" itemprop="datePublished">
+        
+        Aug 22, 2022 - 22:04
+      </time>
+      </p>
   </header>
 
-  <div class="post-content">
-    <p>I make music in styles of accoustic pop and indie.</p>
+  <div class="post-content" itemprop="articleBody">
+    <h2 id="aliases">Aliases</h2>
 
-<p>Feel free to use it for your purposes.</p>
+<p>Unix-based systems supports lots of various shells that the user could use. In my work environment is widely used zsh and bash. Recently I started practicing fish (friendly interactive shell), but for now it’s only a mention.</p>
 
-<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F363195212&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
+<p>Aliases are our friends when it comes to long commands that you have to type on a daily basis.</p>
 
+<p><code class="language-plaintext highlighter-rouge">&gt; alias shortName="your custom command here"</code></p>
+
+<p>To keep aliases between sessions, you can save them in your user’s shell configuration profile file. This can be:</p>
+
+<p>Bash – ~/.bashrc
+ZSH – ~/.zshrc
+Fish – ~/.config/fish/config.fish</p>
+
+<p>So for example, in bash, you can open .bashrc file with your favorite editor like this:</p>
+
+<p><code class="language-plaintext highlighter-rouge">&gt; vim ~/.bashrc</code></p>
+
+<p>To remove specific alias:</p>
+
+<p><code class="language-plaintext highlighter-rouge">&gt; unalias alias_name</code></p>
+
+<p>To remove all aliases:</p>
+
+<p><code class="language-plaintext highlighter-rouge">&gt; unalias -a</code></p>
+
+<h3 id="my-top-10-aliases">My Top 10 Aliases</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">alias open="nautilus --browser"</code></li>
+  <li><code class="language-plaintext highlighter-rouge">alias connectServer = ssh -p (my ssh port number) myuser@myserver</code></li>
+  <li><code class="language-plaintext highlighter-rouge">alias dockerClean = docker rm $(docker ps -a -q)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">alias upgrade='sudo apt-get update &amp;&amp; sudo apt-get upgrade'</code></li>
+  <li><code class="language-plaintext highlighter-rouge">alias netconnections="netstat -tuapw --numeric-hosts --numeric-ports"</code></li>
+  <li><code class="language-plaintext highlighter-rouge">alias myip="curl ident.me"</code></li>
+  <li><code class="language-plaintext highlighter-rouge">alias openvpn3-start="openvpn3 session-start --config ~/openvpn3/client.ovpn"</code></li>
+  <li><code class="language-plaintext highlighter-rouge">alias openvpn3-stop="~/openvpn3/disconnect_cli.sh"</code>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># disconnect_cli.sh
+openvpn3 sessions-list | grep Path | awk -v OFS='\t' '{print $2}' | while read -r path; do
+  openvpn3 session-manage --path "$path" --disconnect
+done
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">alias openvpn3-ls="openvpn3 sessions-list"</code></li>
+  <li><code class="language-plaintext highlighter-rouge">alias weather="wttr"</code>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wttr() {
+  if [ $# -eq 0 ]; then
+    echo "No arguments provided"
+  else
+    curl wttr.in/$1;
+  fi
+}
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+    <div class="share-page">
+    Share this on &rarr;
+    <a href="https://twitter.com/intent/tweet?text=Command Line Habits - Aliases&url=http://piskunov.im/pblog/2022/08/22/command-line-habits-aliases.html&via=piskunovim&related=piskunovim" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://facebook.com/sharer.php?u=http://piskunov.im/pblog/2022/08/22/command-line-habits-aliases.html" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://plus.google.com/share?url=http://piskunov.im/pblog/2022/08/22/command-line-habits-aliases.html" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+</div> 
   </div>
 
+  
+    
+
+  
 </article>
 
       </div>
