@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Balanced Way To Keep Productive</title>
-  <meta name="description" content="*While you reading this, I&#39;ve implemented something new.* Best regards, Igor">
+  <title>Atlassian Cloud Development | Failed to register with the host</title>
+  <meta name="description" content="When working with Jira Cloud instances, you may encounter the following error:">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://piskunov.im/pblog/2018/02/18/balanced-way-to-keep-motivated.html">
+  <link rel="canonical" href="http://piskunov.im/pblog/2021/11/14/atlassian-cloud-development-failed-to-register-with-the-host.html">
   <link rel="alternate" type="application/rss+xml" title="Igor Piskunov" href="/feed.xml">
   
   
@@ -108,27 +108,90 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Balanced Way To Keep Productive</h1>
+    <h1 class="post-title" itemprop="name headline">Atlassian Cloud Development | Failed to register with the host</h1>
     <p class="post-meta">
-      <time datetime="2018-02-18T02:27:38+04:00" itemprop="datePublished">
+      <time datetime="2021-11-14T00:00:00+04:00" itemprop="datePublished">
         
-        Feb 18, 2018 - 02:27
+        Nov 14, 2021 - 00:00
       </time>
       </p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p><code class="language-plaintext highlighter-rouge">*While you reading this, I've implemented something new.*
-</code><br /><br />
-<code class="language-plaintext highlighter-rouge">Best regards, Igor
-</code></p>
+    <p>When working with Jira Cloud instances, you may encounter the following error:</p>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Failed to register with host https://&lt;your-instance-name&gt;.atlassian.net
+Add-on not registered; no compatible hosts detected
+</code></pre></div></div>
+
+<p>Here is a list of the main causes of this error:</p>
+
+<h3 id="1-the-connection-to-the-database-wasnt-established-correctly">1. The connection to the database wasn’t established correctly.</h3>
+
+<p>Please make sure that the credentials for your database are set correctly. Unfortunately,  a minor mistype or mistake could make this happen.</p>
+
+<p>Also, check the schema of the AddonSettings table/collection. If the table was transferred manually, it may have been created incorrectly.</p>
+
+<h3 id="2-instance-with-the-given-name-is-already-registered">2. Instance with the given name is already registered.</h3>
+
+<p>You need to check if the AddonSettings table/collection includes the clientKey of your instance. If it is the case, you should remove this row/document so nothing can block your addon to be installed.</p>
+
+<h3 id="3-the-endpoint-for-the-installed-callback-function-wasnt-configured-correctly">3. The endpoint for the /installed callback function wasn’t configured correctly.</h3>
+
+<p>In short: after the application exchanges handshake(keys) with the Atlassian product instance, our application needs to declare its readiness to work. This can be done by responding with a 200 or 204 code status to a GET request to the /installed endpoint. This request is performed automatically. The only thing necessary to do is to check the existence of the corresponding endpoint in the project.</p>
+
+<p>You can read more about this <a href="https://developer.atlassian.com/cloud/jira/platform/connect-app-descriptor/#lifecycle">here</a>.</p>
+
+<h3 id="4-addon-can-be-running-on-a-network-where-there-is-no-access-to-the-internet-and-ngrok-functions-for-example-an-internal-network-or-a-vpn-with-specific-settings">4. Addon can be running on a network where there is no access to the internet and ngrok functions (for example, an internal network or a VPN with specific settings).</h3>
+
+<p>It is recommended to check the availability of the addon by checking the ngrok tunnel. In case of an access error, it is recommended to connect to another network, disable (in some cases enable) VPN, or contact the administrator of your network.</p>
+
+<h3 id="5-certain-versions-of-the-atlassian-connect-express-package-have-a-problem-with-the-urijs-module">5. Certain versions of the atlassian-connect-express package have a problem with the urijs module.</h3>
+
+<p>In order for the error not to occur, it is necessary:</p>
+
+<ul>
+  <li>
+    <p>Add the following version of urijs as a dependency: <br />
+<span style="color:#E53935">
+“urijs”: “1.19.1”
+</span> <br /></p>
+  </li>
+  <li>
+    <p>Install dependencies and run the application: <br />
+<span style="color:#E53935">
+npm install &amp;&amp; npm start
+</span></p>
+  </li>
+</ul>
+
+<h3 id="6-problem-with-the-triple-slash-after-https">6. Problem with the triple slash after https.</h3>
+
+<p>If you noticed that there is a triple-slash after the protocol name then it’s suggested to check if the full address of your instance is specified in the hosts section inside credentials.json file.</p>
+
+<p>Bear in mind that the full address must include the protocol: “https://<your-instance-name>.atlassian.net/".</your-instance-name></p>
+
+<p>For example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "hosts": {
+    "https://instance.atlassian.net/": {
+      "product": "jira",
+      "username": "",
+      "password": ""
+    }
+  }
+}
+</code></pre></div></div>
+<hr style="margin: 35px 0 27px;" />
+
+<p>I hope this one was helpful. <br /><br />Naturally, these are only those cases that occur most often. If you have a case that you would like to share, please write about it in the comments or contact me by email (mail{at}piskunov.im).</p>
 
     <div class="share-page">
     Share this on &rarr;
-    <a href="https://twitter.com/intent/tweet?text=Balanced Way To Keep Productive&url=http://piskunov.im/pblog/2018/02/18/balanced-way-to-keep-motivated.html&via=piskunovim&related=piskunovim" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
-    <a href="https://facebook.com/sharer.php?u=http://piskunov.im/pblog/2018/02/18/balanced-way-to-keep-motivated.html" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
-    <a href="https://plus.google.com/share?url=http://piskunov.im/pblog/2018/02/18/balanced-way-to-keep-motivated.html" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+    <a href="https://twitter.com/intent/tweet?text=Atlassian Cloud Development | Failed to register with the host&url=http://piskunov.im/pblog/2021/11/14/atlassian-cloud-development-failed-to-register-with-the-host.html&via=piskunovim&related=piskunovim" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://facebook.com/sharer.php?u=http://piskunov.im/pblog/2021/11/14/atlassian-cloud-development-failed-to-register-with-the-host.html" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://plus.google.com/share?url=http://piskunov.im/pblog/2021/11/14/atlassian-cloud-development-failed-to-register-with-the-host.html" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
 </div> 
   </div>
 

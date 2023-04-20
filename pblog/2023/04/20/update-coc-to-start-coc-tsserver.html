@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Row Talent || Experience</title>
+  <title>Resolving coc.nvim Compatibility for TypeScript Support</title>
   <meta name="description" content="Introduction">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://piskunov.im/pblog/2017/10/26/row-talent-and-experience.html">
+  <link rel="canonical" href="http://piskunov.im/pblog/2023/04/20/update-coc-to-start-coc-tsserver.html">
   <link rel="alternate" type="application/rss+xml" title="Igor Piskunov" href="/feed.xml">
   
   
@@ -53,7 +53,12 @@
           
 
              
-               
+
+             
+          
+
+             
+
              
           
 
@@ -68,12 +73,7 @@
           
 
              
-
-             
-          
-
-             
-
+               
              
           
 
@@ -108,49 +108,62 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Row Talent || Experience</h1>
+    <h1 class="post-title" itemprop="name headline">Resolving coc.nvim Compatibility for TypeScript Support</h1>
     <p class="post-meta">
-      <time datetime="2017-10-26T23:52:12+03:00" itemprop="datePublished">
+      <time datetime="2023-04-20T00:00:00+04:00" itemprop="datePublished">
         
-        Oct 26, 2017 - 23:52
+        Apr 20, 2023 - 00:00
       </time>
+      
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Igor Piskunov</span></span>
       </p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <h3 id="introduction">Introduction</h3>
+    <h2 id="introduction">Introduction</h2>
 
-<p>Until recently, I was worried about the question of what caused the success of some people or the failure of others. Perhaps you was asking yourself the same question. Why can not I do something? Why am I still not as perfect as I would like to be? When will the moment of my enlightenment come and when will I have a success?</p>
+<p>Hey there! If you’re using Neovim or Vim as your code editor, you’re probably familiar with the Conquer of Completion (coc.nvim) extension. It makes TypeScript development a breeze with its coc-tsserver extension, which offers autocompletion, error checking, and more. But what if you encounter a version compatibility issue like this: “coc-tsserver 2.1.3 requires coc.nvim &gt;= 0.0.82, please update coc.nvim”? Don’t worry, we’ll cover two ways of how to resolve this situation.
+Don’t worry, we’ll cover two ways of how to resolve this situation.</p>
 
-<h3 id="the-story-about-your-first-guitar">The Story About Your First Guitar</h3>
+<h2 id="automatic-update-the-easy-way">Automatic Update: The Easy Way</h2>
 
-<p>To answer this question, I would like to cite the example of the ability to play the guitar. Let’s say that you never took a guitar in your hands before and now comes the moment when you listen to a lot of great songs on the radio, you take your money and go to the store. There you take the best guitar that you see. It’s yours now. Then you come home, take out the guitar and understand: “That’s all! I’m ready to start playing!”.</p>
+<p>First, let’s try the simplest method—using the built-in <code class="language-plaintext highlighter-rouge">:CocUpdate</code> command:</p>
 
-<p>However, the first attempts to extract at least some harmonious sound lead to failure. You spend one hour on this, then another, but it doesn’t get better. Hands do not listen to you, and the sounds that the guitar produces are very far from those that could be called acceptable. But what went wrong? Just recently in the store the seller played as song for you on this guitar and you admired how awesome is your future guitar.</p>
+<ol>
+  <li>Launch Neovim or Vim.</li>
+  <li>Enter command mode and run <code class="language-plaintext highlighter-rouge">:CocUpdate</code>.</li>
+  <li>Wait for the update process to finish—it shouldn’t take long!</li>
+  <li>Close Neovim or Vim using <code class="language-plaintext highlighter-rouge">:q!</code>.</li>
+  <li>Relaunch Neovim or Vim and check the version with <code class="language-plaintext highlighter-rouge">:CocInfo</code>.</li>
+</ol>
 
-<p>You invite your best friend, who graduated from the conservatory with a guitar class and asked him to test your new instrument. And surprise, again you hear beautiful chords, transitions using legato and now you start thinking that you will never succeed in playing like this. You don’t have the talent of your friend, so you are doomed to failure. But this judgment is a huge mistake.</p>
+<p>If all goes well, you’ll see coc.nvim has been updated to version 0.0.82 or higher. But if the automatic update didn’t do the trick, let’s move on to the manual update.</p>
 
-<h3 id="lots-hours-of-training">Lots hours of training</h3>
+<h2 id="manual-update-taking-matters-into-your-own-hands">Manual Update: Taking Matters into Your Own Hands</h2>
 
-<p>You forget to think about how many hours did your best friend spend in order to play purely his first gamut. You don’t have the faintest idea of ​​how many hours did he play and how many failures were in his life before that. You only see the final result, which on your part is perceived like a gift . And this is a monstrous mistake!</p>
+<p>Here’s how to manually update coc.nvim:</p>
 
-<p>Our world is arranged fairly strictly and fairly. Only by being able to compare groups of different people will it be possible to examine their skills and abilities from another more objective side.</p>
+<ol>
+  <li>Close Neovim or Vim if it’s currently open.</li>
+  <li>Open a terminal (or command prompt in Windows).</li>
+  <li>Locate your coc.nvim installation directory (check your Neovim or Vim configuration files if you’re unsure).</li>
+  <li>Use the <code class="language-plaintext highlighter-rouge">cd</code> command to navigate to the coc.nvim directory.</li>
+  <li>Run <code class="language-plaintext highlighter-rouge">git pull</code> to fetch the latest changes and merge them into your local copy.</li>
+  <li>Close the terminal and relaunch Neovim or Vim.</li>
+  <li>Check the version again with <code class="language-plaintext highlighter-rouge">:CocInfo</code>.</li>
+</ol>
 
-<p>For example, we take 3 groups of guitarists. In the first group, musicians have an experience of 100 hours playing the guitar, in the second 1000 hours and in the third 10,000 hours. How do you think, will be a difference in the playing between such groups of musicians? Undoubtedly yes! Moreover, it is impossible that someone from the 100 hours group will play as well as a person from a 1000 hours group. And it’s quite easy to explain.</p>
+<p>Now, coc.nvim should be updated to version 0.0.82 or higher, and coc-tsserver 2.1.3 will work like a charm.</p>
 
-<p><img src="https://pp.userapi.com/c824503/v824503610/53c0/7A8gMkC6ibk.jpg" alt="Time &amp; Guitar" /></p>
+<h2 id="conclusion">Conclusion</h2>
 
-<h3 id="conclusion">Conclusion</h3>
-
-<p>Remember, before you think about your successes or failures against the background of other people, start to think whether you have done everything possible. If not, do not despair, now it’s time to start. It’s never too late to change anything. Accept the defeat and do nothing - the biggest crime against yourself.</p>
-
-<p><strong>Strive and achieve!</strong></p>
+<p>That’s it! You’ve successfully updated coc.nvim, ensuring a seamless TypeScript development experience with coc-tsserver 2.1.3. If you have any questions or need more help, feel free to leave a comment below. Keep coding, and enjoy!</p>
 
     <div class="share-page">
     Share this on &rarr;
-    <a href="https://twitter.com/intent/tweet?text=Row Talent || Experience&url=http://piskunov.im/pblog/2017/10/26/row-talent-and-experience.html&via=piskunovim&related=piskunovim" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
-    <a href="https://facebook.com/sharer.php?u=http://piskunov.im/pblog/2017/10/26/row-talent-and-experience.html" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
-    <a href="https://plus.google.com/share?url=http://piskunov.im/pblog/2017/10/26/row-talent-and-experience.html" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+    <a href="https://twitter.com/intent/tweet?text=Resolving coc.nvim Compatibility for TypeScript Support&url=http://piskunov.im/pblog/2023/04/20/update-coc-to-start-coc-tsserver.html&via=piskunovim&related=piskunovim" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://facebook.com/sharer.php?u=http://piskunov.im/pblog/2023/04/20/update-coc-to-start-coc-tsserver.html" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://plus.google.com/share?url=http://piskunov.im/pblog/2023/04/20/update-coc-to-start-coc-tsserver.html" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
 </div> 
   </div>
 

@@ -1,493 +1,518 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://piskunov.im/feed.xml" rel="self" type="application/atom+xml" /><link href="http://piskunov.im/" rel="alternate" type="text/html" /><updated>2023-03-20T23:04:04+03:00</updated><id>http://piskunov.im/feed.xml</id><title type="html">Igor Piskunov</title><subtitle>Be proud of every step that leads you forward and keep run so, that no one can overtake you.</subtitle><entry><title type="html">Command Line Habits - Aliases</title><link href="http://piskunov.im/pblog/2022/08/22/command-line-habits-aliases.html" rel="alternate" type="text/html" title="Command Line Habits - Aliases" /><published>2022-08-22T22:04:00+03:00</published><updated>2022-08-22T22:04:00+03:00</updated><id>http://piskunov.im/pblog/2022/08/22/command-line-habits-aliases</id><content type="html" xml:base="http://piskunov.im/pblog/2022/08/22/command-line-habits-aliases.html">&lt;h2 id=&quot;aliases&quot;&gt;Aliases&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://piskunov.im/feed.xml" rel="self" type="application/atom+xml" /><link href="http://piskunov.im/" rel="alternate" type="text/html" /><updated>2023-04-21T02:24:28+04:00</updated><id>http://piskunov.im/feed.xml</id><title type="html">Igor Piskunov</title><subtitle>Be proud of every step that leads you forward and keep run so, that no one can overtake you.</subtitle><entry><title type="html">Resolving coc.nvim Compatibility for TypeScript Support</title><link href="http://piskunov.im/pblog/2023/04/20/update-coc-to-start-coc-tsserver.html" rel="alternate" type="text/html" title="Resolving coc.nvim Compatibility for TypeScript Support" /><published>2023-04-20T00:00:00+04:00</published><updated>2023-04-20T00:00:00+04:00</updated><id>http://piskunov.im/pblog/2023/04/20/update-coc-to-start-coc-tsserver</id><content type="html" xml:base="http://piskunov.im/pblog/2023/04/20/update-coc-to-start-coc-tsserver.html"><![CDATA[<h2 id="introduction">Introduction</h2>
 
-&lt;p&gt;Unix-based systems supports lots of various shells that the user could use. In my work environment is widely used zsh and bash. Recently I started practicing fish (friendly interactive shell), but for now it’s only a mention.&lt;/p&gt;
+<p>Hey there! If you’re using Neovim or Vim as your code editor, you’re probably familiar with the Conquer of Completion (coc.nvim) extension. It makes TypeScript development a breeze with its coc-tsserver extension, which offers autocompletion, error checking, and more. But what if you encounter a version compatibility issue like this: “coc-tsserver 2.1.3 requires coc.nvim &gt;= 0.0.82, please update coc.nvim”? Don’t worry, we’ll cover two ways of how to resolve this situation.
+Don’t worry, we’ll cover two ways of how to resolve this situation.</p>
 
-&lt;p&gt;Aliases are our friends when it comes to long commands that you have to type on a daily basis.&lt;/p&gt;
+<h2 id="automatic-update-the-easy-way">Automatic Update: The Easy Way</h2>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt; alias shortName=&quot;your custom command here&quot;&lt;/code&gt;&lt;/p&gt;
+<p>First, let’s try the simplest method—using the built-in <code class="language-plaintext highlighter-rouge">:CocUpdate</code> command:</p>
 
-&lt;p&gt;To keep aliases between sessions, you can save them in your user’s shell configuration profile file. This can be:&lt;/p&gt;
+<ol>
+  <li>Launch Neovim or Vim.</li>
+  <li>Enter command mode and run <code class="language-plaintext highlighter-rouge">:CocUpdate</code>.</li>
+  <li>Wait for the update process to finish—it shouldn’t take long!</li>
+  <li>Close Neovim or Vim using <code class="language-plaintext highlighter-rouge">:q!</code>.</li>
+  <li>Relaunch Neovim or Vim and check the version with <code class="language-plaintext highlighter-rouge">:CocInfo</code>.</li>
+</ol>
 
-&lt;ul&gt;
-  &lt;li&gt;Bash – ~/.bashrc&lt;/li&gt;
-  &lt;li&gt;ZSH – ~/.zshrc&lt;/li&gt;
-  &lt;li&gt;Fish – ~/.config/fish/config.fish&lt;/li&gt;
-&lt;/ul&gt;
+<p>If all goes well, you’ll see coc.nvim has been updated to version 0.0.82 or higher. But if the automatic update didn’t do the trick, let’s move on to the manual update.</p>
 
-&lt;p&gt;So for example, in bash, you can open .bashrc file with your favorite editor like this:&lt;/p&gt;
+<h2 id="manual-update-taking-matters-into-your-own-hands">Manual Update: Taking Matters into Your Own Hands</h2>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt; vim ~/.bashrc&lt;/code&gt;&lt;/p&gt;
+<p>Here’s how to manually update coc.nvim:</p>
 
-&lt;p&gt;To remove specific alias:&lt;/p&gt;
+<ol>
+  <li>Close Neovim or Vim if it’s currently open.</li>
+  <li>Open a terminal (or command prompt in Windows).</li>
+  <li>Locate your coc.nvim installation directory (check your Neovim or Vim configuration files if you’re unsure).</li>
+  <li>Use the <code class="language-plaintext highlighter-rouge">cd</code> command to navigate to the coc.nvim directory.</li>
+  <li>Run <code class="language-plaintext highlighter-rouge">git pull</code> to fetch the latest changes and merge them into your local copy.</li>
+  <li>Close the terminal and relaunch Neovim or Vim.</li>
+  <li>Check the version again with <code class="language-plaintext highlighter-rouge">:CocInfo</code>.</li>
+</ol>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt; unalias alias_name&lt;/code&gt;&lt;/p&gt;
+<p>Now, coc.nvim should be updated to version 0.0.82 or higher, and coc-tsserver 2.1.3 will work like a charm.</p>
 
-&lt;p&gt;To remove all aliases:&lt;/p&gt;
+<h2 id="conclusion">Conclusion</h2>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt; unalias -a&lt;/code&gt;&lt;/p&gt;
+<p>That’s it! You’ve successfully updated coc.nvim, ensuring a seamless TypeScript development experience with coc-tsserver 2.1.3. If you have any questions or need more help, feel free to leave a comment below. Keep coding, and enjoy!</p>]]></content><author><name>Igor Piskunov</name></author><category term="pblog" /><summary type="html"><![CDATA[Introduction]]></summary></entry><entry><title type="html">Command Line Habits - Aliases</title><link href="http://piskunov.im/pblog/2022/08/22/command-line-habits-aliases.html" rel="alternate" type="text/html" title="Command Line Habits - Aliases" /><published>2022-08-22T23:04:00+04:00</published><updated>2022-08-22T23:04:00+04:00</updated><id>http://piskunov.im/pblog/2022/08/22/command-line-habits-aliases</id><content type="html" xml:base="http://piskunov.im/pblog/2022/08/22/command-line-habits-aliases.html"><![CDATA[<h2 id="aliases">Aliases</h2>
 
-&lt;h3 id=&quot;my-top-10-aliases&quot;&gt;My Top 10 Aliases&lt;/h3&gt;
+<p>Unix-based systems supports lots of various shells that the user could use. In my work environment is widely used zsh and bash. Recently I started practicing fish (friendly interactive shell), but for now it’s only a mention.</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alias open=&quot;nautilus --browser&quot;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
+<p>Aliases are our friends when it comes to long commands that you have to type on a daily basis.</p>
 
-&lt;blockquote&gt;
-  &lt;p&gt;Example usage: ‘open .’ (opens current directory in nautilus)&lt;/p&gt;
-&lt;/blockquote&gt;
+<p><code class="language-plaintext highlighter-rouge">&gt; alias shortName="your custom command here"</code></p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alias connectServer = ssh -p (my ssh port number) myuser@myserver&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alias dockerClean = docker rm $(docker ps -a -q)&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alias upgrade='sudo apt-get update &amp;amp;&amp;amp; sudo apt-get upgrade'&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alias netconnections=&quot;netstat -tuapw --numeric-hosts --numeric-ports&quot;&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alias myip=&quot;curl ident.me&quot;&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alias openvpn3-start=&quot;openvpn3 session-start --config ~/openvpn3/client.ovpn&quot;&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alias openvpn3-stop=&quot;~/openvpn3/disconnect_cli.sh&quot;&lt;/code&gt;
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# disconnect_cli.sh
+<p>To keep aliases between sessions, you can save them in your user’s shell configuration profile file. This can be:</p>
+
+<p>Bash – ~/.bashrc
+ZSH – ~/.zshrc
+Fish – ~/.config/fish/config.fish</p>
+
+<p>So for example, in bash, you can open .bashrc file with your favorite editor like this:</p>
+
+<p><code class="language-plaintext highlighter-rouge">&gt; vim ~/.bashrc</code></p>
+
+<p>To remove specific alias:</p>
+
+<p><code class="language-plaintext highlighter-rouge">&gt; unalias alias_name</code></p>
+
+<p>To remove all aliases:</p>
+
+<p><code class="language-plaintext highlighter-rouge">&gt; unalias -a</code></p>
+
+<h3 id="my-top-10-aliases">My Top 10 Aliases</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">alias open="nautilus --browser"</code></li>
+  <li><code class="language-plaintext highlighter-rouge">alias connectServer = ssh -p (my ssh port number) myuser@myserver</code></li>
+  <li><code class="language-plaintext highlighter-rouge">alias dockerClean = docker rm $(docker ps -a -q)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">alias upgrade='sudo apt-get update &amp;&amp; sudo apt-get upgrade'</code></li>
+  <li><code class="language-plaintext highlighter-rouge">alias netconnections="netstat -tuapw --numeric-hosts --numeric-ports"</code></li>
+  <li><code class="language-plaintext highlighter-rouge">alias myip="curl ident.me"</code></li>
+  <li><code class="language-plaintext highlighter-rouge">alias openvpn3-start="openvpn3 session-start --config ~/openvpn3/client.ovpn"</code></li>
+  <li><code class="language-plaintext highlighter-rouge">alias openvpn3-stop="~/openvpn3/disconnect_cli.sh"</code>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># disconnect_cli.sh
 openvpn3 sessions-list | grep Path | awk -v OFS='\t' '{print $2}' | while read -r path; do
-  openvpn3 session-manage --path &quot;$path&quot; --disconnect
+  openvpn3 session-manage --path "$path" --disconnect
 done
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alias openvpn3-ls=&quot;openvpn3 sessions-list&quot;&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alias weather=&quot;wttr&quot;&lt;/code&gt;
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wttr() {
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">alias openvpn3-ls="openvpn3 sessions-list"</code></li>
+  <li><code class="language-plaintext highlighter-rouge">alias weather="wttr"</code>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wttr() {
   if [ $# -eq 0 ]; then
-    echo &quot;No arguments provided&quot;
+    echo "No arguments provided"
   else
     curl wttr.in/$1;
   fi
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;Example usage: ‘weather Krasnodar’&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">Aliases</summary></entry><entry><title type="html">Have Fun Playing Bones By Imagine Dragons</title><link href="http://localhost:4000/pblog/2022/08/19/imagine-dragons-piano-cover.html" rel="alternate" type="text/html" title="Have Fun Playing Bones By Imagine Dragons" /><published>2022-08-19T19:59:00+03:00</published><updated>2022-08-19T19:59:00+03:00</updated><id>http://localhost:4000/pblog/2022/08/19/imagine-dragons-piano-cover</id><content type="html" xml:base="http://localhost:4000/pblog/2022/08/19/imagine-dragons-piano-cover.html">&lt;p&gt;It’s a great feeling when you touch the musical instrument again. I’m sure it also enjoys when you touch it. So why do we need to experience the feeling of prolonged separation? Just play and let the music fill the environment. To fill you from inside. It doesn’t matter if you’re an amateur or a professional, this’s always a great opportunity to get in touch with the incredible world of music that can enslave you.&lt;/p&gt;
+</code></pre></div>    </div>
+  </li>
+</ul>]]></content><author><name></name></author><category term="pblog" /><summary type="html"><![CDATA[Aliases]]></summary></entry><entry><title type="html">Have Fun Playing Bones By Imagine Dragons</title><link href="http://piskunov.im/pblog/2022/08/19/imagine-dragons-piano-cover.html" rel="alternate" type="text/html" title="Have Fun Playing Bones By Imagine Dragons" /><published>2022-08-19T20:59:00+04:00</published><updated>2022-08-19T20:59:00+04:00</updated><id>http://piskunov.im/pblog/2022/08/19/imagine-dragons-piano-cover</id><content type="html" xml:base="http://piskunov.im/pblog/2022/08/19/imagine-dragons-piano-cover.html"><![CDATA[<p>It’s a great feeling when you touch the musical instrument again. I’m sure it also enjoys when you touch it. So why do we need to experience the feeling of prolonged separation? Just play and let the music fill the environment. To fill you from inside. It doesn’t matter if you’re an amateur or a professional, this’s always a great opportunity to get in touch with the incredible world of music that can enslave you.</p>
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/UGZD5apmcoE&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">It’s a great feeling when you touch the musical instrument again. I’m sure it also enjoys when you touch it. So why do we need to experience the feeling of prolonged separation? Just play and let the music fill the environment. To fill you from inside. It doesn’t matter if you’re an amateur or a professional, this’s always a great opportunity to get in touch with the incredible world of music that can enslave you.</summary></entry><entry><title type="html">My lovely keyboard</title><link href="http://localhost:4000/pblog/2022/08/17/my-lovely-keyboard-device.html" rel="alternate" type="text/html" title="My lovely keyboard" /><published>2022-08-17T22:33:15+03:00</published><updated>2022-08-17T22:33:15+03:00</updated><id>http://localhost:4000/pblog/2022/08/17/my-lovely-keyboard-device</id><content type="html" xml:base="http://localhost:4000/pblog/2022/08/17/my-lovely-keyboard-device.html">&lt;p&gt;This is the first post in the “Purchases I have not regretted” series. It’s not an advertisement or technical review. Please, let me know if you see something wrong in my text that could help to improve it. Thank you!&lt;/p&gt;
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UGZD5apmcoE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>]]></content><author><name></name></author><category term="pblog" /><summary type="html"><![CDATA[It’s a great feeling when you touch the musical instrument again. I’m sure it also enjoys when you touch it. So why do we need to experience the feeling of prolonged separation? Just play and let the music fill the environment. To fill you from inside. It doesn’t matter if you’re an amateur or a professional, this’s always a great opportunity to get in touch with the incredible world of music that can enslave you.]]></summary></entry><entry><title type="html">My lovely keyboard</title><link href="http://piskunov.im/pblog/2022/08/17/my-lovely-keyboard-device.html" rel="alternate" type="text/html" title="My lovely keyboard" /><published>2022-08-17T23:33:15+04:00</published><updated>2022-08-17T23:33:15+04:00</updated><id>http://piskunov.im/pblog/2022/08/17/my-lovely-keyboard-device</id><content type="html" xml:base="http://piskunov.im/pblog/2022/08/17/my-lovely-keyboard-device.html"><![CDATA[<p>This is the first post in the “Purchases I have not regretted” series. It’s not an advertisement or technical review. Please, let me know if you see something wrong in my text that could help to improve it. Thank you!</p>
 
-&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
+<h3 id="introduction">Introduction</h3>
 
-&lt;p&gt;We live in a time when lots of devices pass through our hands. I think there are two main reasons for this: the fast technological progress and the constant search for a device that would satisfy our needs.&lt;/p&gt;
+<p>We live in a time when lots of devices pass through our hands. I think there are two main reasons for this: the fast technological progress and the constant search for a device that would satisfy our needs.</p>
 
-&lt;p&gt;I work a lot on the computer and for me, choosing the right keyboard was a long process. It was a frustrating experience typing on membrane keyboards, and it was sleepless nights for my loved ones due to the loud clicks of mechanical keyboards.&lt;/p&gt;
+<p>I work a lot on the computer and for me, choosing the right keyboard was a long process. It was a frustrating experience typing on membrane keyboards, and it was sleepless nights for my loved ones due to the loud clicks of mechanical keyboards.</p>
 
-&lt;p&gt;So it was until one day the Logitech MX Keys keyboard fell into my hands, and since then it has become the main keyboard in my house. Today, I am the happy owner of three keyboards of the MX Keys series:&lt;/p&gt;
+<p>So it was until one day the Logitech MX Keys keyboard fell into my hands, and since then it has become the main keyboard in my house. Today, I am the happy owner of three keyboards of the MX Keys series:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;Logitech MX Keys,ft&lt;/li&gt;
-  &lt;li&gt;Logitech MX Keys Mini,&lt;/li&gt;
-  &lt;li&gt;Logitech Craft.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Logitech MX Keys,ft</li>
+  <li>Logitech MX Keys Mini,</li>
+  <li>Logitech Craft.</li>
+</ul>
 
-&lt;p&gt;&lt;img src=&quot;https://sun9-79.userapi.com/impg/uP8dBCJA9ploA5wVTPsl1YD3iaC5buh9A7-diw/YwTmxFx1n20.jpg?size=1600x1200&amp;amp;quality=95&amp;amp;sign=e3d85a140c3e0a06f00677166cf26e92&amp;amp;type=album&quot; width=&quot;480&quot; /&gt;&lt;/p&gt;
+<p><img src="https://sun9-79.userapi.com/impg/uP8dBCJA9ploA5wVTPsl1YD3iaC5buh9A7-diw/YwTmxFx1n20.jpg?size=1600x1200&amp;quality=95&amp;sign=e3d85a140c3e0a06f00677166cf26e92&amp;type=album" width="480" /></p>
 
-&lt;p&gt;Let’s talk about what makes me interested in these keyboards.&lt;/p&gt;
+<p>Let’s talk about what makes me interested in these keyboards.</p>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;h3 id=&quot;advantages&quot;&gt;Advantages&lt;/h3&gt;
+<h3 id="advantages">Advantages</h3>
 
-&lt;p&gt;There are three main advantages I see in all MX keyboards:&lt;/p&gt;
+<p>There are three main advantages I see in all MX keyboards:</p>
 
-&lt;ol&gt;
-  &lt;li&gt;Quiet key travel.&lt;/li&gt;
-  &lt;li&gt;Ability to connect to three different devices.&lt;/li&gt;
-  &lt;li&gt;Wireless connection.&lt;/li&gt;
-  &lt;li&gt;Long-life battery.&lt;/li&gt;
-&lt;/ol&gt;
+<ol>
+  <li>Quiet key travel.</li>
+  <li>Ability to connect to three different devices.</li>
+  <li>Wireless connection.</li>
+  <li>Long-life battery.</li>
+</ol>
 
-&lt;p&gt;No matter which version you choose, you can be sure that these functions will be provided with due comfort. By choosing the version you’re choosing between the form, the weight and some unusual features that I cannot mark as advantages. Let’s try to briefly describe each version.&lt;/p&gt;
+<p>No matter which version you choose, you can be sure that these functions will be provided with due comfort. By choosing the version you’re choosing between the form, the weight and some unusual features that I cannot mark as advantages. Let’s try to briefly describe each version.</p>
 
-&lt;p&gt;&lt;img src=&quot;https://sun9-29.userapi.com/impg/UdM9uKls-ktTd1irw9VFVS6YULojJIcBf0vPSw/1ftzypRq2oY.jpg?size=1600x903&amp;amp;quality=95&amp;amp;sign=afd65e81ec69c4306cf9c06abfe74bd3&amp;amp;type=album &quot; width=&quot;480&quot; /&gt;&lt;/p&gt;
+<p><img src="https://sun9-29.userapi.com/impg/UdM9uKls-ktTd1irw9VFVS6YULojJIcBf0vPSw/1ftzypRq2oY.jpg?size=1600x903&amp;quality=95&amp;sign=afd65e81ec69c4306cf9c06abfe74bd3&amp;type=album " width="480" /></p>
 
-&lt;p&gt;&lt;strong&gt;Logitech MX Keys&lt;/strong&gt; is a balanced full-scale keyboard. It looks and feels great. Weight is average. Connection technology: Logitech Unifying (I’ll tell you a little later, this is important).&lt;/p&gt;
+<p><strong>Logitech MX Keys</strong> is a balanced full-scale keyboard. It looks and feels great. Weight is average. Connection technology: Logitech Unifying (I’ll tell you a little later, this is important).</p>
 
-&lt;p&gt;&lt;img src=&quot;https://sun9-44.userapi.com/impg/haMpRjtTwTFLDlMxyS4__5XnrA0X9gLjtoSOPQ/Tt4K8BKxd28.jpg?size=1600x1200&amp;amp;quality=95&amp;amp;sign=6343d6d6d56b86af70354e968ea88131&amp;amp;type=album &quot; width=&quot;480&quot; /&gt;&lt;/p&gt;
+<p><img src="https://sun9-44.userapi.com/impg/haMpRjtTwTFLDlMxyS4__5XnrA0X9gLjtoSOPQ/Tt4K8BKxd28.jpg?size=1600x1200&amp;quality=95&amp;sign=6343d6d6d56b86af70354e968ea88131&amp;type=album " width="480" /></p>
 
-&lt;p&gt;&lt;strong&gt;Logitech MX Keys Mini&lt;/strong&gt; is a minimized version of the MX Keys. Numpad has been removed, the main letter keys haven’t been touched, and the bottom row of the keyboard has been more tightly packed. The weight is light. Connectivity technology: Bluetooth.&lt;/p&gt;
+<p><strong>Logitech MX Keys Mini</strong> is a minimized version of the MX Keys. Numpad has been removed, the main letter keys haven’t been touched, and the bottom row of the keyboard has been more tightly packed. The weight is light. Connectivity technology: Bluetooth.</p>
 
-&lt;p&gt;&lt;img src=&quot;https://sun9-4.userapi.com/impg/jIYOSE_DIgQ31aQGO-NjBfsM-dU47nGOKD1jVQ/5ja3EBCD3Lo.jpg?size=1600x1186&amp;amp;quality=95&amp;amp;sign=4840754aeac501e1f2f65e81fd1d44b8&amp;amp;type=album &quot; width=&quot;480&quot; /&gt;&lt;/p&gt;
+<p><img src="https://sun9-4.userapi.com/impg/jIYOSE_DIgQ31aQGO-NjBfsM-dU47nGOKD1jVQ/5ja3EBCD3Lo.jpg?size=1600x1186&amp;quality=95&amp;sign=4840754aeac501e1f2f65e81fd1d44b8&amp;type=album " width="480" /></p>
 
-&lt;p&gt;&lt;strong&gt;Logitech Craft&lt;/strong&gt; is a copy of the Logitech MX Keys, weighted down in my opinion an absolutely useless feature called “crown” (an input dial that you won’t use even in those cases where it’s implied). The main idea behind the crown is to use it in the area of digital design and video editing. But in fact, it doesn’t provide functions that could replace convenient editor shortcuts. Moreover, the crown takes extra space and adds weight to the device. As a result, the weight turned out to be heavy, and it’s hard not to notice. Connectivity technology: Logitech Unifying.&lt;/p&gt;
+<p><strong>Logitech Craft</strong> is a copy of the Logitech MX Keys, weighted down in my opinion an absolutely useless feature called “crown” (an input dial that you won’t use even in those cases where it’s implied). The main idea behind the crown is to use it in the area of digital design and video editing. But in fact, it doesn’t provide functions that could replace convenient editor shortcuts. Moreover, the crown takes extra space and adds weight to the device. As a result, the weight turned out to be heavy, and it’s hard not to notice. Connectivity technology: Logitech Unifying.</p>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;h3 id=&quot;about-connectivity-technologies&quot;&gt;About connectivity technologies&lt;/h3&gt;
+<h3 id="about-connectivity-technologies">About connectivity technologies</h3>
 
-&lt;p&gt;Let’s talk about two facts that apply to all MX keyboards we’re talking about today:&lt;/p&gt;
+<p>Let’s talk about two facts that apply to all MX keyboards we’re talking about today:</p>
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;You can connect all these keyboards via Bluetooth.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;You cannot use any of these keyboards as wired ones.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+<ol>
+  <li>
+    <p>You can connect all these keyboards via Bluetooth.</p>
+  </li>
+  <li>
+    <p>You cannot use any of these keyboards as wired ones.</p>
+  </li>
+</ol>
 
-&lt;p&gt;The first item in the list means a lot of devices that you’re able to connect easily. And the second one…well…means that we have an issue on BIOS[POST] step when the Bluetooth driver isn’t loaded yet.&lt;/p&gt;
+<p>The first item in the list means a lot of devices that you’re able to connect easily. And the second one…well…means that we have an issue on BIOS[POST] step when the Bluetooth driver isn’t loaded yet.</p>
 
-&lt;p&gt;Some motherboards support Bluetooth loading in POST, but it will cost you extra money. Logitech MX Keys and Logitech Craft have a resolution to this issue called Logitech’s Unifying technology. All you need to do is to plug in the USB dongle from the kit inside your computer and the keyboards will be available in BIOS.&lt;/p&gt;
+<p>Some motherboards support Bluetooth loading in POST, but it will cost you extra money. Logitech MX Keys and Logitech Craft have a resolution to this issue called Logitech’s Unifying technology. All you need to do is to plug in the USB dongle from the kit inside your computer and the keyboards will be available in BIOS.</p>
 
-&lt;p&gt;Until this year, MX Keys Mini had no workaround. It’s truly a Bluetooth keyboard and cannot be connected by using “unifying” technology. That meant, in order to use the keyboard in BIOS, you just need another keyboard. But in 2022 with the new Logitech MX Mechanical Keyboard, the new dongle (Logi Bolt) was announced which is designed to solve the big problem of a small device. So now, if you have MX Keys Mini, I strictly recommend thinking about getting this dongle.&lt;/p&gt;
+<p>Until this year, MX Keys Mini had no workaround. It’s truly a Bluetooth keyboard and cannot be connected by using “unifying” technology. That meant, in order to use the keyboard in BIOS, you just need another keyboard. But in 2022 with the new Logitech MX Mechanical Keyboard, the new dongle (Logi Bolt) was announced which is designed to solve the big problem of a small device. So now, if you have MX Keys Mini, I strictly recommend thinking about getting this dongle.</p>
 
-&lt;p&gt;&lt;img src=&quot;https://resource.logitech.com/content/dam/logitech/en/products/mice/unifying-receiver-usb/gallery/usb-gallery-01.png&quot; width=&quot;200&quot; /&gt;
-&lt;img src=&quot;https://resource.logitech.com/content/dam/logitech/en/products/mice/logi-bolt-usb-receiver/gallery/logi-bolt-usb-receiver-gallery-01.png&quot; width=&quot;200&quot; /&gt;&lt;/p&gt;
+<p><img src="https://resource.logitech.com/content/dam/logitech/en/products/mice/unifying-receiver-usb/gallery/usb-gallery-01.png" width="200" />
+<img src="https://resource.logitech.com/content/dam/logitech/en/products/mice/logi-bolt-usb-receiver/gallery/logi-bolt-usb-receiver-gallery-01.png" width="200" /></p>
 
-&lt;blockquote&gt;
-  &lt;p&gt;The first one (orange) is “Unifying” receiver and the second one (green) is “Logi Bolt”&lt;/p&gt;
-&lt;/blockquote&gt;
+<blockquote>
+  <p>The first one (orange) is “Unifying” receiver and the second one (green) is “Logi Bolt”</p>
+</blockquote>
 
-&lt;p&gt;By the way, Logitech Unifying technology also saves battery life, so the keyboard will work longer without charge (Logi Bolt marketing also states that).&lt;/p&gt;
+<p>By the way, Logitech Unifying technology also saves battery life, so the keyboard will work longer without charge (Logi Bolt marketing also states that).</p>
 
-&lt;p&gt;All keyboards on a single charge last approximately 14 days. You are more likely to forget when you last charged it. The time frame between charges is really impressive.&lt;/p&gt;
+<p>All keyboards on a single charge last approximately 14 days. You are more likely to forget when you last charged it. The time frame between charges is really impressive.</p>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;h3 id=&quot;summary&quot;&gt;Summary&lt;/h3&gt;
+<h3 id="summary">Summary</h3>
 
-&lt;p&gt;In terms of form factor, I’d personally choose the MX Keys Mini. It’s a great keyboard for travelling, it has all the main features of the MX Keys series, it’s ultimately comfortable to use, and it takes up little space at home. But! The BIOS doesn’t work out of the box (don’t forget about Logi Bolt, but that means additional investment).&lt;/p&gt;
+<p>In terms of form factor, I’d personally choose the MX Keys Mini. It’s a great keyboard for travelling, it has all the main features of the MX Keys series, it’s ultimately comfortable to use, and it takes up little space at home. But! The BIOS doesn’t work out of the box (don’t forget about Logi Bolt, but that means additional investment).</p>
 
-&lt;p&gt;The most balanced option is MX Keys. Yes, I’m repeating it again, it’s great and that’s true. It’s full-scaled, it’s still lightweight, and it works in BIOS. But the personal preference for more compact devices makes this device number two on my list.&lt;/p&gt;
+<p>The most balanced option is MX Keys. Yes, I’m repeating it again, it’s great and that’s true. It’s full-scaled, it’s still lightweight, and it works in BIOS. But the personal preference for more compact devices makes this device number two on my list.</p>
 
-&lt;p&gt;And, I’m sorry, but the Logitech Craft is rubbish. Frankly, it’s not so different from the MX Keys, but you have to pay extra money for the noticeable weight, additional space at the top of the keyboard, and, of course, for the “crown” spinner. And that’s not fair.&lt;/p&gt;
+<p>And, I’m sorry, but the Logitech Craft is rubbish. Frankly, it’s not so different from the MX Keys, but you have to pay extra money for the noticeable weight, additional space at the top of the keyboard, and, of course, for the “crown” spinner. And that’s not fair.</p>
 
-&lt;p&gt;&lt;strong&gt;And the winner is MX Keys Mini!&lt;/strong&gt; Just because in my case, the form factor makes more sense than BIOS usage. And again, with Logi Bolt this issue should be resolved. I’ll make a note about it if I’ll get one. Just look again, how does MX Keys Mini looks like on the table:&lt;/p&gt;
+<p><strong>And the winner is MX Keys Mini!</strong> Just because in my case, the form factor makes more sense than BIOS usage. And again, with Logi Bolt this issue should be resolved. I’ll make a note about it if I’ll get one. Just look again, how does MX Keys Mini looks like on the table:</p>
 
-&lt;p&gt;&lt;img src=&quot;https://sun1-13.userapi.com/impg/c6htvWLKV0O7mZUopS5i6_5Vr0yOqZMPo7rFig/WW0c_vvPkcM.jpg?size=1600x918&amp;amp;quality=95&amp;amp;sign=3ddb92c7fd835f11434a0d80a49bfbbb&amp;amp;type=album &quot; width=&quot;480&quot; /&gt;&lt;/p&gt;
+<p><img src="https://sun1-13.userapi.com/impg/c6htvWLKV0O7mZUopS5i6_5Vr0yOqZMPo7rFig/WW0c_vvPkcM.jpg?size=1600x918&amp;quality=95&amp;sign=3ddb92c7fd835f11434a0d80a49bfbbb&amp;type=album " width="480" /></p>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;&lt;img src=&quot;https://sun9-1.userapi.com/impg/xDI93kf4Tw45PJclZDDyzNQXs_h-kRqj04-10Q/lsr_AzJBYb8.jpg?size=1280x606&amp;amp;quality=95&amp;amp;sign=5a6540439d5dda9bff9700da83f283b1&amp;amp;type=album&quot; width=&quot;480&quot; /&gt;&lt;/p&gt;
+<p><img src="https://sun9-1.userapi.com/impg/xDI93kf4Tw45PJclZDDyzNQXs_h-kRqj04-10Q/lsr_AzJBYb8.jpg?size=1280x606&amp;quality=95&amp;sign=5a6540439d5dda9bff9700da83f283b1&amp;type=album" width="480" /></p>
 
-&lt;p&gt;PS #1: Some people say that MX Key keyboards has a proverbial slant. That’s true, but in fact, you won’t notice it. I didn’t until someone told me about that.&lt;/p&gt;
+<p>PS #1: Some people say that MX Key keyboards has a proverbial slant. That’s true, but in fact, you won’t notice it. I didn’t until someone told me about that.</p>
 
-&lt;p&gt;PS #2: Additional photo with backlit keys:&lt;/p&gt;
+<p>PS #2: Additional photo with backlit keys:</p>
 
-&lt;p&gt;&lt;img src=&quot;https://sun9-83.userapi.com/impg/ASs3k-0XK6DDVpcL4SLFlTp9gdT7XIecz-LCDg/BzhCD9_yEvI.jpg?size=1600x1200&amp;amp;quality=95&amp;amp;sign=eae9e0793bcf28566cffda473c38c2b3&amp;amp;type=album&quot; width=&quot;480&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">This is the first post in the “Purchases I have not regretted” series. It’s not an advertisement or technical review. Please, let me know if you see something wrong in my text that could help to improve it. Thank you!</summary></entry><entry><title type="html">Atlassian Cloud Development | Failed to register with the host</title><link href="http://piskunov.im/pblog/2021/11/13/atlassian-cloud-development-failed-to-register-with-the-host.html" rel="alternate" type="text/html" title="Atlassian Cloud Development | Failed to register with the host" /><published>2021-11-13T23:00:00+03:00</published><updated>2021-11-13T23:00:00+03:00</updated><id>http://piskunov.im/pblog/2021/11/13/atlassian-cloud-development-failed-to-register-with-the-host</id><content type="html" xml:base="http://piskunov.im/pblog/2021/11/13/atlassian-cloud-development-failed-to-register-with-the-host.html">&lt;p&gt;When working with Jira Cloud instances, you may encounter the following error:&lt;/p&gt;
+<p><img src="https://sun9-83.userapi.com/impg/ASs3k-0XK6DDVpcL4SLFlTp9gdT7XIecz-LCDg/BzhCD9_yEvI.jpg?size=1600x1200&amp;quality=95&amp;sign=eae9e0793bcf28566cffda473c38c2b3&amp;type=album" width="480" /></p>]]></content><author><name></name></author><category term="pblog" /><summary type="html"><![CDATA[This is the first post in the “Purchases I have not regretted” series. It’s not an advertisement or technical review. Please, let me know if you see something wrong in my text that could help to improve it. Thank you!]]></summary></entry><entry><title type="html">Atlassian Cloud Development | Failed to register with the host</title><link href="http://piskunov.im/pblog/2021/11/14/atlassian-cloud-development-failed-to-register-with-the-host.html" rel="alternate" type="text/html" title="Atlassian Cloud Development | Failed to register with the host" /><published>2021-11-14T00:00:00+04:00</published><updated>2021-11-14T00:00:00+04:00</updated><id>http://piskunov.im/pblog/2021/11/14/atlassian-cloud-development-failed-to-register-with-the-host</id><content type="html" xml:base="http://piskunov.im/pblog/2021/11/14/atlassian-cloud-development-failed-to-register-with-the-host.html"><![CDATA[<p>When working with Jira Cloud instances, you may encounter the following error:</p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Failed to register with host https://&amp;lt;your-instance-name&amp;gt;.atlassian.net
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Failed to register with host https://&lt;your-instance-name&gt;.atlassian.net
 Add-on not registered; no compatible hosts detected
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;Here is a list of the main causes of this error:&lt;/p&gt;
+<p>Here is a list of the main causes of this error:</p>
 
-&lt;h3 id=&quot;1-the-connection-to-the-database-wasnt-established-correctly&quot;&gt;1. The connection to the database wasn’t established correctly.&lt;/h3&gt;
+<h3 id="1-the-connection-to-the-database-wasnt-established-correctly">1. The connection to the database wasn’t established correctly.</h3>
 
-&lt;p&gt;Please make sure that the credentials for your database are set correctly. Unfortunately,  a minor mistype or mistake could make this happen.&lt;/p&gt;
+<p>Please make sure that the credentials for your database are set correctly. Unfortunately,  a minor mistype or mistake could make this happen.</p>
 
-&lt;p&gt;Also, check the schema of the AddonSettings table/collection. If the table was transferred manually, it may have been created incorrectly.&lt;/p&gt;
+<p>Also, check the schema of the AddonSettings table/collection. If the table was transferred manually, it may have been created incorrectly.</p>
 
-&lt;h3 id=&quot;2-instance-with-the-given-name-is-already-registered&quot;&gt;2. Instance with the given name is already registered.&lt;/h3&gt;
+<h3 id="2-instance-with-the-given-name-is-already-registered">2. Instance with the given name is already registered.</h3>
 
-&lt;p&gt;You need to check if the AddonSettings table/collection includes the clientKey of your instance. If it is the case, you should remove this row/document so nothing can block your addon to be installed.&lt;/p&gt;
+<p>You need to check if the AddonSettings table/collection includes the clientKey of your instance. If it is the case, you should remove this row/document so nothing can block your addon to be installed.</p>
 
-&lt;h3 id=&quot;3-the-endpoint-for-the-installed-callback-function-wasnt-configured-correctly&quot;&gt;3. The endpoint for the /installed callback function wasn’t configured correctly.&lt;/h3&gt;
+<h3 id="3-the-endpoint-for-the-installed-callback-function-wasnt-configured-correctly">3. The endpoint for the /installed callback function wasn’t configured correctly.</h3>
 
-&lt;p&gt;In short: after the application exchanges handshake(keys) with the Atlassian product instance, our application needs to declare its readiness to work. This can be done by responding with a 200 or 204 code status to a GET request to the /installed endpoint. This request is performed automatically. The only thing necessary to do is to check the existence of the corresponding endpoint in the project.&lt;/p&gt;
+<p>In short: after the application exchanges handshake(keys) with the Atlassian product instance, our application needs to declare its readiness to work. This can be done by responding with a 200 or 204 code status to a GET request to the /installed endpoint. This request is performed automatically. The only thing necessary to do is to check the existence of the corresponding endpoint in the project.</p>
 
-&lt;p&gt;You can read more about this &lt;a href=&quot;https://developer.atlassian.com/cloud/jira/platform/connect-app-descriptor/#lifecycle&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+<p>You can read more about this <a href="https://developer.atlassian.com/cloud/jira/platform/connect-app-descriptor/#lifecycle">here</a>.</p>
 
-&lt;h3 id=&quot;4-addon-can-be-running-on-a-network-where-there-is-no-access-to-the-internet-and-ngrok-functions-for-example-an-internal-network-or-a-vpn-with-specific-settings&quot;&gt;4. Addon can be running on a network where there is no access to the internet and ngrok functions (for example, an internal network or a VPN with specific settings).&lt;/h3&gt;
+<h3 id="4-addon-can-be-running-on-a-network-where-there-is-no-access-to-the-internet-and-ngrok-functions-for-example-an-internal-network-or-a-vpn-with-specific-settings">4. Addon can be running on a network where there is no access to the internet and ngrok functions (for example, an internal network or a VPN with specific settings).</h3>
 
-&lt;p&gt;It is recommended to check the availability of the addon by checking the ngrok tunnel. In case of an access error, it is recommended to connect to another network, disable (in some cases enable) VPN, or contact the administrator of your network.&lt;/p&gt;
+<p>It is recommended to check the availability of the addon by checking the ngrok tunnel. In case of an access error, it is recommended to connect to another network, disable (in some cases enable) VPN, or contact the administrator of your network.</p>
 
-&lt;h3 id=&quot;5-certain-versions-of-the-atlassian-connect-express-package-have-a-problem-with-the-urijs-module&quot;&gt;5. Certain versions of the atlassian-connect-express package have a problem with the urijs module.&lt;/h3&gt;
+<h3 id="5-certain-versions-of-the-atlassian-connect-express-package-have-a-problem-with-the-urijs-module">5. Certain versions of the atlassian-connect-express package have a problem with the urijs module.</h3>
 
-&lt;p&gt;In order for the error not to occur, it is necessary:&lt;/p&gt;
+<p>In order for the error not to occur, it is necessary:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Add the following version of urijs as a dependency: &lt;br /&gt;
-&lt;span style=&quot;color:#E53935&quot;&gt;
+<ul>
+  <li>
+    <p>Add the following version of urijs as a dependency: <br />
+<span style="color:#E53935">
 “urijs”: “1.19.1”
-&lt;/span&gt; &lt;br /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Install dependencies and run the application: &lt;br /&gt;
-&lt;span style=&quot;color:#E53935&quot;&gt;
-npm install &amp;amp;&amp;amp; npm start
-&lt;/span&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+</span> <br /></p>
+  </li>
+  <li>
+    <p>Install dependencies and run the application: <br />
+<span style="color:#E53935">
+npm install &amp;&amp; npm start
+</span></p>
+  </li>
+</ul>
 
-&lt;h3 id=&quot;6-problem-with-the-triple-slash-after-https&quot;&gt;6. Problem with the triple slash after https.&lt;/h3&gt;
+<h3 id="6-problem-with-the-triple-slash-after-https">6. Problem with the triple slash after https.</h3>
 
-&lt;p&gt;If you noticed that there is a triple-slash after the protocol name then it’s suggested to check if the full address of your instance is specified in the hosts section inside credentials.json file.&lt;/p&gt;
+<p>If you noticed that there is a triple-slash after the protocol name then it’s suggested to check if the full address of your instance is specified in the hosts section inside credentials.json file.</p>
 
-&lt;p&gt;Bear in mind that the full address must include the protocol: “https://&lt;your-instance-name&gt;.atlassian.net/&quot;.&lt;/your-instance-name&gt;&lt;/p&gt;
+<p>Bear in mind that the full address must include the protocol: “https://<your-instance-name>.atlassian.net/".</your-instance-name></p>
 
-&lt;p&gt;For example:&lt;/p&gt;
+<p>For example:</p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
-  &quot;hosts&quot;: {
-    &quot;https://instance.atlassian.net/&quot;: {
-      &quot;product&quot;: &quot;jira&quot;,
-      &quot;username&quot;: &quot;&quot;,
-      &quot;password&quot;: &quot;&quot;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "hosts": {
+    "https://instance.atlassian.net/": {
+      "product": "jira",
+      "username": "",
+      "password": ""
     }
   }
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;hr style=&quot;margin: 35px 0 27px;&quot; /&gt;
+</code></pre></div></div>
+<hr style="margin: 35px 0 27px;" />
 
-&lt;p&gt;I hope this one was helpful. &lt;br /&gt;&lt;br /&gt;Naturally, these are only those cases that occur most often. If you have a case that you would like to share, please write about it in the comments or contact me by email (mail{at}piskunov.im).&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">When working with Jira Cloud instances, you may encounter the following error:</summary></entry><entry><title type="html">Three years as Atlassian developer</title><link href="http://piskunov.im/pblog/2021/11/04/three-years-as-atlassian-developer.html" rel="alternate" type="text/html" title="Three years as Atlassian developer" /><published>2021-11-04T23:27:38+03:00</published><updated>2021-11-04T23:27:38+03:00</updated><id>http://piskunov.im/pblog/2021/11/04/three-years-as-atlassian-developer</id><content type="html" xml:base="http://piskunov.im/pblog/2021/11/04/three-years-as-atlassian-developer.html">&lt;p&gt;This big headline means that over the past few years I have had a great opportunity to experience all the delights and disadvantages of the ecosystem of Atlassian products, as well as their API. In particular, everything related to the cloud part of development.&lt;/p&gt;
+<p>I hope this one was helpful. <br /><br />Naturally, these are only those cases that occur most often. If you have a case that you would like to share, please write about it in the comments or contact me by email (mail{at}piskunov.im).</p>]]></content><author><name></name></author><category term="pblog" /><summary type="html"><![CDATA[When working with Jira Cloud instances, you may encounter the following error:]]></summary></entry><entry><title type="html">Three years as Atlassian developer</title><link href="http://piskunov.im/pblog/2021/11/05/three-years-as-atlassian-developer.html" rel="alternate" type="text/html" title="Three years as Atlassian developer" /><published>2021-11-05T00:27:38+04:00</published><updated>2021-11-05T00:27:38+04:00</updated><id>http://piskunov.im/pblog/2021/11/05/three-years-as-atlassian-developer</id><content type="html" xml:base="http://piskunov.im/pblog/2021/11/05/three-years-as-atlassian-developer.html"><![CDATA[<p>This big headline means that over the past few years I have had a great opportunity to experience all the delights and disadvantages of the ecosystem of Atlassian products, as well as their API. In particular, everything related to the cloud part of development.</p>
 
-&lt;p&gt;“There are limitations” is the first thing any developer will tell you when it comes to Jira Сloud or Confluence Cloud. This simple statement can make you feel like an insurmountable obstacle is somewhere ahead. But, I propose to shortly figure out what exactly these words mean.&lt;/p&gt;
+<p>“There are limitations” is the first thing any developer will tell you when it comes to Jira Сloud or Confluence Cloud. This simple statement can make you feel like an insurmountable obstacle is somewhere ahead. But, I propose to shortly figure out what exactly these words mean.</p>
 
-&lt;h3 id=&quot;everything-is-in-an-iframe&quot;&gt;Everything is in an &amp;lt;iframe&amp;gt;&lt;/h3&gt;
+<h3 id="everything-is-in-an-iframe">Everything is in an &lt;iframe&gt;</h3>
 
-&lt;p&gt;All the executable code of your application will be delivered to the cloud product by adding the appropriate iframe element. In fact, this means that your code won’t have access to the Jira/Confluence environment directly and interact with the interface. Instead, you should use a global AP object, location sections, and hooks to help organize your interactions in the most natural way. I hope to tell you more about this someday, but for now this is all you need to know.&lt;/p&gt;
+<p>All the executable code of your application will be delivered to the cloud product by adding the appropriate iframe element. In fact, this means that your code won’t have access to the Jira/Confluence environment directly and interact with the interface. Instead, you should use a global AP object, location sections, and hooks to help organize your interactions in the most natural way. I hope to tell you more about this someday, but for now this is all you need to know.</p>
 
-&lt;h3 id=&quot;all-operations-with-data-through-the-api&quot;&gt;All operations with data through the API&lt;/h3&gt;
+<h3 id="all-operations-with-data-through-the-api">All operations with data through the API</h3>
 
-&lt;p&gt;That means that you have no connection to the product’s instance database and cannot access data directly. The only way to get the data is coming through the official Atlassian Cloud API. As a result, if something is absent in the API then it is hard to achieve.&lt;/p&gt;
+<p>That means that you have no connection to the product’s instance database and cannot access data directly. The only way to get the data is coming through the official Atlassian Cloud API. As a result, if something is absent in the API then it is hard to achieve.</p>
 
-&lt;h3 id=&quot;but-limitation-doesnt-mean-impossible&quot;&gt;But “limitation” doesn’t mean “impossible”&lt;/h3&gt;
+<h3 id="but-limitation-doesnt-mean-impossible">But “limitation” doesn’t mean “impossible”</h3>
 
-&lt;p&gt;It seems obvious, but I decided to highlight it. You can still implement the required feature, but you have to keep in mind the requirements that the product exposes to you.&lt;/p&gt;
+<p>It seems obvious, but I decided to highlight it. You can still implement the required feature, but you have to keep in mind the requirements that the product exposes to you.</p>
 
-&lt;p&gt;You must know exactly which areas of the product are affected by your functionality and know what Attlassian’s position on this issue is. Particularly, you shouldn’t try to access those parts of the product that were restricted by the API. If you come across a question that hasn’t been disclosed anywhere, you can write to the community or directly to the Atlassian team. The great thing here is you entering the territory of an extremely hospitable product, with a large community of developers who are always ready to help with your problems.&lt;/p&gt;
+<p>You must know exactly which areas of the product are affected by your functionality and know what Attlassian’s position on this issue is. Particularly, you shouldn’t try to access those parts of the product that were restricted by the API. If you come across a question that hasn’t been disclosed anywhere, you can write to the community or directly to the Atlassian team. The great thing here is you entering the territory of an extremely hospitable product, with a large community of developers who are always ready to help with your problems.</p>
 
-&lt;h3 id=&quot;rely-on-atlassian&quot;&gt;Rely on Atlassian&lt;/h3&gt;
+<h3 id="rely-on-atlassian">Rely on Atlassian</h3>
 
-&lt;p&gt;This simple thought means that if Atlassian Cloud services are not available, then your application won’t be available either.&lt;/p&gt;
+<p>This simple thought means that if Atlassian Cloud services are not available, then your application won’t be available either.</p>
 
-&lt;h3 id=&quot;so&quot;&gt;So&lt;/h3&gt;
+<h3 id="so">So</h3>
 
-&lt;p&gt;We talked about just one fundamental idea that you need to understand before starting to implement any feature in the Atlassian Cloud world. But, of course, on the way of implementation, the developer encounters various challenges that must be overcome. It will be my pleasure to share some of the solutions to problems that you might encounter in future posts.&lt;/p&gt;
+<p>We talked about just one fundamental idea that you need to understand before starting to implement any feature in the Atlassian Cloud world. But, of course, on the way of implementation, the developer encounters various challenges that must be overcome. It will be my pleasure to share some of the solutions to problems that you might encounter in future posts.</p>
 
-&lt;p&gt;Please subscribe and…see you. :)&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">This big headline means that over the past few years I have had a great opportunity to experience all the delights and disadvantages of the ecosystem of Atlassian products, as well as their API. In particular, everything related to the cloud part of development.</summary></entry><entry><title type="html">One Year Changelog</title><link href="http://piskunov.im/pblog/2019/03/01/one-year-changelog.html" rel="alternate" type="text/html" title="One Year Changelog" /><published>2019-03-01T13:27:38+03:00</published><updated>2019-03-01T13:27:38+03:00</updated><id>http://piskunov.im/pblog/2019/03/01/one-year-changelog</id><content type="html" xml:base="http://piskunov.im/pblog/2019/03/01/one-year-changelog.html">&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;I know you missed me. So I'm back and I would like to share with you something that happened with me last year.&lt;/code&gt;&lt;/p&gt;
+<p>Please subscribe and…see you. :)</p>]]></content><author><name></name></author><category term="pblog" /><summary type="html"><![CDATA[This big headline means that over the past few years I have had a great opportunity to experience all the delights and disadvantages of the ecosystem of Atlassian products, as well as their API. In particular, everything related to the cloud part of development.]]></summary></entry><entry><title type="html">One Year Changelog</title><link href="http://piskunov.im/pblog/2019/03/01/one-year-changelog.html" rel="alternate" type="text/html" title="One Year Changelog" /><published>2019-03-01T14:27:38+04:00</published><updated>2019-03-01T14:27:38+04:00</updated><id>http://piskunov.im/pblog/2019/03/01/one-year-changelog</id><content type="html" xml:base="http://piskunov.im/pblog/2019/03/01/one-year-changelog.html"><![CDATA[<p><code class="language-plaintext highlighter-rouge">I know you missed me. So I'm back and I would like to share with you something that happened with me last year.</code></p>
 
-&lt;h3 id=&quot;spring-2018&quot;&gt;Spring 2018&lt;/h3&gt;
-&lt;p&gt;I am a mentor. I have a new guy “to play with” and I know what to do with it. He is 19 and in two month he will live our company, but I believe it should be his best experience of work. He knows how to write code, and my goal is to bring him to the next step: to give him idea of how he could be better. By this I mean that I know where I am now, but at the same time I should understand where I can go and what I can do in my current position. It’s not so obvious, but the idea of finding a new ways can bring you extremely valuable habits.&lt;/p&gt;
+<h3 id="spring-2018">Spring 2018</h3>
+<p>I am a mentor. I have a new guy “to play with” and I know what to do with it. He is 19 and in two month he will live our company, but I believe it should be his best experience of work. He knows how to write code, and my goal is to bring him to the next step: to give him idea of how he could be better. By this I mean that I know where I am now, but at the same time I should understand where I can go and what I can do in my current position. It’s not so obvious, but the idea of finding a new ways can bring you extremely valuable habits.</p>
 
-&lt;p&gt;Let’s say you’re staying near the wall somewhere inside the labyrint. You can decide that this is the end of the labyrinth and you’re the winner. But at the same time you could try to find another way and decide that this is the dead end and nothing more. And here is the difference. Our life is a huge labyrinth with unlimited number of dead ends. And in order to be successful in this game you should get more information about its rules. May be you can just break walls, who knows, but you’ll never know this if you’ll never try.
-And yeah, about mentorship. I really appreciate this time we spent together. It was not my first experience, but every time it’s like an great journey.&lt;/p&gt;
+<p>Let’s say you’re staying near the wall somewhere inside the labyrint. You can decide that this is the end of the labyrinth and you’re the winner. But at the same time you could try to find another way and decide that this is the dead end and nothing more. And here is the difference. Our life is a huge labyrinth with unlimited number of dead ends. And in order to be successful in this game you should get more information about its rules. May be you can just break walls, who knows, but you’ll never know this if you’ll never try.
+And yeah, about mentorship. I really appreciate this time we spent together. It was not my first experience, but every time it’s like an great journey.</p>
 
-&lt;h3 id=&quot;summer-2018&quot;&gt;Summer 2018&lt;/h3&gt;
-&lt;p&gt;No doubt it was time of Amazon MWS. Direction of development in our company has been changed and now we’re creating new cool services in order to sell more with Amazon. Unfortunately I cannot tell you more but that was my first experience with Amazon API. And here I found little cons.&lt;/p&gt;
+<h3 id="summer-2018">Summer 2018</h3>
+<p>No doubt it was time of Amazon MWS. Direction of development in our company has been changed and now we’re creating new cool services in order to sell more with Amazon. Unfortunately I cannot tell you more but that was my first experience with Amazon API. And here I found little cons.</p>
 
-&lt;p&gt;First of all I want to say that I like Amazon and I appreciate work that they do. But requests to their API is highly limited. I understand why and I agree that it makes sense, but it was really restraining for us.&lt;/p&gt;
+<p>First of all I want to say that I like Amazon and I appreciate work that they do. But requests to their API is highly limited. I understand why and I agree that it makes sense, but it was really restraining for us.</p>
 
-&lt;p&gt;For example, we can process only 6 orders per minute. Let’s say if we have 1000 orders per day, then we need to wait 2 hours 46 minutes to pass them through Amazon API. &lt;a href=&quot;https://docs.developer.amazonservices.com/en_US/orders-2013-09-01/Orders_GetOrder.html&quot;&gt;Seriously&lt;/a&gt;. Anyway we can deal with that.&lt;/p&gt;
+<p>For example, we can process only 6 orders per minute. Let’s say if we have 1000 orders per day, then we need to wait 2 hours 46 minutes to pass them through Amazon API. <a href="https://docs.developer.amazonservices.com/en_US/orders-2013-09-01/Orders_GetOrder.html">Seriously</a>. Anyway we can deal with that.</p>
 
-&lt;h3 id=&quot;autumn-2018&quot;&gt;Autumn 2018&lt;/h3&gt;
-&lt;p&gt;Even if you did your job well, there always can be the place for misunderstanding and mistrust. It’s time of a strong words and a big changes. Obviously, any changes in your life serves for the best purposes. At the same time it could hurt. Maybe not you, but someone else.&lt;/p&gt;
+<h3 id="autumn-2018">Autumn 2018</h3>
+<p>Even if you did your job well, there always can be the place for misunderstanding and mistrust. It’s time of a strong words and a big changes. Obviously, any changes in your life serves for the best purposes. At the same time it could hurt. Maybe not you, but someone else.</p>
 
-&lt;p&gt;Direction of software development has been changed to SEO optimization and deep understanding of search engines for manipulation with them. That affected everyone who wants to concentrate on products instead of solving tasks of advertising and promotion.&lt;/p&gt;
+<p>Direction of software development has been changed to SEO optimization and deep understanding of search engines for manipulation with them. That affected everyone who wants to concentrate on products instead of solving tasks of advertising and promotion.</p>
 
-&lt;p&gt;There is only one way to solve such issue. Stop doing shit you don’t like.&lt;/p&gt;
+<p>There is only one way to solve such issue. Stop doing shit you don’t like.</p>
 
-&lt;h3 id=&quot;winter-2018-2019&quot;&gt;Winter 2018-2019&lt;/h3&gt;
-&lt;p&gt;Atlassian. I heard a lot about this company and used their products couple of times. But I’ve never thought about to be a part of its developers community. Times change. Right now I’m working in direction of Atlassian Cloud. And to say that I’ve got a new impression about this company would be an understatement.&lt;/p&gt;
+<h3 id="winter-2018-2019">Winter 2018-2019</h3>
+<p>Atlassian. I heard a lot about this company and used their products couple of times. But I’ve never thought about to be a part of its developers community. Times change. Right now I’m working in direction of Atlassian Cloud. And to say that I’ve got a new impression about this company would be an understatement.</p>
 
-&lt;p&gt;There are lots of messy places in Atlassian Development. They have two UI libraries that don’t cover their style guide. Their API has three versions with different aproaches to work with. And it’s absolutely ok to find inside ther code such comment:&lt;/p&gt;
+<p>There are lots of messy places in Atlassian Development. They have two UI libraries that don’t cover their style guide. Their API has three versions with different aproaches to work with. And it’s absolutely ok to find inside ther code such comment:</p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/* Actually it works not like described in docs. You can find description of the process here #issue_number. */&lt;/code&gt;&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">/* Actually it works not like described in docs. You can find description of the process here #issue_number. */</code></p>
 
-&lt;p&gt;I was surprised to see that in such a big company with a huge number of customers. Anyway it’s a matter of habit. I really like to work with their processes and I think it’s a good possibility to help them and to their developers community(our developers community*).&lt;/p&gt;
+<p>I was surprised to see that in such a big company with a huge number of customers. Anyway it’s a matter of habit. I really like to work with their processes and I think it’s a good possibility to help them and to their developers community(our developers community*).</p>
 
-&lt;h3 id=&quot;now-spring-2019&quot;&gt;Now (Spring 2019)&lt;/h3&gt;
+<h3 id="now-spring-2019">Now (Spring 2019)</h3>
 
-&lt;p&gt;I really appreciate you here with me. Thank you for this. I will try to bring more content to you, cause I really like our communication. I have an idea for my new little project. But lets talk about it next time. Keep doing what you love and let’s keep in touch.&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">I know you missed me. So I'm back and I would like to share with you something that happened with me last year.</summary></entry><entry><title type="html">Balanced Way To Keep Productive</title><link href="http://piskunov.im/pblog/2018/02/18/balanced-way-to-keep-motivated.html" rel="alternate" type="text/html" title="Balanced Way To Keep Productive" /><published>2018-02-18T01:27:38+03:00</published><updated>2018-02-18T01:27:38+03:00</updated><id>http://piskunov.im/pblog/2018/02/18/balanced-way-to-keep-motivated</id><content type="html" xml:base="http://piskunov.im/pblog/2018/02/18/balanced-way-to-keep-motivated.html">&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*While you reading this, I've implemented something new.*
-&lt;/code&gt;&lt;br /&gt;&lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Best regards, Igor
-&lt;/code&gt;&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">*While you reading this, I've implemented something new.* Best regards, Igor</summary></entry><entry><title type="html">LoopBack - REST APIs with no coding</title><link href="http://piskunov.im/pblog/2017/12/12/loopback-rest-apis-with-no-coding.html" rel="alternate" type="text/html" title="LoopBack - REST APIs with no coding" /><published>2017-12-12T15:48:03+03:00</published><updated>2017-12-12T15:48:03+03:00</updated><id>http://piskunov.im/pblog/2017/12/12/loopback-rest-apis-with-no-coding</id><content type="html" xml:base="http://piskunov.im/pblog/2017/12/12/loopback-rest-apis-with-no-coding.html">&lt;blockquote&gt;
-  &lt;p&gt;Article is in the process of writing. Last update: 12-12-2017.&lt;/p&gt;
-&lt;/blockquote&gt;
+<p>I really appreciate you here with me. Thank you for this. I will try to bring more content to you, cause I really like our communication. I have an idea for my new little project. But lets talk about it next time. Keep doing what you love and let’s keep in touch.</p>]]></content><author><name></name></author><category term="pblog" /><summary type="html"><![CDATA[I know you missed me. So I'm back and I would like to share with you something that happened with me last year.]]></summary></entry><entry><title type="html">Balanced Way To Keep Productive</title><link href="http://piskunov.im/pblog/2018/02/18/balanced-way-to-keep-motivated.html" rel="alternate" type="text/html" title="Balanced Way To Keep Productive" /><published>2018-02-18T02:27:38+04:00</published><updated>2018-02-18T02:27:38+04:00</updated><id>http://piskunov.im/pblog/2018/02/18/balanced-way-to-keep-motivated</id><content type="html" xml:base="http://piskunov.im/pblog/2018/02/18/balanced-way-to-keep-motivated.html"><![CDATA[<p><code class="language-plaintext highlighter-rouge">*While you reading this, I've implemented something new.*
+</code><br /><br />
+<code class="language-plaintext highlighter-rouge">Best regards, Igor
+</code></p>]]></content><author><name></name></author><category term="pblog" /><summary type="html"><![CDATA[*While you reading this, I've implemented something new.* Best regards, Igor]]></summary></entry><entry><title type="html">LoopBack - REST APIs with no coding</title><link href="http://piskunov.im/pblog/2017/12/12/loopback-rest-apis-with-no-coding.html" rel="alternate" type="text/html" title="LoopBack - REST APIs with no coding" /><published>2017-12-12T16:48:03+04:00</published><updated>2017-12-12T16:48:03+04:00</updated><id>http://piskunov.im/pblog/2017/12/12/loopback-rest-apis-with-no-coding</id><content type="html" xml:base="http://piskunov.im/pblog/2017/12/12/loopback-rest-apis-with-no-coding.html"><![CDATA[<blockquote>
+  <p>Article is in the process of writing. Last update: 12-12-2017.</p>
+</blockquote>
 
-&lt;p&gt;LoopBack is an open-source framework serving as platform for building APIs and microservices in Node.js
-Due its friendly environment whole the process of creating API has become pretty easy.&lt;/p&gt;
+<p>LoopBack is an open-source framework serving as platform for building APIs and microservices in Node.js
+Due its friendly environment whole the process of creating API has become pretty easy.</p>
 
-&lt;p&gt;LoopBack officially-supported connectors for the following databases:&lt;/p&gt;
+<p>LoopBack officially-supported connectors for the following databases:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;Cloudant&lt;/li&gt;
-  &lt;li&gt;DashDB&lt;/li&gt;
-  &lt;li&gt;DB2&lt;/li&gt;
-  &lt;li&gt;DB2 for iSeries&lt;/li&gt;
-  &lt;li&gt;DB2 for z/OS&lt;/li&gt;
-  &lt;li&gt;Informix&lt;/li&gt;
-  &lt;li&gt;MongoDB&lt;/li&gt;
-  &lt;li&gt;MySQL&lt;/li&gt;
-  &lt;li&gt;Oracle&lt;/li&gt;
-  &lt;li&gt;PostgreSQL&lt;/li&gt;
-  &lt;li&gt;Redis&lt;/li&gt;
-  &lt;li&gt;SQL Server&lt;/li&gt;
-  &lt;li&gt;SQLite3&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Cloudant</li>
+  <li>DashDB</li>
+  <li>DB2</li>
+  <li>DB2 for iSeries</li>
+  <li>DB2 for z/OS</li>
+  <li>Informix</li>
+  <li>MongoDB</li>
+  <li>MySQL</li>
+  <li>Oracle</li>
+  <li>PostgreSQL</li>
+  <li>Redis</li>
+  <li>SQL Server</li>
+  <li>SQLite3</li>
+</ul>
 
-&lt;p&gt;Here I’ll try to cover some questions about this framework. Current version is 3.x (we are not covering 4.x development preview).&lt;/p&gt;
+<p>Here I’ll try to cover some questions about this framework. Current version is 3.x (we are not covering 4.x development preview).</p>
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+<p><br /></p>
 
-&lt;h3 id=&quot;where-should-i-start&quot;&gt;Where should I start?&lt;/h3&gt;
+<h3 id="where-should-i-start">Where should I start?</h3>
 
-&lt;p&gt;As in any other framework, everything starts with &lt;a href=&quot;http://loopback.io/doc/en/lb3/index.html&quot;&gt;documentation&lt;/a&gt;. This article is based on docs, so it’s pretty good if you are ok with that.&lt;/p&gt;
+<p>As in any other framework, everything starts with <a href="http://loopback.io/doc/en/lb3/index.html">documentation</a>. This article is based on docs, so it’s pretty good if you are ok with that.</p>
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+<p><br /></p>
 
-&lt;h3 id=&quot;how-to-initialize&quot;&gt;How to initialize?&lt;/h3&gt;
+<h3 id="how-to-initialize">How to initialize?</h3>
 
-&lt;p&gt;First of all you need to go through this &lt;a href=&quot;http://loopback.io/getting-started/&quot;&gt;“Getting Started” guide&lt;/a&gt;. If you’ll not, it’s ok because I’ll show you something pretty similar here. To be strict we must do it.&lt;/p&gt;
+<p>First of all you need to go through this <a href="http://loopback.io/getting-started/">“Getting Started” guide</a>. If you’ll not, it’s ok because I’ll show you something pretty similar here. To be strict we must do it.</p>
 
-&lt;p&gt;&lt;strong&gt;Install loopback-cli:&lt;/strong&gt;&lt;/p&gt;
+<p><strong>Install loopback-cli:</strong></p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ npm install -g loopback-cli&lt;/code&gt;&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">$ npm install -g loopback-cli</code></p>
 
-&lt;p&gt;&lt;strong&gt;Create directory for the project:&lt;/strong&gt;&lt;/p&gt;
+<p><strong>Create directory for the project:</strong></p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ mkdir test-loopback&lt;/code&gt;&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">$ mkdir test-loopback</code></p>
 
-&lt;p&gt;&lt;strong&gt;Initialise project (do inside created directory):&lt;/strong&gt;&lt;/p&gt;
+<p><strong>Initialise project (do inside created directory):</strong></p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ lb app&lt;/code&gt;&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">$ lb app</code></p>
 
-&lt;p&gt;&lt;em&gt;After “lb app” command set all default options. Then dependencies will be installed.&lt;/em&gt;&lt;/p&gt;
+<p><em>After “lb app” command set all default options. Then dependencies will be installed.</em></p>
 
-&lt;p&gt;&lt;strong&gt;Start the project&lt;/strong&gt;&lt;/p&gt;
+<p><strong>Start the project</strong></p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ node .&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ npm start&lt;/code&gt;&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">$ node .</code> or <code class="language-plaintext highlighter-rouge">$ npm start</code></p>
 
-&lt;p&gt;&lt;em&gt;(Use command line hints to find out which address and port will be used for your project)&lt;/em&gt;&lt;/p&gt;
+<p><em>(Use command line hints to find out which address and port will be used for your project)</em></p>
 
-&lt;p&gt;Don’t forget to check out “/explore” link (by default: localhost:3000/explore).&lt;/p&gt;
+<p>Don’t forget to check out “/explore” link (by default: localhost:3000/explore).</p>
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+<p><br /></p>
 
-&lt;h3 id=&quot;how-to-create-a-model-to-persist-data&quot;&gt;How to create a model to persist data?&lt;/h3&gt;
+<h3 id="how-to-create-a-model-to-persist-data">How to create a model to persist data?</h3>
 
-&lt;p&gt;&lt;strong&gt;Create new model command:&lt;/strong&gt;&lt;/p&gt;
+<p><strong>Create new model command:</strong></p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lb model&lt;/code&gt;&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">lb model</code></p>
 
-&lt;p&gt;&lt;em&gt;(Use command line hints to create your first model)&lt;/em&gt;&lt;/p&gt;
+<p><em>(Use command line hints to create your first model)</em></p>
 
-&lt;p&gt;For test project I’ve created model “repertoire” with properties:&lt;/p&gt;
+<p>For test project I’ve created model “repertoire” with properties:</p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;name&quot;: {
-  &quot;type&quot;: &quot;string&quot;,
-  &quot;required&quot;: true
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"name": {
+  "type": "string",
+  "required": true
 },
-&quot;date&quot;: {
-  &quot;type&quot;: &quot;date&quot;
+"date": {
+  "type": "date"
 },
-&quot;description&quot;: {
-  &quot;type&quot;: &quot;string&quot;
+"description": {
+  "type": "string"
 },
-&quot;genre&quot;: {
-  &quot;type&quot;: &quot;string&quot;
+"genre": {
+  "type": "string"
 },
-&quot;active&quot;: {
-  &quot;type&quot;: &quot;boolean&quot;,
-  &quot;default&quot;: false
+"active": {
+  "type": "boolean",
+  "default": false
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;Finally we’ll check some files to see the changes:&lt;/p&gt;
+<p>Finally we’ll check some files to see the changes:</p>
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/server/model-config.json&lt;/code&gt;&lt;/em&gt;  - here was added some basic parameters about your model&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <tbody>
+    <tr>
+      <td><em><code class="language-plaintext highlighter-rouge">/server/model-config.json</code></em>  - here was added some basic parameters about your model</td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/common/models/repertoire.json&lt;/code&gt;&lt;/em&gt; - here you can see the model definition with base “PersistedModel” that we ingeireted from.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <tbody>
+    <tr>
+      <td><em><code class="language-plaintext highlighter-rouge">/common/models/repertoire.json</code></em> - here you can see the model definition with base “PersistedModel” that we ingeireted from.</td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/common/models/repertoire.js&lt;/code&gt;&lt;/em&gt; - can be used to customise the model behaviour.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <tbody>
+    <tr>
+      <td><em><code class="language-plaintext highlighter-rouge">/common/models/repertoire.js</code></em> - can be used to customise the model behaviour.</td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+<p><br /></p>
 
-&lt;h3 id=&quot;persist-in-memory-data-to-a-file&quot;&gt;Persist in-memory data to a file&lt;/h3&gt;
+<h3 id="persist-in-memory-data-to-a-file">Persist in-memory data to a file</h3>
 
-&lt;p&gt;The default datasource (&lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/server/datasources.json&lt;/code&gt;&lt;/em&gt;) for LoopBack uses a connector that persists the data in memory. This means that the data will be losted after you’ll restart application.&lt;/p&gt;
+<p>The default datasource (<em><code class="language-plaintext highlighter-rouge">/server/datasources.json</code></em>) for LoopBack uses a connector that persists the data in memory. This means that the data will be losted after you’ll restart application.</p>
 
-&lt;p&gt;In development mode this will be useful to persist this data temporarily. To do so we need to add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;file&lt;/code&gt; proprety inside &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;db&lt;/code&gt; property in &lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/server/datasources.json&lt;/code&gt;&lt;/em&gt;.&lt;/p&gt;
+<p>In development mode this will be useful to persist this data temporarily. To do so we need to add <code class="language-plaintext highlighter-rouge">file</code> proprety inside <code class="language-plaintext highlighter-rouge">db</code> property in <em><code class="language-plaintext highlighter-rouge">/server/datasources.json</code></em>.</p>
 
-&lt;p&gt;Ok, example:&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;db&quot;: {
-    &quot;name&quot;: &quot;db&quot;,
-    &quot;connector&quot;: &quot;memory&quot;,
-    &quot;file&quot;: &quot;repertoire.json&quot;
+<p>Ok, example:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"db": {
+    "name": "db",
+    "connector": "memory",
+    "file": "repertoire.json"
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+<p><br /></p>
 
-&lt;h3 id=&quot;setup-a-development-mode&quot;&gt;Setup a development mode&lt;/h3&gt;
+<h3 id="setup-a-development-mode">Setup a development mode</h3>
 
-&lt;p&gt;We do this by installing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nodemon&lt;/code&gt; as a dev dependency:&lt;/p&gt;
+<p>We do this by installing <code class="language-plaintext highlighter-rouge">nodemon</code> as a dev dependency:</p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ npm install --save-dev nodemon&lt;/code&gt;&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">$ npm install --save-dev nodemon</code></p>
 
-&lt;p&gt;And creating a script &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dev&lt;/code&gt; inside &lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/package.json&lt;/code&gt;&lt;/em&gt;:&lt;/p&gt;
+<p>And creating a script <code class="language-plaintext highlighter-rouge">dev</code> inside <em><code class="language-plaintext highlighter-rouge">/package.json</code></em>:</p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;scripts&quot;{
-	&quot;dev&quot;: &quot;nodemon server/server.js --watch common --watch server&quot;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"scripts"{
+	"dev": "nodemon server/server.js --watch common --watch server"
 	...
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;After that we can execute dev-script by running:&lt;/p&gt;
+<p>After that we can execute dev-script by running:</p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ npm run dev&lt;/code&gt;&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">$ npm run dev</code></p>
 
-&lt;p&gt;When running in develpoment mode the server will be automatically restarted when there are changes detected in the &lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/common&lt;/code&gt;&lt;/em&gt; or &lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/server&lt;/code&gt;&lt;/em&gt; directories. To know more about &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nodemon&lt;/code&gt; see &lt;a href=&quot;https://github.com/remy/nodemon#nodemon&quot;&gt;Nodemon Documentation&lt;/a&gt;.&lt;/p&gt;
+<p>When running in develpoment mode the server will be automatically restarted when there are changes detected in the <em><code class="language-plaintext highlighter-rouge">/common</code></em> or <em><code class="language-plaintext highlighter-rouge">/server</code></em> directories. To know more about <code class="language-plaintext highlighter-rouge">nodemon</code> see <a href="https://github.com/remy/nodemon#nodemon">Nodemon Documentation</a>.</p>
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+<p><br /></p>
 
-&lt;h3 id=&quot;discovery-models-from-relational-databases&quot;&gt;Discovery models from relational databases&lt;/h3&gt;
+<h3 id="discovery-models-from-relational-databases">Discovery models from relational databases</h3>
 
-&lt;ul&gt;
-  &lt;li&gt;Setup your mysql data in &lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/server/datasources.json&lt;/code&gt;&lt;/em&gt; file:&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Setup your mysql data in <em><code class="language-plaintext highlighter-rouge">/server/datasources.json</code></em> file:</li>
+</ul>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
-  &quot;db&quot;: {
-    &quot;name&quot;: &quot;db&quot;,
-    &quot;connector&quot;: &quot;memory&quot;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "db": {
+    "name": "db",
+    "connector": "memory"
   },
-  &quot;accountDs&quot;: {
-    &quot;host&quot;: &quot;mysqlServerName&quot;,
-    &quot;port&quot;: 3306,
-    &quot;database&quot;: &quot;databaseName&quot;,
-    &quot;username&quot;: &quot;username&quot;,
-    &quot;password&quot;: &quot;password!&quot;,
-    &quot;name&quot;: &quot;repertoireDB&quot;,
-    &quot;connector&quot;: &quot;mysql&quot;
+  "accountDs": {
+    "host": "mysqlServerName",
+    "port": 3306,
+    "database": "databaseName",
+    "username": "username",
+    "password": "password!",
+    "name": "repertoireDB",
+    "connector": "mysql"
   }
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;ul&gt;
-  &lt;li&gt;Create the models folder if doesn’t exist:&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Create the models folder if doesn’t exist:</li>
+</ul>
 
-&lt;p&gt;&lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/common/models&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
+<p><em><code class="language-plaintext highlighter-rouge">/common/models</code></em></p>
 
-&lt;ul&gt;
-  &lt;li&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;script.js&lt;/code&gt; on &lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/project/server/bin&lt;/code&gt;&lt;/em&gt; folder to discover and build models:&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Create <code class="language-plaintext highlighter-rouge">script.js</code> on <em><code class="language-plaintext highlighter-rouge">/project/server/bin</code></em> folder to discover and build models:</li>
+</ul>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var path = require('path');
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var path = require('path');
 var fs = require('fs');
 var app = require(path.resolve(__dirname, '../server'));
 var outputPath = path.resolve(__dirname, '../../common/models');
@@ -496,13 +521,13 @@ var dataSource = app.dataSources.accountDs;
 
 function schemaCB(err, schema) {
   if(schema) {
-    console.log(&quot;Auto discovery success: &quot; + schema.name);
+    console.log("Auto discovery success: " + schema.name);
     var outputName = outputPath + '/' +schema.name + '.json';
     fs.writeFile(outputName, JSON.stringify(schema, null, 2), function(err) {
       if(err) {
         console.log(err);
       } else {
-        console.log(&quot;JSON saved to &quot; + outputName);
+        console.log("JSON saved to " + outputName);
       }
     });
   }
@@ -514,232 +539,139 @@ function schemaCB(err, schema) {
 };
 
 dataSource.discoverSchema('tableName',{schema:'schemaName'},schemaCB);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">Article is in the process of writing. Last update: 12-12-2017.</summary></entry><entry><title type="html">Command Line Habits - Grep</title><link href="http://piskunov.im/pblog/2017/12/10/command-line-habits-grep.html" rel="alternate" type="text/html" title="Command Line Habits - Grep" /><published>2017-12-10T20:16:25+03:00</published><updated>2017-12-10T20:16:25+03:00</updated><id>http://piskunov.im/pblog/2017/12/10/command-line-habits-grep</id><content type="html" xml:base="http://piskunov.im/pblog/2017/12/10/command-line-habits-grep.html">&lt;p&gt;Grep is considered as one of the most useful commands on Unix-like operating systems. Here you’ll get basics that can be useful in your work.&lt;/p&gt;
+</code></pre></div></div>]]></content><author><name></name></author><category term="pblog" /><summary type="html"><![CDATA[Article is in the process of writing. Last update: 12-12-2017.]]></summary></entry><entry><title type="html">Command Line Habits - Grep</title><link href="http://piskunov.im/pblog/2017/12/10/command-line-habits-grep.html" rel="alternate" type="text/html" title="Command Line Habits - Grep" /><published>2017-12-10T21:16:25+04:00</published><updated>2017-12-10T21:16:25+04:00</updated><id>http://piskunov.im/pblog/2017/12/10/command-line-habits-grep</id><content type="html" xml:base="http://piskunov.im/pblog/2017/12/10/command-line-habits-grep.html"><![CDATA[<p>Grep is considered as one of the most useful commands on Unix-like operating systems. Here you’ll get basics that can be useful in your work.</p>
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+<p><br /></p>
 
-&lt;h3 id=&quot;search-the-contents-of-files&quot;&gt;Search the contents of files&lt;/h3&gt;
+<h3 id="search-the-contents-of-files">Search the contents of files</h3>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep [pattern] [file(s)]&lt;/code&gt;&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">grep [pattern] [file(s)]</code></p>
 
-&lt;p&gt;&lt;em&gt;Example:&lt;/em&gt;&lt;/p&gt;
+<p><em>Example:</em></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; grep &quot;import&quot; *js
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; grep "import" *js
+</code></pre></div></div>
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+<p><br /></p>
 
-&lt;h3 id=&quot;case-insensitive-search&quot;&gt;Case-insensitive search&lt;/h3&gt;
+<h3 id="case-insensitive-search">Case-insensitive search</h3>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -i [pattern] [file(s)]&lt;/code&gt;&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">grep -i [pattern] [file(s)]</code></p>
 
-&lt;p&gt;&lt;em&gt;Example:&lt;/em&gt;&lt;/p&gt;
+<p><em>Example:</em></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; grep -i &quot;apiservice&quot; *Service.js
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; grep -i "apiservice" *Service.js
+</code></pre></div></div>
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+<p><br /></p>
 
-&lt;h3 id=&quot;search-recursevly-inside-directory&quot;&gt;Search recursevly inside directory&lt;/h3&gt;
+<h3 id="search-recursevly-inside-directory">Search recursevly inside directory</h3>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep -r [pattern] [path]&lt;/code&gt;&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">grep -r [pattern] [path]</code></p>
 
-&lt;p&gt;&lt;em&gt;Example:&lt;/em&gt;&lt;/p&gt;
+<p><em>Example:</em></p>
 
-&lt;p&gt;&lt;em&gt;-&amp;gt; Find “api” instances in the current directory recursevly&lt;/em&gt;&lt;/p&gt;
+<p><em>-&gt; Find “api” instances in the current directory recursevly</em></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; grep -r &quot;api&quot; . 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; grep -r "api" . 
+</code></pre></div></div>
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+<p><br /></p>
 
-&lt;h3 id=&quot;find-files-by-pattern&quot;&gt;Find files by pattern&lt;/h3&gt;
+<h3 id="find-files-by-pattern">Find files by pattern</h3>
 
-&lt;p&gt;Sometimes there is a need to search inside files that could be selected by part of their name or extension.&lt;/p&gt;
+<p>Sometimes there is a need to search inside files that could be selected by part of their name or extension.</p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;find [path] -name [pattern]&lt;/code&gt;&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">find [path] -name [pattern]</code></p>
 
-&lt;p&gt;&lt;em&gt;Examples:&lt;/em&gt;&lt;/p&gt;
+<p><em>Examples:</em></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; find . -name &quot;*Service.js&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; find . -name "*Service.js"
+</code></pre></div></div>
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+<p><br /></p>
 
-&lt;h3 id=&quot;combining-find-and-grep-with-xargs&quot;&gt;Combining find and grep with xargs&lt;/h3&gt;
+<h3 id="combining-find-and-grep-with-xargs">Combining find and grep with xargs</h3>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xargs&lt;/code&gt; is a command used to build and execute commands. By default it’s using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;echo&lt;/code&gt; command.&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">xargs</code> is a command used to build and execute commands. By default it’s using <code class="language-plaintext highlighter-rouge">echo</code> command.</p>
 
-&lt;p&gt;&lt;em&gt;Example:&lt;/em&gt;&lt;/p&gt;
+<p><em>Example:</em></p>
 
-&lt;p&gt;&lt;em&gt;-&amp;gt; Outputs the strings of find result&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; find . -name &quot;*js&quot; | xargs
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<p><em>-&gt; Outputs the strings of find result</em></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; find . -name "*js" | xargs
+</code></pre></div></div>
 
-&lt;p&gt;&lt;em&gt;-&amp;gt; Outputs “todo” instances for files that ends with “Service.js”&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; find . -name &quot;*Service.js&quot; | xargs grep &quot;todo&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;em&gt;-&amp;gt; Same as previous command. You can use it, but using “find” is preferable from the side that we can test its output and be sure that pattern is ok&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; grep -r --include=&quot;*Service.js&quot; &quot;todo&quot; . 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<p><em>-&gt; Outputs “todo” instances for files that ends with “Service.js”</em></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; find . -name "*Service.js" | xargs grep "todo"
+</code></pre></div></div>
+<p><em>-&gt; Same as previous command. You can use it, but using “find” is preferable from the side that we can test its output and be sure that pattern is ok</em></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; grep -r --include="*Service.js" "todo" . 
+</code></pre></div></div>
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+<p><br /></p>
 
-&lt;h3 id=&quot;search-contents-of-git-repository&quot;&gt;Search contents of git repository&lt;/h3&gt;
+<h3 id="search-contents-of-git-repository">Search contents of git repository</h3>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git grep [pattern]&lt;/code&gt;&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">git grep [pattern]</code></p>
 
-&lt;p&gt;&lt;em&gt;Example:&lt;/em&gt;&lt;/p&gt;
+<p><em>Example:</em></p>
 
-&lt;p&gt;&lt;em&gt;-&amp;gt; Searching “version” string in your project tracked files&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;`git grep version`
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<p><em>-&gt; Searching “version” string in your project tracked files</em></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>`git grep version`
+</code></pre></div></div>
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+<p><br /></p>
 
-&lt;h3 id=&quot;show-context-around-grep-search&quot;&gt;Show context around grep search&lt;/h3&gt;
+<h3 id="show-context-around-grep-search">Show context around grep search</h3>
 
-&lt;p&gt;&lt;strong&gt;Grep mark up options:&lt;/strong&gt;&lt;/p&gt;
+<p><strong>Grep mark up options:</strong></p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-n&lt;/code&gt; : each output line is preceded by its relative line number in the file, starting at line 1&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">-n</code> : each output line is preceded by its relative line number in the file, starting at line 1</p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--color(-colour)&lt;/code&gt; : mark up the matching text with the expression stored in GREP_COLOR environment variable&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">--color(-colour)</code> : mark up the matching text with the expression stored in GREP_COLOR environment variable</p>
 
-&lt;p&gt;&lt;strong&gt;Grep context options:&lt;/strong&gt;&lt;/p&gt;
+<p><strong>Grep context options:</strong></p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-A [num]&lt;/code&gt; : print “num” lines of trailing context after each match&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">-A [num]</code> : print “num” lines of trailing context after each match</p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-B [num]&lt;/code&gt; : print “num” lines of leading context before each match&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">-B [num]</code> : print “num” lines of leading context before each match</p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-C [num]&lt;/code&gt; : print “num” lines of leading and trailing context surrounding each match. By default is 2 and is equivalent to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-A 2 -B 2&lt;/code&gt;&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">-C [num]</code> : print “num” lines of leading and trailing context surrounding each match. By default is 2 and is equivalent to <code class="language-plaintext highlighter-rouge">-A 2 -B 2</code></p>
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+<p><br /></p>
 
-&lt;h3 id=&quot;regular-expressions&quot;&gt;Regular expressions&lt;/h3&gt;
+<h3 id="regular-expressions">Regular expressions</h3>
 
-&lt;p&gt;&lt;strong&gt;Basic:&lt;/strong&gt;&lt;/p&gt;
+<p><strong>Basic:</strong></p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.&lt;/code&gt; : any character&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">.</code> : any character</p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\&lt;/code&gt; : escaping character (like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\.&lt;/code&gt; for dot)&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">\</code> : escaping character (like <code class="language-plaintext highlighter-rouge">\.</code> for dot)</p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt; : zero or more occurences of the regular expression&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">*</code> : zero or more occurences of the regular expression</p>
 
-&lt;p&gt;&lt;strong&gt;Extended:&lt;/strong&gt;&lt;/p&gt;
+<p><strong>Extended:</strong></p>
 
-&lt;p&gt;To use extended regular expressions with grep, you’ll need to either escape them with backslashes or turn on extended regular expressions with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-E&lt;/code&gt; option.&lt;/p&gt;
+<p>To use extended regular expressions with grep, you’ll need to either escape them with backslashes or turn on extended regular expressions with the <code class="language-plaintext highlighter-rouge">-E</code> option.</p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;?&lt;/code&gt; : matches zero or one occurence of the one-character regular expression&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">?</code> : matches zero or one occurence of the one-character regular expression</p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; : matches one or more occurence of the one-character regular expression&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">+</code> : matches one or more occurence of the one-character regular expression</p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;|&lt;/code&gt; : separate alternatives&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">|</code> : separate alternatives</p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;^&lt;/code&gt; : matches the begining of a line&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">^</code> : matches the begining of a line</p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$&lt;/code&gt; : matches the end of a line&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">$</code> : matches the end of a line</p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[]&lt;/code&gt; : mathes any one character in that string&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">[]</code> : mathes any one character in that string</p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;()&lt;/code&gt; : for grouping expressions&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">()</code> : for grouping expressions</p>
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+<p><br /></p>
 
-&lt;h3 id=&quot;find-matches-excluding-a-pattern&quot;&gt;Find matches excluding a pattern&lt;/h3&gt;
+<h3 id="find-matches-excluding-a-pattern">Find matches excluding a pattern</h3>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt; find [path] -name [pattern] | grep -v [pattern]&lt;/code&gt;&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">&gt; find [path] -name [pattern] | grep -v [pattern]</code></p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-v&lt;/code&gt; : option for inverse&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">Grep is considered as one of the most useful commands on Unix-like operating systems. Here you’ll get basics that can be useful in your work.</summary></entry><entry><title type="html">Command Line Habits - Vim</title><link href="http://piskunov.im/pblog/2017/12/08/command-line-habits-vim.html" rel="alternate" type="text/html" title="Command Line Habits - Vim" /><published>2017-12-08T21:26:47+03:00</published><updated>2017-12-08T21:26:47+03:00</updated><id>http://piskunov.im/pblog/2017/12/08/command-line-habits-vim</id><content type="html" xml:base="http://piskunov.im/pblog/2017/12/08/command-line-habits-vim.html">&lt;p&gt;Using Vim is a good habit for developers of any level. Today we’re going to look through the set of basic commands that’s widely used in Vim.&lt;/p&gt;
-
-&lt;h3 id=&quot;startquit-vim&quot;&gt;Start/Quit Vim&lt;/h3&gt;
-
-&lt;p&gt;Enter “vim” command in your terminal. This command will start vim editor in normal mode&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;gt; vim&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;In order to quit vim we need to activate command mode. For this you should press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shift+:&lt;/code&gt;(or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shift+;&lt;/code&gt;) . Then enter the command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;quit&lt;/code&gt;(or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;q&lt;/code&gt;) and press Enter.&lt;/p&gt;
-
-&lt;h3 id=&quot;vim-modes&quot;&gt;Vim Modes&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;default&lt;/strong&gt;: normal mode (for navigation and text manipulation) &lt;br /&gt;
-&lt;strong&gt;command mode&lt;/strong&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shift+:&lt;/code&gt;): to enter commands (including search and filter)  &lt;br /&gt;
-&lt;strong&gt;insert mode&lt;/strong&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i&lt;/code&gt;):  to insert text &lt;br /&gt; 
-&lt;strong&gt;visual mode&lt;/strong&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v&lt;/code&gt;): to select blocks of text from the file (the only 
-   way to select a block of text)&lt;/p&gt;
-
-&lt;p&gt;To exit back to normal mode from any other mode press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ESC&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;navigation&quot;&gt;Navigation&lt;/h3&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;h&lt;/code&gt;: left &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;j&lt;/code&gt;: down &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;k&lt;/code&gt;: up &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;l&lt;/code&gt;: right &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;w&lt;/code&gt;: one word forward &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;b&lt;/code&gt;: one word back &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gg&lt;/code&gt;: set cursor to the beginning of file &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;G&lt;/code&gt;: set cursor into the end of file&lt;/p&gt;
-
-&lt;h3 id=&quot;saving-files&quot;&gt;Saving Files&lt;/h3&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:write(:w)&lt;/code&gt;: save command for existed files &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:write &amp;lt;filename with extension&amp;gt;(:w &amp;lt;filename with extension&amp;gt;)&lt;/code&gt;: save command for new files (also can be used “vim &lt;filename with=&quot;&quot; extension=&quot;&quot;&gt;&quot; in terminal) &lt;br /&gt;&lt;/filename&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:wq&lt;/code&gt;(or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:x&lt;/code&gt;): save file and quit vim&lt;/p&gt;
-
-&lt;h3 id=&quot;normal-mode-built-in-commands&quot;&gt;Normal mode built-in commands&lt;/h3&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dd&lt;/code&gt;: delete line &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;D&lt;/code&gt;: delete line, but preserve whitespace &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dw&lt;/code&gt;: delete the word &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cw&lt;/code&gt;: delete the word and activate insert mode &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Combinations&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;d5w&lt;/code&gt;: delete 5 words &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c3j&lt;/code&gt;: replace 3 lines and activate insert mode &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C&lt;/code&gt;: replace the rest of line(starting cursor point) and activate insert mode &lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;combining-commands&quot;&gt;Combining commands&lt;/h3&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cit&lt;/code&gt;: change inside tag contents (between opening and closing tags) &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ci{&lt;/code&gt;: change inside curly braces &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ci&quot;&lt;/code&gt;: change inside quotes (not including quotes) &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ci[&lt;/code&gt;: change inside square brackets &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ci(&lt;/code&gt;: change inside parentheses &lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;copy-and-paste&quot;&gt;Copy and Paste&lt;/h3&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y&lt;/code&gt;: copy(yank) text (visual mode) &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;d&lt;/code&gt;: cut text (visual mode) &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p&lt;/code&gt;: paste text (normal mode) &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yy(or Y)&lt;/code&gt;: yank current line, including newline character (normal mode)&lt;/p&gt;
-
-&lt;h3 id=&quot;searching&quot;&gt;Searching&lt;/h3&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/pattern&lt;/code&gt;: search forward for pattern &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;?pattern&lt;/code&gt;: search backward &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;: repeat forward search &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;N&lt;/code&gt;: repeat backward&lt;/p&gt;
-
-&lt;h3 id=&quot;buffer-usage&quot;&gt;Buffer Usage&lt;/h3&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:e config.json&lt;/code&gt;: edit config.json file &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:buffers&lt;/code&gt; (or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:ls&lt;/code&gt;): list the current buffers (including numbers)  &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:b &amp;lt;num&amp;gt;&lt;/code&gt;: display the buffer with the given num. &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:bd&lt;/code&gt;: delete the current buffer (will fail if unsaved)  &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:b#&lt;/code&gt;(or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl+6&lt;/code&gt;): switching to the previously edited buffer &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:set hidden&lt;/code&gt;: Allow switching buffers without saving.&lt;/p&gt;
-
-&lt;h3 id=&quot;configure-vim&quot;&gt;Configure Vim&lt;/h3&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:syntax on&lt;/code&gt;: enables syntax highlighting &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:syntax off&lt;/code&gt;: disables sntax highlighting &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:set number&lt;/code&gt;: enables line numbers &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:set nonumber&lt;/code&gt;: disables line numbers &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:set relativemunber&lt;/code&gt;: enables relative line numbers &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:set norelativenumber&lt;/code&gt;: disables relative line numbers &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:set number relative numbers&lt;/code&gt;: enables both options of line numbers&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;help option-list&lt;/code&gt;: more options to set&lt;/p&gt;</content><author><name></name></author><category term="pblog" /><summary type="html">Using Vim is a good habit for developers of any level. Today we’re going to look through the set of basic commands that’s widely used in Vim.</summary></entry></feed>
+<p><code class="language-plaintext highlighter-rouge">-v</code> : option for inverse</p>]]></content><author><name></name></author><category term="pblog" /><summary type="html"><![CDATA[Grep is considered as one of the most useful commands on Unix-like operating systems. Here you’ll get basics that can be useful in your work.]]></summary></entry></feed>

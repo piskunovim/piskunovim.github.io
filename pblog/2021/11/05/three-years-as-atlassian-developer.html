@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Balanced Way To Keep Productive</title>
-  <meta name="description" content="*While you reading this, I&#39;ve implemented something new.* Best regards, Igor">
+  <title>Three years as Atlassian developer</title>
+  <meta name="description" content="This big headline means that over the past few years I have had a great opportunity to experience all the delights and disadvantages of the ecosystem of Atla...">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://piskunov.im/pblog/2018/02/18/balanced-way-to-keep-motivated.html">
+  <link rel="canonical" href="http://piskunov.im/pblog/2021/11/05/three-years-as-atlassian-developer.html">
   <link rel="alternate" type="application/rss+xml" title="Igor Piskunov" href="/feed.xml">
   
   
@@ -108,27 +108,49 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Balanced Way To Keep Productive</h1>
+    <h1 class="post-title" itemprop="name headline">Three years as Atlassian developer</h1>
     <p class="post-meta">
-      <time datetime="2018-02-18T02:27:38+04:00" itemprop="datePublished">
+      <time datetime="2021-11-05T00:27:38+04:00" itemprop="datePublished">
         
-        Feb 18, 2018 - 02:27
+        Nov 5, 2021 - 00:27
       </time>
       </p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p><code class="language-plaintext highlighter-rouge">*While you reading this, I've implemented something new.*
-</code><br /><br />
-<code class="language-plaintext highlighter-rouge">Best regards, Igor
-</code></p>
+    <p>This big headline means that over the past few years I have had a great opportunity to experience all the delights and disadvantages of the ecosystem of Atlassian products, as well as their API. In particular, everything related to the cloud part of development.</p>
 
+<p>“There are limitations” is the first thing any developer will tell you when it comes to Jira Сloud or Confluence Cloud. This simple statement can make you feel like an insurmountable obstacle is somewhere ahead. But, I propose to shortly figure out what exactly these words mean.</p>
+
+<h3 id="everything-is-in-an-iframe">Everything is in an &lt;iframe&gt;</h3>
+
+<p>All the executable code of your application will be delivered to the cloud product by adding the appropriate iframe element. In fact, this means that your code won’t have access to the Jira/Confluence environment directly and interact with the interface. Instead, you should use a global AP object, location sections, and hooks to help organize your interactions in the most natural way. I hope to tell you more about this someday, but for now this is all you need to know.</p>
+
+<h3 id="all-operations-with-data-through-the-api">All operations with data through the API</h3>
+
+<p>That means that you have no connection to the product’s instance database and cannot access data directly. The only way to get the data is coming through the official Atlassian Cloud API. As a result, if something is absent in the API then it is hard to achieve.</p>
+
+<h3 id="but-limitation-doesnt-mean-impossible">But “limitation” doesn’t mean “impossible”</h3>
+
+<p>It seems obvious, but I decided to highlight it. You can still implement the required feature, but you have to keep in mind the requirements that the product exposes to you.</p>
+
+<p>You must know exactly which areas of the product are affected by your functionality and know what Attlassian’s position on this issue is. Particularly, you shouldn’t try to access those parts of the product that were restricted by the API. If you come across a question that hasn’t been disclosed anywhere, you can write to the community or directly to the Atlassian team. The great thing here is you entering the territory of an extremely hospitable product, with a large community of developers who are always ready to help with your problems.</p>
+
+<h3 id="rely-on-atlassian">Rely on Atlassian</h3>
+
+<p>This simple thought means that if Atlassian Cloud services are not available, then your application won’t be available either.</p>
+
+<h3 id="so">So</h3>
+
+<p>We talked about just one fundamental idea that you need to understand before starting to implement any feature in the Atlassian Cloud world. But, of course, on the way of implementation, the developer encounters various challenges that must be overcome. It will be my pleasure to share some of the solutions to problems that you might encounter in future posts.</p>
+
+<p>Please subscribe and…see you. :)</p>
 
     <div class="share-page">
     Share this on &rarr;
-    <a href="https://twitter.com/intent/tweet?text=Balanced Way To Keep Productive&url=http://piskunov.im/pblog/2018/02/18/balanced-way-to-keep-motivated.html&via=piskunovim&related=piskunovim" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
-    <a href="https://facebook.com/sharer.php?u=http://piskunov.im/pblog/2018/02/18/balanced-way-to-keep-motivated.html" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
-    <a href="https://plus.google.com/share?url=http://piskunov.im/pblog/2018/02/18/balanced-way-to-keep-motivated.html" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+    <a href="https://twitter.com/intent/tweet?text=Three years as Atlassian developer&url=http://piskunov.im/pblog/2021/11/05/three-years-as-atlassian-developer.html&via=piskunovim&related=piskunovim" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://facebook.com/sharer.php?u=http://piskunov.im/pblog/2021/11/05/three-years-as-atlassian-developer.html" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://plus.google.com/share?url=http://piskunov.im/pblog/2021/11/05/three-years-as-atlassian-developer.html" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
 </div> 
   </div>
 
