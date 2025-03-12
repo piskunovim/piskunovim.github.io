@@ -1,0 +1,131 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/_astro/favicon.DlnF0RSw.png"><meta name="generator" content="Astro v5.4.2"><!-- Canonical URL --><link rel="canonical" href="https://piskunov.dev/wedding-day/"><!-- Primary Meta Tags --><title>Wedding day &amp; New friend</title><meta name="title" content="Wedding day &#38; New friend"><meta name="description"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://piskunov.dev/wedding-day/"><meta property="og:title" content="Wedding day &#38; New friend"><meta property="og:description"><meta property="og:image" content="https://piskunov.dev/syakir.webp"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://piskunov.dev/wedding-day/"><meta property="twitter:title" content="Wedding day &#38; New friend"><meta property="twitter:description"><meta property="twitter:image" content="https://piskunov.dev/syakir.webp"><script>
+	function waitForIframe(selector, callback) {
+    	const interval = setInterval(() => {
+			const iframe = document.querySelector(selector);
+			if (iframe && iframe.contentWindow) {
+				clearInterval(interval);
+				iframe.addEventListener('load', () => callback(iframe));
+				callback(iframe);
+			}
+    	}, 200);
+	}
+
+	function sendMessage(message) {
+		waitForIframe("iframe.giscus-frame", (iframe) => {
+			iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+		});
+	}
+	
+	(function () {
+		let theme = localStorage.getItem('theme');
+		if (!theme) {
+			theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+			localStorage.setItem('theme', theme);
+		}
+
+		console.log("theme", theme)
+
+		const isDark = theme === 'dark';
+		console.log({ isDark})
+		
+		isDark ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');
+
+		sendMessage({
+		  setConfig: {
+		    theme: isDark ? 'dark_dimmed' : 'light'
+		  }
+		});
+	})();
+</script><link rel="stylesheet" href="/_astro/_slug_.CPG33NGs.css">
+<style>.toc-list[data-astro-cid-awg4b4gg]::-webkit-scrollbar{width:5px}.toc-list[data-astro-cid-awg4b4gg]::-webkit-scrollbar-track{background:transparent}.toc-list[data-astro-cid-awg4b4gg]::-webkit-scrollbar-thumb{background:#eee;border-radius:5px}.dark .toc-list[data-astro-cid-awg4b4gg]::-webkit-scrollbar-thumb{background:#2e2e2e;border-radius:5px}
+</style><script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[])})(window,'partytown','forward');/* Partytown 0.11.0 - MIT QwikDev */
+const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=t]=e;return[n,{...t,...r}]},n=Object.freeze((t=>{const e=new Set;let n=[];do{Object.getOwnPropertyNames(n).forEach((t=>{"function"==typeof n[t]&&e.add(t)}))}while((n=Object.getPrototypeOf(n))!==Object.prototype);return Array.from(e)})());!function(t,r,o,i,a,s,c,l,d,p,u=t,f){function h(){f||(f=1,"/"==(c=(s.lib||"/~partytown/")+(s.debug?"debug/":""))[0]&&(d=r.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(l=setTimeout(v,(null==s?void 0:s.fallbackTimeout)||1e4),r.addEventListener("pt0",w),a?y(1):o.serviceWorker?o.serviceWorker.register(c+(s.swPath||"partytown-sw.js"),{scope:c}).then((function(t){t.active?y():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&y()}))}),console.error):v())))}function y(e){p=r.createElement(e?"script":"iframe"),t._pttab=Date.now(),e||(p.style.display="block",p.style.width="0",p.style.height="0",p.style.border="0",p.style.visibility="hidden",p.setAttribute("aria-hidden",!0)),p.src=c+"partytown-"+(e?"atomics.js?v=0.11.0":"sandbox-sw.html?"+t._pttab),r.querySelector(s.sandboxParent||"body").appendChild(p)}function v(n,o){for(w(),i==t&&(s.forward||[]).map((function(n){const[r]=e(n);delete t[r.split(".")[0]]})),n=0;n<d.length;n++)(o=r.createElement("script")).innerHTML=d[n].innerHTML,o.nonce=s.nonce,r.head.appendChild(o);p&&p.parentNode.removeChild(p)}function w(){clearTimeout(l)}s=t.partytown||{},i==t&&(s.forward||[]).map((function(r){const[o,{preserveBehavior:i}]=e(r);u=t,o.split(".").map((function(e,r,o){var a;u=u[o[r]]=r+1<o.length?u[o[r]]||(a=o[r+1],n.includes(a)?[]:{}):(()=>{let e=null;if(i){const{methodOrProperty:n,thisObject:r}=((t,e)=>{let n=t;for(let t=0;t<e.length-1;t+=1)n=n[e[t]];return{thisObject:n,methodOrProperty:e.length>0?n[e[e.length-1]]:void 0}})(t,o);"function"==typeof n&&(e=(...t)=>n.apply(r,...t))}return function(){let n;return e&&(n=e(arguments)),(t._ptf=t._ptf||[]).push(o,arguments),n}})()}))})),"complete"==r.readyState?h():(t.addEventListener("DOMContentLoaded",h),t.addEventListener("load",h))}(window,document,navigator,top,window.crossOriginIsolated);;(e=>{e.addEventListener("astro:before-swap",e=>{let r=document.body.querySelector("iframe[src*='/~partytown/']");if(r)e.newDocument.body.append(r)})})(document);</script></head> <body class="bg-white dark:bg-zinc-900 dark:text-zinc-100 pt-16 sm:pt-0"> <header id="site-header" class="flex items-center w-full transition duration-300 z-[999] border-[var(--soft-border-color)]"> <div class="container"> <nav class="flex gap-4 items-center justify-between py-3"> <h2 class="m-0"> <a href="/" class="flex gap-4 items-center text-xl font-black uppercase"></a><div class="logo"><a href="/" class="flex gap-4 items-center text-xl font-black uppercase"></a><a class="site-title" href="/">Igor Piskunov</a>  </div> </h2> <div class="flex"> <a class="p-3 dark:hidden" href="https://github.com/piskunovim" target="_blank"><img src="/_astro/github-mark.BwyJR_2w_1yTuyt.svg" data-image-component="true" alt="Github logo" width="24" height="24" loading="lazy" decoding="async"></a> <a class="p-3 hidden dark:block" href="https://github.com/piskunovim" target="_blank"><img src="/_astro/github-mark-white.S2fJVXLq_Z113rs3.svg" data-image-component="true" alt="Github logo" width="24" height="24" loading="lazy" decoding="async"></a> <a class="p-3 dark:hidden" href="https://fosstodon.org/@piskunovim" target="_blank"><img src="/_astro/mastodon.CSJMTvH9_pOH2O.svg" data-image-component="true" alt="Mastodon logo" width="24" height="24" loading="lazy" decoding="async"></a> <a class="p-3 hidden dark:block" href="https://fosstodon.org/@piskunovim" target="_blank"><img src="/_astro/mastodon-white.g6vWpARi_ZezO5y.svg" data-image-component="true" alt="Mastodon logo" width="24" height="24" loading="lazy" decoding="async"></a> <button class="p-3" id="themeToggle" aria-label="Theme mode"> <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg> <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"> <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg> </button> </div> </nav> <div class="fixed top-3 w-auto max-w-full px-3 left-1/2 -translate-x-1/2 z-[999]"> <div class="flex px-2.5 bg-white/90 dark:bg-zinc-900/75 backdrop-blur-md leading-tight rounded-full border dark:border-zinc-700"> <div class="px-2.5 text-sm"> <a href="/" class="py-3 flex items-center text-zinc-600 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-zinc-50" aria-label="Home">  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>  </a> </div> <div class="px-2.5 text-sm"> <a href="/about/" class="py-3 flex items-center text-zinc-600 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-zinc-50"> About </a> </div><div class="px-2.5 text-sm"> <a href="/posts/" class="py-3 flex items-center text-zinc-600 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-zinc-50"> Posts </a> </div><div class="px-2.5 text-sm"> <a href="/music/" class="py-3 flex items-center text-zinc-600 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-zinc-50"> Music </a> </div><div class="px-2.5 text-sm"> <a href="/tags/" class="py-3 flex items-center text-zinc-600 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-zinc-50"> Tags </a> </div> </div> </div> </div>  <script>
+		
+
+		const handleToggleClick = () => {
+			// TODO: Investigate if possible to merge with sendMessage from BaseHead.astro 
+			const sendMessage = (message) => {
+				const iframe = document.querySelector('iframe.giscus-frame');
+				if (!iframe) return;
+				iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+			}
+
+			const element = document.documentElement;
+			element.classList.toggle('dark');
+
+			const isDark = element.classList.contains('dark');
+
+			sendMessage({
+				setConfig: {
+					theme: isDark ? 'dark_dimmed' : 'light'
+				}
+			});
+
+			localStorage.setItem('theme', isDark ? 'dark' : 'light');
+		};
+		document.getElementById('themeToggle')?.addEventListener('click', handleToggleClick);
+	</script> </header> <div class="py-8 min-h-[calc(100vh-160px)]">  <div class="container lg:flex gap-10"> <main class="overflow-hidden grow"> <article> <div class="prose dark:prose-invert
+  prose-h1:font-[900] prose-h1:my-4 prose-h1:text-2xl sm:prose-h1:text-[2rem]/[1.3]
+  prose-h2:mt-6 prose-h2:mb-3 prose-h2:text-2xl sm:prose-h2:text-3xl prose-h2:font-extrabold
+  prose-h3:mt-5 prose-h3:mb-2 prose-h3:text-xl sm:prose-h3:text-2xl
+  prose-h4:mt-3 prose-h4:mb-0 prose-img:rounded-xl prose-h3:target:pt-20">  <div> <h1 class="!my-1 leading-tight">Wedding day &amp; New friend</h1> <div class="text-sm font-[500] mt-2 sm:mt-0 py-1 md:text-right flex flex-col sm:flex-row gap-3 sm:justify-between sm:items-center"> <div class="flex gap-2"> <a class="border border-zinc-300 dark:border-zinc-700 rounded-2xl
+                          text-sm text-zinc-700 dark:text-zinc-300 no-underline px-2 py-0.5
+                          transition-all duration-700
+                        hover:border-zinc-700 dark:hover:border-zinc-300" href="/tags/notes"> notes </a><a class="border border-zinc-300 dark:border-zinc-700 rounded-2xl
+                          text-sm text-zinc-700 dark:text-zinc-300 no-underline px-2 py-0.5
+                          transition-all duration-700
+                        hover:border-zinc-700 dark:hover:border-zinc-300" href="/tags/pblog"> pblog </a> </div> <div> Published on <strong><time datetime="2017-11-14T00:00:00.000Z"> Nov 14, 2017 </time></strong> </div> </div> </div> <div class="py-3 overflow-hidden">  </div> <img src="https://pp.userapi.com/c840521/v840521264/21422/DmEKBSjBySU.jpg" width="480">
+<p>My wife Irina is sitting to my left. We are traveling in a limousine Hammer with our friends Yuri, Nadia, Ilya, Anna, Nikolay and Christina. The rock of the 80s plays on the radio, the rays of the November sun make their way through the clouds.
+“Golden autumn” finally came to Krasnodar.</p>
+<p>I do not like to exaggerate the meanings of certain moments in life. But believe, whatever person you are, creating your family will be one of the happiest days in your life.</p>
+<p>In fact, this is the next stage of working on yourself, which allows you to do things that you can not do alone. To create something more.</p>
+<iframe src="//vk.com/video_ext.php?oid=198559388&#x26;id=456239069&#x26;hash=1b2bf89fd82f78b6&#x26;hd=1" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+<h3 id="google-home">Google Home</h3>
+<p>I would like to take this opportunity to share with you the use of the new gadget, which is unknown when it appears officially in Russia.</p>
+<img src="https://pp.userapi.com/c824502/v824502111/2468e/RFIhyBBUWKM.jpg" width="480">
+<p>In a very short time, we became friends despite the fact that there is still a lot of work to expand the functionality. Reminders, alarm, timer, playing music, communication, playing in the company. The interface of communication is surprisingly much better than you can imagine.</p>
+<p>To know the weather outside or the status of traffic jams, you do not need to open the application, just ask. I you need to order a taxi - ask Google Home to do it (of course if you don’t live in Russia). And of course there is a wonderful guide from Google that will lead you to extend possibilities of your home assistant.</p>
+<p>I want to note: listening to music on the device is a pleasure. The support of Chromecast and many other devices is also pleasing. And for sure, I’ll make another one post about this device(from programming perspective). Anyway it’s a really new experience in interface, that for sure will get progress.</p>  </div> <script id="giscus-script" src="https://giscus.app/client.js" data-repo="piskunovim/piskunovim" data-repo-id="MDEwOlJlcG9zaXRvcnkxNTYxOTUxMjI=" data-category="Announcements" data-category-id="DIC_kwDOCU9ZMs4Cn3OG" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" async></script> </article> </main> <div class="shrink-0 w-[280px] hidden md:block"> <div class="mb-4"> <div class="about-the-author py-4 border-b"> <h3 class="font-extrabold uppercase mb-4 text-sm">About the Author</h3> <div class="flex gap-4 items-center leading-tight not-prose"> <a href="https://github.com/piskunovim" target="_blank" rel="noopener noreferrer" class="rounded-full overflow-hidden shrink-0 w-[70px] h-[70px]"> <img src="/_astro/piskunovim.D2QCUpug_ZMYCDD.webp" data-image-component="true" alt="Igor Piskunov" width="967" height="739" loading="lazy" decoding="async"> </a> <div> <div> <a href="https://github.com/piskunovim" class="block font-bold text-inherit hover:text-[var(--link-color)]" target="_blank" rel="noopener noreferrer">
+Igor Piskunov
+</a> </div> <small class="avatar__subtitle">Software Engineer</small> </div> </div> <!-- <div class='author-desc text-[.825rem] my-4'> --> <!-- <p class='mb-3'>
+			Igor is a Software Engineer at <a href="https://keitaro.io" target='_blank' class="underline">Keitaro</a>.
+		</p> --> <!-- <p>He will be happy to work and collaborate in any project as a Front-end engineer. His main stacks are React and Vue 3.</p> --> <!-- </div> --> </div> </div>  </div> </div>  </div> <footer class="container mt-8"> <div class="justify-center flex gap-4 py-8 prose dark:prose-invert text-sm"> <a href="/feed.xml">RSS</a> </div> <div class="py-4 border-t dark:border-t-zinc-700"> <div class="md:flex text-sm text-zinc-500 dark:text-zinc-300 prose dark:prose-invert justify-between"> <div>Copyright © 2025 Igor Piskunov.</div> </div> </div> </footer> <!-- Google tag (gtag.js) -->  <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-7PD4495X5D"></script> <script type="text/partytown">(function(){const GTAG_MEASUREMENT_ID = "G-7PD4495X5D";
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+
+          gtag('config', GTAG_MEASUREMENT_ID);
+        })();</script>  </body> </html> <script async>
+	const anchors = document.querySelectorAll('.prose h2[id], .prose h3[id]');
+	const links = document.querySelectorAll('nav.toc ul li a');
+
+	function observeToc() {
+		if (typeof anchors != 'undefined' && anchors != null && typeof links != 'undefined' && links != null) {
+			let scrollTop = window.scrollY;
+
+			// highlight the last scrolled-to: set everything inactive first
+			for (const link of links) {
+				link.classList.add('border-transparent', 'text-inherit');
+				link.classList.remove('bg-[var(--background-surface-color)]', 'border-[var(--soft-border-color)]', 'text-[var(--link-color)]');
+			}
+			// then iterate backwards, on the first match highlight it and break
+			for (var i = anchors.length - 1; i >= 0; i--) {
+				if (scrollTop > anchors[i].offsetTop - 80) {
+					links[i].classList.remove('border-transparent', 'text-inherit');
+					links[i].classList.add('bg-[var(--background-surface-color)]', 'border-[var(--soft-border-color)]', 'text-[var(--link-color)]');
+					break;
+				}
+			}
+		}
+	}
+
+	window.addEventListener('scroll', (event) => {
+		observeToc(event);
+	});
+	window.addEventListener('hashchange', (event) => {
+		observeToc(event);
+	});
+</script>

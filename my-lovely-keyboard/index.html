@@ -1,0 +1,184 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/_astro/favicon.DlnF0RSw.png"><meta name="generator" content="Astro v5.4.2"><!-- Canonical URL --><link rel="canonical" href="https://piskunov.dev/my-lovely-keyboard/"><!-- Primary Meta Tags --><title>My lovely keyboard</title><meta name="title" content="My lovely keyboard"><meta name="description"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://piskunov.dev/my-lovely-keyboard/"><meta property="og:title" content="My lovely keyboard"><meta property="og:description"><meta property="og:image" content="https://piskunov.dev/syakir.webp"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://piskunov.dev/my-lovely-keyboard/"><meta property="twitter:title" content="My lovely keyboard"><meta property="twitter:description"><meta property="twitter:image" content="https://piskunov.dev/syakir.webp"><script>
+	function waitForIframe(selector, callback) {
+    	const interval = setInterval(() => {
+			const iframe = document.querySelector(selector);
+			if (iframe && iframe.contentWindow) {
+				clearInterval(interval);
+				iframe.addEventListener('load', () => callback(iframe));
+				callback(iframe);
+			}
+    	}, 200);
+	}
+
+	function sendMessage(message) {
+		waitForIframe("iframe.giscus-frame", (iframe) => {
+			iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+		});
+	}
+	
+	(function () {
+		let theme = localStorage.getItem('theme');
+		if (!theme) {
+			theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+			localStorage.setItem('theme', theme);
+		}
+
+		console.log("theme", theme)
+
+		const isDark = theme === 'dark';
+		console.log({ isDark})
+		
+		isDark ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');
+
+		sendMessage({
+		  setConfig: {
+		    theme: isDark ? 'dark_dimmed' : 'light'
+		  }
+		});
+	})();
+</script><link rel="stylesheet" href="/_astro/_slug_.CPG33NGs.css">
+<style>.toc-list[data-astro-cid-awg4b4gg]::-webkit-scrollbar{width:5px}.toc-list[data-astro-cid-awg4b4gg]::-webkit-scrollbar-track{background:transparent}.toc-list[data-astro-cid-awg4b4gg]::-webkit-scrollbar-thumb{background:#eee;border-radius:5px}.dark .toc-list[data-astro-cid-awg4b4gg]::-webkit-scrollbar-thumb{background:#2e2e2e;border-radius:5px}
+</style><script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[])})(window,'partytown','forward');/* Partytown 0.11.0 - MIT QwikDev */
+const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=t]=e;return[n,{...t,...r}]},n=Object.freeze((t=>{const e=new Set;let n=[];do{Object.getOwnPropertyNames(n).forEach((t=>{"function"==typeof n[t]&&e.add(t)}))}while((n=Object.getPrototypeOf(n))!==Object.prototype);return Array.from(e)})());!function(t,r,o,i,a,s,c,l,d,p,u=t,f){function h(){f||(f=1,"/"==(c=(s.lib||"/~partytown/")+(s.debug?"debug/":""))[0]&&(d=r.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(l=setTimeout(v,(null==s?void 0:s.fallbackTimeout)||1e4),r.addEventListener("pt0",w),a?y(1):o.serviceWorker?o.serviceWorker.register(c+(s.swPath||"partytown-sw.js"),{scope:c}).then((function(t){t.active?y():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&y()}))}),console.error):v())))}function y(e){p=r.createElement(e?"script":"iframe"),t._pttab=Date.now(),e||(p.style.display="block",p.style.width="0",p.style.height="0",p.style.border="0",p.style.visibility="hidden",p.setAttribute("aria-hidden",!0)),p.src=c+"partytown-"+(e?"atomics.js?v=0.11.0":"sandbox-sw.html?"+t._pttab),r.querySelector(s.sandboxParent||"body").appendChild(p)}function v(n,o){for(w(),i==t&&(s.forward||[]).map((function(n){const[r]=e(n);delete t[r.split(".")[0]]})),n=0;n<d.length;n++)(o=r.createElement("script")).innerHTML=d[n].innerHTML,o.nonce=s.nonce,r.head.appendChild(o);p&&p.parentNode.removeChild(p)}function w(){clearTimeout(l)}s=t.partytown||{},i==t&&(s.forward||[]).map((function(r){const[o,{preserveBehavior:i}]=e(r);u=t,o.split(".").map((function(e,r,o){var a;u=u[o[r]]=r+1<o.length?u[o[r]]||(a=o[r+1],n.includes(a)?[]:{}):(()=>{let e=null;if(i){const{methodOrProperty:n,thisObject:r}=((t,e)=>{let n=t;for(let t=0;t<e.length-1;t+=1)n=n[e[t]];return{thisObject:n,methodOrProperty:e.length>0?n[e[e.length-1]]:void 0}})(t,o);"function"==typeof n&&(e=(...t)=>n.apply(r,...t))}return function(){let n;return e&&(n=e(arguments)),(t._ptf=t._ptf||[]).push(o,arguments),n}})()}))})),"complete"==r.readyState?h():(t.addEventListener("DOMContentLoaded",h),t.addEventListener("load",h))}(window,document,navigator,top,window.crossOriginIsolated);;(e=>{e.addEventListener("astro:before-swap",e=>{let r=document.body.querySelector("iframe[src*='/~partytown/']");if(r)e.newDocument.body.append(r)})})(document);</script></head> <body class="bg-white dark:bg-zinc-900 dark:text-zinc-100 pt-16 sm:pt-0"> <header id="site-header" class="flex items-center w-full transition duration-300 z-[999] border-[var(--soft-border-color)]"> <div class="container"> <nav class="flex gap-4 items-center justify-between py-3"> <h2 class="m-0"> <a href="/" class="flex gap-4 items-center text-xl font-black uppercase"></a><div class="logo"><a href="/" class="flex gap-4 items-center text-xl font-black uppercase"></a><a class="site-title" href="/">Igor Piskunov</a>  </div> </h2> <div class="flex"> <a class="p-3 dark:hidden" href="https://github.com/piskunovim" target="_blank"><img src="/_astro/github-mark.BwyJR_2w_1yTuyt.svg" data-image-component="true" alt="Github logo" width="24" height="24" loading="lazy" decoding="async"></a> <a class="p-3 hidden dark:block" href="https://github.com/piskunovim" target="_blank"><img src="/_astro/github-mark-white.S2fJVXLq_Z113rs3.svg" data-image-component="true" alt="Github logo" width="24" height="24" loading="lazy" decoding="async"></a> <a class="p-3 dark:hidden" href="https://fosstodon.org/@piskunovim" target="_blank"><img src="/_astro/mastodon.CSJMTvH9_pOH2O.svg" data-image-component="true" alt="Mastodon logo" width="24" height="24" loading="lazy" decoding="async"></a> <a class="p-3 hidden dark:block" href="https://fosstodon.org/@piskunovim" target="_blank"><img src="/_astro/mastodon-white.g6vWpARi_ZezO5y.svg" data-image-component="true" alt="Mastodon logo" width="24" height="24" loading="lazy" decoding="async"></a> <button class="p-3" id="themeToggle" aria-label="Theme mode"> <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg> <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"> <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg> </button> </div> </nav> <div class="fixed top-3 w-auto max-w-full px-3 left-1/2 -translate-x-1/2 z-[999]"> <div class="flex px-2.5 bg-white/90 dark:bg-zinc-900/75 backdrop-blur-md leading-tight rounded-full border dark:border-zinc-700"> <div class="px-2.5 text-sm"> <a href="/" class="py-3 flex items-center text-zinc-600 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-zinc-50" aria-label="Home">  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>  </a> </div> <div class="px-2.5 text-sm"> <a href="/about/" class="py-3 flex items-center text-zinc-600 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-zinc-50"> About </a> </div><div class="px-2.5 text-sm"> <a href="/posts/" class="py-3 flex items-center text-zinc-600 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-zinc-50"> Posts </a> </div><div class="px-2.5 text-sm"> <a href="/music/" class="py-3 flex items-center text-zinc-600 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-zinc-50"> Music </a> </div><div class="px-2.5 text-sm"> <a href="/tags/" class="py-3 flex items-center text-zinc-600 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-zinc-50"> Tags </a> </div> </div> </div> </div>  <script>
+		
+
+		const handleToggleClick = () => {
+			// TODO: Investigate if possible to merge with sendMessage from BaseHead.astro 
+			const sendMessage = (message) => {
+				const iframe = document.querySelector('iframe.giscus-frame');
+				if (!iframe) return;
+				iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+			}
+
+			const element = document.documentElement;
+			element.classList.toggle('dark');
+
+			const isDark = element.classList.contains('dark');
+
+			sendMessage({
+				setConfig: {
+					theme: isDark ? 'dark_dimmed' : 'light'
+				}
+			});
+
+			localStorage.setItem('theme', isDark ? 'dark' : 'light');
+		};
+		document.getElementById('themeToggle')?.addEventListener('click', handleToggleClick);
+	</script> </header> <div class="py-8 min-h-[calc(100vh-160px)]">  <div class="container lg:flex gap-10"> <main class="overflow-hidden grow"> <article> <div class="prose dark:prose-invert
+  prose-h1:font-[900] prose-h1:my-4 prose-h1:text-2xl sm:prose-h1:text-[2rem]/[1.3]
+  prose-h2:mt-6 prose-h2:mb-3 prose-h2:text-2xl sm:prose-h2:text-3xl prose-h2:font-extrabold
+  prose-h3:mt-5 prose-h3:mb-2 prose-h3:text-xl sm:prose-h3:text-2xl
+  prose-h4:mt-3 prose-h4:mb-0 prose-img:rounded-xl prose-h3:target:pt-20">  <div> <h1 class="!my-1 leading-tight">My lovely keyboard</h1> <div class="text-sm font-[500] mt-2 sm:mt-0 py-1 md:text-right flex flex-col sm:flex-row gap-3 sm:justify-between sm:items-center"> <div class="flex gap-2"> <a class="border border-zinc-300 dark:border-zinc-700 rounded-2xl
+                          text-sm text-zinc-700 dark:text-zinc-300 no-underline px-2 py-0.5
+                          transition-all duration-700
+                        hover:border-zinc-700 dark:hover:border-zinc-300" href="/tags/notes"> notes </a><a class="border border-zinc-300 dark:border-zinc-700 rounded-2xl
+                          text-sm text-zinc-700 dark:text-zinc-300 no-underline px-2 py-0.5
+                          transition-all duration-700
+                        hover:border-zinc-700 dark:hover:border-zinc-300" href="/tags/devices"> devices </a> </div> <div> Published on <strong><time datetime="2022-08-17T00:00:00.000Z"> Aug 17, 2022 </time></strong> </div> </div> </div> <div class="py-3 overflow-hidden">  </div> <p>This is the first post in the “Purchases I have not regretted” series. It’s not an advertisement or technical review. Please, let me know if you see something wrong in my text that could help to improve it. Thank you!</p>
+<h2 id="introduction">Introduction</h2>
+<p>We live in a time when lots of devices pass through our hands. I think there are two main reasons for this: the fast technological progress and the constant search for a device that would satisfy our needs.</p>
+<p>I work a lot on the computer and for me, choosing the right keyboard was a long process. It was a frustrating experience typing on membrane keyboards, and it was sleepless nights for my loved ones due to the loud clicks of mechanical keyboards.</p>
+<p>So it was until one day the Logitech MX Keys keyboard fell into my hands, and since then it has become the main keyboard in my house. Today, I am the happy owner of three keyboards of the MX Keys series:</p>
+<ul>
+<li>Logitech MX Keys,ft</li>
+<li>Logitech MX Keys Mini,</li>
+<li>Logitech Craft.</li>
+</ul>
+<img src="https://sun9-79.userapi.com/impg/uP8dBCJA9ploA5wVTPsl1YD3iaC5buh9A7-diw/YwTmxFx1n20.jpg?size=1600x1200&#x26;quality=95&#x26;sign=e3d85a140c3e0a06f00677166cf26e92&#x26;type=album" width="480">
+<p>Let’s talk about what makes me interested in these keyboards.</p>
+<hr>
+<h2 id="advantages">Advantages</h2>
+<p>There are three main advantages I see in all MX keyboards:</p>
+<ol>
+<li>Quiet key travel.</li>
+<li>Ability to connect to three different devices.</li>
+<li>Wireless connection.</li>
+<li>Long-life battery.</li>
+</ol>
+<p>No matter which version you choose, you can be sure that these functions will be provided with due comfort. By choosing the version you’re choosing between the form, the weight and some unusual features that I cannot mark as advantages. Let’s try to briefly describe each version.</p>
+<p><img src="https://sun9-29.userapi.com/impg/UdM9uKls-ktTd1irw9VFVS6YULojJIcBf0vPSw/1ftzypRq2oY.jpg?size=1600x903&#x26;quality=95&#x26;sign=afd65e81ec69c4306cf9c06abfe74bd3&#x26;type=album
+" width="480"></p>
+<p><strong>Logitech MX Keys</strong> is a balanced full-scale keyboard. It looks and feels great. Weight is average. Connection technology: Logitech Unifying (I’ll tell you a little later, this is important).</p>
+<p><img src="https://sun9-44.userapi.com/impg/haMpRjtTwTFLDlMxyS4__5XnrA0X9gLjtoSOPQ/Tt4K8BKxd28.jpg?size=1600x1200&#x26;quality=95&#x26;sign=6343d6d6d56b86af70354e968ea88131&#x26;type=album
+" width="480"></p>
+<p><strong>Logitech MX Keys Mini</strong> is a minimized version of the MX Keys. Numpad has been removed, the main letter keys haven’t been touched, and the bottom row of the keyboard has been more tightly packed. The weight is light. Connectivity technology: Bluetooth.</p>
+<p><img src="https://sun9-4.userapi.com/impg/jIYOSE_DIgQ31aQGO-NjBfsM-dU47nGOKD1jVQ/5ja3EBCD3Lo.jpg?size=1600x1186&#x26;quality=95&#x26;sign=4840754aeac501e1f2f65e81fd1d44b8&#x26;type=album
+" width="480"></p>
+<p><strong>Logitech Craft</strong> is a copy of the Logitech MX Keys, weighted down in my opinion an absolutely useless feature called “crown” (an input dial that you won’t use even in those cases where it’s implied). The main idea behind the crown is to use it in the area of digital design and video editing. But in fact, it doesn’t provide functions that could replace convenient editor shortcuts. Moreover, the crown takes extra space and adds weight to the device. As a result, the weight turned out to be heavy, and it’s hard not to notice. Connectivity technology: Logitech Unifying.</p>
+<hr>
+<h2 id="about-connectivity-technologies">About connectivity technologies</h2>
+<p>Let’s talk about two facts that apply to all MX keyboards we’re talking about today:</p>
+<ol>
+<li>
+<p>You can connect all these keyboards via Bluetooth.</p>
+</li>
+<li>
+<p>You cannot use any of these keyboards as wired ones.</p>
+</li>
+</ol>
+<p>The first item in the list means a lot of devices that you’re able to connect easily. And the second one…well…means that we have an issue on BIOS[POST] step when the Bluetooth driver isn’t loaded yet.</p>
+<p>Some motherboards support Bluetooth loading in POST, but it will cost you extra money. Logitech MX Keys and Logitech Craft have a resolution to this issue called Logitech’s Unifying technology. All you need to do is to plug in the USB dongle from the kit inside your computer and the keyboards will be available in BIOS.</p>
+<p>Until this year, MX Keys Mini had no workaround. It’s truly a Bluetooth keyboard and cannot be connected by using “unifying” technology. That meant, in order to use the keyboard in BIOS, you just need another keyboard. But in 2022 with the new Logitech MX Mechanical Keyboard, the new dongle (Logi Bolt) was announced which is designed to solve the big problem of a small device. So now, if you have MX Keys Mini, I strictly recommend thinking about getting this dongle.</p>
+<img src="https://resource.logitech.com/content/dam/logitech/en/products/mice/unifying-receiver-usb/gallery/usb-gallery-01.png" width="200">
+<img src="https://resource.logitech.com/content/dam/logitech/en/products/mice/logi-bolt-usb-receiver/gallery/logi-bolt-usb-receiver-gallery-01.png" width="200">
+<blockquote>
+<p>The first one (orange) is “Unifying” receiver and the second one (green) is “Logi Bolt”</p>
+</blockquote>
+<p>By the way, Logitech Unifying technology also saves battery life, so the keyboard will work longer without charge (Logi Bolt marketing also states that).</p>
+<p>All keyboards on a single charge last approximately 14 days. You are more likely to forget when you last charged it. The time frame between charges is really impressive.</p>
+<hr>
+<h2 id="summary">Summary</h2>
+<p>In terms of form factor, I’d personally choose the MX Keys Mini. It’s a great keyboard for travelling, it has all the main features of the MX Keys series, it’s ultimately comfortable to use, and it takes up little space at home. But! The BIOS doesn’t work out of the box (don’t forget about Logi Bolt, but that means additional investment).</p>
+<p>The most balanced option is MX Keys. Yes, I’m repeating it again, it’s great and that’s true. It’s full-scaled, it’s still lightweight, and it works in BIOS. But the personal preference for more compact devices makes this device number two on my list.</p>
+<p>And, I’m sorry, but the Logitech Craft is rubbish. Frankly, it’s not so different from the MX Keys, but you have to pay extra money for the noticeable weight, additional space at the top of the keyboard, and, of course, for the “crown” spinner. And that’s not fair.</p>
+<p><strong>And the winner is MX Keys Mini!</strong> Just because in my case, the form factor makes more sense than BIOS usage. And again, with Logi Bolt this issue should be resolved. I’ll make a note about it if I’ll get one. Just look again, how does MX Keys Mini looks like on the table:</p>
+<p><img src="https://sun1-13.userapi.com/impg/c6htvWLKV0O7mZUopS5i6_5Vr0yOqZMPo7rFig/WW0c_vvPkcM.jpg?size=1600x918&#x26;quality=95&#x26;sign=3ddb92c7fd835f11434a0d80a49bfbbb&#x26;type=album
+" width="480"></p>
+<hr>
+<img src="https://sun9-1.userapi.com/impg/xDI93kf4Tw45PJclZDDyzNQXs_h-kRqj04-10Q/lsr_AzJBYb8.jpg?size=1280x606&#x26;quality=95&#x26;sign=5a6540439d5dda9bff9700da83f283b1&#x26;type=album" width="480">
+<p>PS #1: Some people say that MX Key keyboards has a proverbial slant. That’s true, but in fact, you won’t notice it. I didn’t until someone told me about that.</p>
+<p>PS #2: Additional photo with backlit keys:</p>
+<img src="https://sun9-83.userapi.com/impg/ASs3k-0XK6DDVpcL4SLFlTp9gdT7XIecz-LCDg/BzhCD9_yEvI.jpg?size=1600x1200&#x26;quality=95&#x26;sign=eae9e0793bcf28566cffda473c38c2b3&#x26;type=album" width="480">  </div> <script id="giscus-script" src="https://giscus.app/client.js" data-repo="piskunovim/piskunovim" data-repo-id="MDEwOlJlcG9zaXRvcnkxNTYxOTUxMjI=" data-category="Announcements" data-category-id="DIC_kwDOCU9ZMs4Cn3OG" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" async></script> </article> </main> <div class="shrink-0 w-[280px] hidden md:block"> <div class="mb-4"> <div class="about-the-author py-4 border-b"> <h3 class="font-extrabold uppercase mb-4 text-sm">About the Author</h3> <div class="flex gap-4 items-center leading-tight not-prose"> <a href="https://github.com/piskunovim" target="_blank" rel="noopener noreferrer" class="rounded-full overflow-hidden shrink-0 w-[70px] h-[70px]"> <img src="/_astro/piskunovim.D2QCUpug_ZMYCDD.webp" data-image-component="true" alt="Igor Piskunov" width="967" height="739" loading="lazy" decoding="async"> </a> <div> <div> <a href="https://github.com/piskunovim" class="block font-bold text-inherit hover:text-[var(--link-color)]" target="_blank" rel="noopener noreferrer">
+Igor Piskunov
+</a> </div> <small class="avatar__subtitle">Software Engineer</small> </div> </div> <!-- <div class='author-desc text-[.825rem] my-4'> --> <!-- <p class='mb-3'>
+			Igor is a Software Engineer at <a href="https://keitaro.io" target='_blank' class="underline">Keitaro</a>.
+		</p> --> <!-- <p>He will be happy to work and collaborate in any project as a Front-end engineer. His main stacks are React and Vue 3.</p> --> <!-- </div> --> </div> </div> <nav class="toc sticky top-4 py-2 lg:-ml-3" data-astro-cid-awg4b4gg><h3 class="font-extrabold uppercase mb-1 px-3 text-sm" data-astro-cid-awg4b4gg>On This Page</h3><ul class="toc-list max-h-[calc(100vh-70px)] overflow-auto text-[.825rem] text-[var(--color-content-secondary)]" data-astro-cid-awg4b4gg><li data-astro-cid-awg4b4gg><a class="block font-bold py-1.5 px-3 border-l border-transparent text-inherit leading-tight text-zinc-700 dark:text-zinc-300" href="#introduction" data-astro-cid-awg4b4gg>Introduction</a></li><li data-astro-cid-awg4b4gg><a class="block font-bold py-1.5 px-3 border-l border-transparent text-inherit leading-tight text-zinc-700 dark:text-zinc-300" href="#advantages" data-astro-cid-awg4b4gg>Advantages</a></li><li data-astro-cid-awg4b4gg><a class="block font-bold py-1.5 px-3 border-l border-transparent text-inherit leading-tight text-zinc-700 dark:text-zinc-300" href="#about-connectivity-technologies" data-astro-cid-awg4b4gg>About connectivity technologies</a></li><li data-astro-cid-awg4b4gg><a class="block font-bold py-1.5 px-3 border-l border-transparent text-inherit leading-tight text-zinc-700 dark:text-zinc-300" href="#summary" data-astro-cid-awg4b4gg>Summary</a></li></ul></nav> </div> </div>  </div> <footer class="container mt-8"> <div class="justify-center flex gap-4 py-8 prose dark:prose-invert text-sm"> <a href="/feed.xml">RSS</a> </div> <div class="py-4 border-t dark:border-t-zinc-700"> <div class="md:flex text-sm text-zinc-500 dark:text-zinc-300 prose dark:prose-invert justify-between"> <div>Copyright © 2025 Igor Piskunov.</div> </div> </div> </footer> <!-- Google tag (gtag.js) -->  <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-7PD4495X5D"></script> <script type="text/partytown">(function(){const GTAG_MEASUREMENT_ID = "G-7PD4495X5D";
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+
+          gtag('config', GTAG_MEASUREMENT_ID);
+        })();</script>  </body> </html> <script async>
+	const anchors = document.querySelectorAll('.prose h2[id], .prose h3[id]');
+	const links = document.querySelectorAll('nav.toc ul li a');
+
+	function observeToc() {
+		if (typeof anchors != 'undefined' && anchors != null && typeof links != 'undefined' && links != null) {
+			let scrollTop = window.scrollY;
+
+			// highlight the last scrolled-to: set everything inactive first
+			for (const link of links) {
+				link.classList.add('border-transparent', 'text-inherit');
+				link.classList.remove('bg-[var(--background-surface-color)]', 'border-[var(--soft-border-color)]', 'text-[var(--link-color)]');
+			}
+			// then iterate backwards, on the first match highlight it and break
+			for (var i = anchors.length - 1; i >= 0; i--) {
+				if (scrollTop > anchors[i].offsetTop - 80) {
+					links[i].classList.remove('border-transparent', 'text-inherit');
+					links[i].classList.add('bg-[var(--background-surface-color)]', 'border-[var(--soft-border-color)]', 'text-[var(--link-color)]');
+					break;
+				}
+			}
+		}
+	}
+
+	window.addEventListener('scroll', (event) => {
+		observeToc(event);
+	});
+	window.addEventListener('hashchange', (event) => {
+		observeToc(event);
+	});
+</script>

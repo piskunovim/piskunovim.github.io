@@ -1,332 +1,114 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/_astro/favicon.DlnF0RSw.png"><meta name="generator" content="Astro v5.4.2"><!-- Canonical URL --><link rel="canonical" href="https://piskunov.dev/"><!-- Primary Meta Tags --><title>Igor Piskunov - Software Engineer Blog &amp; Portfolio Website</title><meta name="title" content="Igor Piskunov - Software Engineer Blog &#38; Portfolio Website"><meta name="description" content="Software Engineer Blog &#38;Portfolio Website"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://piskunov.dev/"><meta property="og:title" content="Igor Piskunov - Software Engineer Blog &#38; Portfolio Website"><meta property="og:description" content="Software Engineer Blog &#38;Portfolio Website"><meta property="og:image" content="https://piskunov.dev/syakir.webp"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://piskunov.dev/"><meta property="twitter:title" content="Igor Piskunov - Software Engineer Blog &#38; Portfolio Website"><meta property="twitter:description" content="Software Engineer Blog &#38;Portfolio Website"><meta property="twitter:image" content="https://piskunov.dev/syakir.webp"><script>
+	function waitForIframe(selector, callback) {
+    	const interval = setInterval(() => {
+			const iframe = document.querySelector(selector);
+			if (iframe && iframe.contentWindow) {
+				clearInterval(interval);
+				iframe.addEventListener('load', () => callback(iframe));
+				callback(iframe);
+			}
+    	}, 200);
+	}
 
-  <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	function sendMessage(message) {
+		waitForIframe("iframe.giscus-frame", (iframe) => {
+			iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+		});
+	}
+	
+	(function () {
+		let theme = localStorage.getItem('theme');
+		if (!theme) {
+			theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+			localStorage.setItem('theme', theme);
+		}
 
-  <title>Igor Piskunov</title>
-  <meta name="description" content="Be proud of every step that leads you forward and keep run so, that no one can overtake you.">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/">
-  <link rel="alternate" type="application/rss+xml" title="Igor Piskunov" href="/feed.xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  
-  
-</head>
+		console.log("theme", theme)
 
+		const isDark = theme === 'dark';
+		console.log({ isDark})
+		
+		isDark ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');
 
-  <body>
+		sendMessage({
+		  setConfig: {
+		    theme: isDark ? 'dark_dimmed' : 'light'
+		  }
+		});
+	})();
+</script><link rel="stylesheet" href="/_astro/_slug_.CPG33NGs.css"><script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[])})(window,'partytown','forward');/* Partytown 0.11.0 - MIT QwikDev */
+const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=t]=e;return[n,{...t,...r}]},n=Object.freeze((t=>{const e=new Set;let n=[];do{Object.getOwnPropertyNames(n).forEach((t=>{"function"==typeof n[t]&&e.add(t)}))}while((n=Object.getPrototypeOf(n))!==Object.prototype);return Array.from(e)})());!function(t,r,o,i,a,s,c,l,d,p,u=t,f){function h(){f||(f=1,"/"==(c=(s.lib||"/~partytown/")+(s.debug?"debug/":""))[0]&&(d=r.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(l=setTimeout(v,(null==s?void 0:s.fallbackTimeout)||1e4),r.addEventListener("pt0",w),a?y(1):o.serviceWorker?o.serviceWorker.register(c+(s.swPath||"partytown-sw.js"),{scope:c}).then((function(t){t.active?y():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&y()}))}),console.error):v())))}function y(e){p=r.createElement(e?"script":"iframe"),t._pttab=Date.now(),e||(p.style.display="block",p.style.width="0",p.style.height="0",p.style.border="0",p.style.visibility="hidden",p.setAttribute("aria-hidden",!0)),p.src=c+"partytown-"+(e?"atomics.js?v=0.11.0":"sandbox-sw.html?"+t._pttab),r.querySelector(s.sandboxParent||"body").appendChild(p)}function v(n,o){for(w(),i==t&&(s.forward||[]).map((function(n){const[r]=e(n);delete t[r.split(".")[0]]})),n=0;n<d.length;n++)(o=r.createElement("script")).innerHTML=d[n].innerHTML,o.nonce=s.nonce,r.head.appendChild(o);p&&p.parentNode.removeChild(p)}function w(){clearTimeout(l)}s=t.partytown||{},i==t&&(s.forward||[]).map((function(r){const[o,{preserveBehavior:i}]=e(r);u=t,o.split(".").map((function(e,r,o){var a;u=u[o[r]]=r+1<o.length?u[o[r]]||(a=o[r+1],n.includes(a)?[]:{}):(()=>{let e=null;if(i){const{methodOrProperty:n,thisObject:r}=((t,e)=>{let n=t;for(let t=0;t<e.length-1;t+=1)n=n[e[t]];return{thisObject:n,methodOrProperty:e.length>0?n[e[e.length-1]]:void 0}})(t,o);"function"==typeof n&&(e=(...t)=>n.apply(r,...t))}return function(){let n;return e&&(n=e(arguments)),(t._ptf=t._ptf||[]).push(o,arguments),n}})()}))})),"complete"==r.readyState?h():(t.addEventListener("DOMContentLoaded",h),t.addEventListener("load",h))}(window,document,navigator,top,window.crossOriginIsolated);;(e=>{e.addEventListener("astro:before-swap",e=>{let r=document.body.querySelector("iframe[src*='/~partytown/']");if(r)e.newDocument.body.append(r)})})(document);</script></head> <body class="bg-white dark:bg-zinc-900 dark:text-zinc-100 pt-16 sm:pt-0"> <header id="site-header" class="flex items-center w-full transition duration-300 z-[999] border-[var(--soft-border-color)]"> <div class="container"> <nav class="flex gap-4 items-center justify-between py-3"> <h2 class="m-0"> <a href="/" class="flex gap-4 items-center text-xl font-black uppercase"></a><div class="logo"><a href="/" class="flex gap-4 items-center text-xl font-black uppercase"></a><a class="site-title animated-title" href="/">Igor Piskunov</a> <span class="cursor">|</span> </div> </h2> <div class="flex"> <a class="p-3 dark:hidden" href="https://github.com/piskunovim" target="_blank"><img src="/_astro/github-mark.BwyJR_2w_1yTuyt.svg" data-image-component="true" alt="Github logo" width="24" height="24" loading="lazy" decoding="async"></a> <a class="p-3 hidden dark:block" href="https://github.com/piskunovim" target="_blank"><img src="/_astro/github-mark-white.S2fJVXLq_Z113rs3.svg" data-image-component="true" alt="Github logo" width="24" height="24" loading="lazy" decoding="async"></a> <a class="p-3 dark:hidden" href="https://fosstodon.org/@piskunovim" target="_blank"><img src="/_astro/mastodon.CSJMTvH9_pOH2O.svg" data-image-component="true" alt="Mastodon logo" width="24" height="24" loading="lazy" decoding="async"></a> <a class="p-3 hidden dark:block" href="https://fosstodon.org/@piskunovim" target="_blank"><img src="/_astro/mastodon-white.g6vWpARi_ZezO5y.svg" data-image-component="true" alt="Mastodon logo" width="24" height="24" loading="lazy" decoding="async"></a> <button class="p-3" id="themeToggle" aria-label="Theme mode"> <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg> <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"> <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg> </button> </div> </nav> <div class="fixed top-3 w-auto max-w-full px-3 left-1/2 -translate-x-1/2 z-[999]"> <div class="flex px-2.5 bg-white/90 dark:bg-zinc-900/75 backdrop-blur-md leading-tight rounded-full border dark:border-zinc-700"> <div class="px-2.5 text-sm"> <a href="/" class="py-3 flex items-center border-b border-zinc-500 dark:border-zinc-300 text-zinc-950 dark:text-zinc-50" aria-label="Home">  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>  </a> </div> <div class="px-2.5 text-sm"> <a href="/about/" class="py-3 flex items-center text-zinc-600 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-zinc-50"> About </a> </div><div class="px-2.5 text-sm"> <a href="/posts/" class="py-3 flex items-center text-zinc-600 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-zinc-50"> Posts </a> </div><div class="px-2.5 text-sm"> <a href="/music/" class="py-3 flex items-center text-zinc-600 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-zinc-50"> Music </a> </div><div class="px-2.5 text-sm"> <a href="/tags/" class="py-3 flex items-center text-zinc-600 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-zinc-50"> Tags </a> </div> </div> </div> </div>  <script>
+		
 
-    <header class="site-header" role="banner">
+		const handleToggleClick = () => {
+			// TODO: Investigate if possible to merge with sendMessage from BaseHead.astro 
+			const sendMessage = (message) => {
+				const iframe = document.querySelector('iframe.giscus-frame');
+				if (!iframe) return;
+				iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+			}
 
-  <div class="header wrapper">
-    
-    
-    
-    <div class="logo">
-      
-        <a class="site-title animated-title" href="/">Igor Piskunov</a>
-        <span class="cursor">|</span>
-      
-    </div>
+			const element = document.documentElement;
+			element.classList.toggle('dark');
 
-    
-      <nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
+			const isDark = element.classList.contains('dark');
 
-        <div class="trigger">
-          
-          
-          <a class="page-link active" href="/">All</a>
+			sendMessage({
+				setConfig: {
+					theme: isDark ? 'dark_dimmed' : 'light'
+				}
+			});
 
-          
+			localStorage.setItem('theme', isDark ? 'dark' : 'light');
+		};
+		document.getElementById('themeToggle')?.addEventListener('click', handleToggleClick);
+	</script> </header> <div class="py-8 min-h-[calc(100vh-160px)]">  <div class="container"> <div class="w-full md:flex md:items-center gap-16 mb-10"> <div class="text-pretty leading-9"> <h1 class="text-4xl font-bold mb-4">Welcome 🤗</h1> <div class="prose dark:prose-invert
+  prose-h1:font-[900] prose-h1:my-4 prose-h1:text-2xl sm:prose-h1:text-[2rem]/[1.3]
+  prose-h2:mt-6 prose-h2:mb-3 prose-h2:text-2xl sm:prose-h2:text-3xl prose-h2:font-extrabold
+  prose-h3:mt-5 prose-h3:mb-2 prose-h3:text-xl sm:prose-h3:text-2xl
+  prose-h4:mt-3 prose-h4:mb-0 prose-img:rounded-xl prose-h3:target:pt-20">  <div class="text-lg"> <p>This is my personal blog, where I share short insights on different topics. Hope you find something interesting!
+</p><p>If you'd like to reach out, feel free to drop me an email at <a href="mailto:mail@piskunov.dev">mail@piskunov.dev</a>.</p> </div>  </div> </div> <img src="/_astro/piskunovim.D2QCUpug_ZVbcbA.webp" data-image-component="true" alt="Igor Piskunov" loading="eager" width="300" height="229" decoding="async" class="rounded-3xl rotate-3 mx-4 md:mx-0"> </div> <main> <div class="mt-6 mb-12"> <div class="flex justify-between gap-2 border-b mb-1 dark:border-b-zinc-700"> <h2 class="text-lg font-bold mb-3">Recent Posts</h2> <a href="/posts/" class="inline-block py-2 underline dark:prose-invert">All posts &raquo;</a> </div> <div> <div class="flex flex-col sm:flex-row gap-2 sm:items-center  border-b py-2 mb-1 capitalize dark:border-b-zinc-700"> <div class="text-zinc-700 text-sm w-24 dark:text-zinc-300 shrink-0"> <time datetime="2024-03-09T00:00:00.000Z"> Mar 09, 2024 </time> </div> <h3 class="font-medium grow"> <a href="/5-wireless-earbuds-5-different-experiences/"> 5 Wireless Earbuds, 5 Different Experiences </a> </h3> <div class="flex gap-2 shrink-0"> <a class="border border-zinc-300 dark:border-zinc-700 rounded-2xl
+          text-sm text-zinc-700 dark:text-zinc-300 no-underline px-2 py-0.5
+          transition-all duration-700
+          hover:border-zinc-700 dark:hover:border-zinc-300" href="/tags/notes"> notes </a><a class="border border-zinc-300 dark:border-zinc-700 rounded-2xl
+          text-sm text-zinc-700 dark:text-zinc-300 no-underline px-2 py-0.5
+          transition-all duration-700
+          hover:border-zinc-700 dark:hover:border-zinc-300" href="/tags/devices"> devices </a> </div> </div><div class="flex flex-col sm:flex-row gap-2 sm:items-center  border-b py-2 mb-1 capitalize dark:border-b-zinc-700"> <div class="text-zinc-700 text-sm w-24 dark:text-zinc-300 shrink-0"> <time datetime="2023-04-20T00:00:00.000Z"> Apr 20, 2023 </time> </div> <h3 class="font-medium grow"> <a href="/resolving-coc-compatibility-for-typescript-support/"> Resolving coc.nvim Compatibility for TypeScript Support </a> </h3> <div class="flex gap-2 shrink-0"> <a class="border border-zinc-300 dark:border-zinc-700 rounded-2xl
+          text-sm text-zinc-700 dark:text-zinc-300 no-underline px-2 py-0.5
+          transition-all duration-700
+          hover:border-zinc-700 dark:hover:border-zinc-300" href="/tags/cli"> cli </a><a class="border border-zinc-300 dark:border-zinc-700 rounded-2xl
+          text-sm text-zinc-700 dark:text-zinc-300 no-underline px-2 py-0.5
+          transition-all duration-700
+          hover:border-zinc-700 dark:hover:border-zinc-300" href="/tags/linux"> linux </a> </div> </div><div class="flex flex-col sm:flex-row gap-2 sm:items-center  border-b py-2 mb-1 capitalize dark:border-b-zinc-700"> <div class="text-zinc-700 text-sm w-24 dark:text-zinc-300 shrink-0"> <time datetime="2022-08-22T00:00:00.000Z"> Aug 22, 2022 </time> </div> <h3 class="font-medium grow"> <a href="/command-line-habits-aliases/"> Command Line Habits - Aliases </a> </h3> <div class="flex gap-2 shrink-0"> <a class="border border-zinc-300 dark:border-zinc-700 rounded-2xl
+          text-sm text-zinc-700 dark:text-zinc-300 no-underline px-2 py-0.5
+          transition-all duration-700
+          hover:border-zinc-700 dark:hover:border-zinc-300" href="/tags/cli"> cli </a><a class="border border-zinc-300 dark:border-zinc-700 rounded-2xl
+          text-sm text-zinc-700 dark:text-zinc-300 no-underline px-2 py-0.5
+          transition-all duration-700
+          hover:border-zinc-700 dark:hover:border-zinc-300" href="/tags/linux"> linux </a> </div> </div><div class="flex flex-col sm:flex-row gap-2 sm:items-center  border-b py-2 mb-1 capitalize dark:border-b-zinc-700"> <div class="text-zinc-700 text-sm w-24 dark:text-zinc-300 shrink-0"> <time datetime="2022-08-19T00:00:00.000Z"> Aug 19, 2022 </time> </div> <h3 class="font-medium grow"> <a href="/imagine-dragons-cover/"> Have Fun Playing Bones By Imagine Dragons </a> </h3> <div class="flex gap-2 shrink-0"> <a class="border border-zinc-300 dark:border-zinc-700 rounded-2xl
+          text-sm text-zinc-700 dark:text-zinc-300 no-underline px-2 py-0.5
+          transition-all duration-700
+          hover:border-zinc-700 dark:hover:border-zinc-300" href="/tags/notes"> notes </a><a class="border border-zinc-300 dark:border-zinc-700 rounded-2xl
+          text-sm text-zinc-700 dark:text-zinc-300 no-underline px-2 py-0.5
+          transition-all duration-700
+          hover:border-zinc-700 dark:hover:border-zinc-300" href="/tags/pblog"> pblog </a> </div> </div><div class="flex flex-col sm:flex-row gap-2 sm:items-center  border-b py-2 mb-1 capitalize dark:border-b-zinc-700"> <div class="text-zinc-700 text-sm w-24 dark:text-zinc-300 shrink-0"> <time datetime="2022-08-17T00:00:00.000Z"> Aug 17, 2022 </time> </div> <h3 class="font-medium grow"> <a href="/my-lovely-keyboard/"> My lovely keyboard </a> </h3> <div class="flex gap-2 shrink-0"> <a class="border border-zinc-300 dark:border-zinc-700 rounded-2xl
+          text-sm text-zinc-700 dark:text-zinc-300 no-underline px-2 py-0.5
+          transition-all duration-700
+          hover:border-zinc-700 dark:hover:border-zinc-300" href="/tags/notes"> notes </a><a class="border border-zinc-300 dark:border-zinc-700 rounded-2xl
+          text-sm text-zinc-700 dark:text-zinc-300 no-underline px-2 py-0.5
+          transition-all duration-700
+          hover:border-zinc-700 dark:hover:border-zinc-300" href="/tags/devices"> devices </a> </div> </div> </div> <div class="text-right"></div> </div> <div> <div class="flex justify-between gap-2 mb-1"> <h2 class="text-lg font-bold mb-3">Projects</h2> <!-- <a href="/projects/" class="inline-block py-2 underline dark:prose-invert">All projects &raquo;</a> --> </div> <div class="grid grid-cols-12 gap-5"> <div class="col-span-12 sm:col-span-6 lg:col-span-4 border dark:border-zinc-700 rounded-xl shadow-sm p-5"> <div class="flex justify-between items-center"> <div class="flex gap-2"> <span class="border border-zinc-300 dark:border-zinc-700 rounded-2xl
+                    text-sm text-zinc-700 dark:text-zinc-300 no-underline px-2 py-0.5
+                    transition-all duration-700
+                  hover:border-zinc-700 dark:hover:border-zinc-300"> npm-package </span> </div>  </div> <h3 class="font-semibold my-2"> <a class="underline" href="https://github.com/piskunovim/useMemoReducer" target="_blank">use-memo-reducer</a> </h3> <div class="line-clamp-2 text-zinc-600 dark:text-zinc-300 mb-4 min-h-[50px]"> <p>A React hook engineered to efficiently manage state within a React Context</p> </div> <div class="flex justify-end gap-3">  <a class="underline flex items-center gap-2" href="https://codesandbox.io/p/sandbox/use-memo-reducer-context-example-pcv676" target="_blank">
+Demo
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg> </a> </div> </div> </div> </div> </main> </div>  </div> <footer class="container mt-8"> <div class="justify-center flex gap-4 py-8 prose dark:prose-invert text-sm"> <a href="/feed.xml">RSS</a> </div> <div class="py-4 border-t dark:border-t-zinc-700"> <div class="md:flex text-sm text-zinc-500 dark:text-zinc-300 prose dark:prose-invert justify-between"> <div>Copyright © 2025 Igor Piskunov.</div> </div> </div> </footer> <!-- Google tag (gtag.js) -->  <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-7PD4495X5D"></script> <script type="text/partytown">(function(){const GTAG_MEASUREMENT_ID = "G-7PD4495X5D";
 
-            
-              
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
 
-              
-          
-              
-                
-              
-                
-              
-                
-              
-                
-              
-
-              
-          
-              
-
-              
-          
-              
-
-              
-                
-                
-                <a class="page-link " href="/linux/">Linux</a>
-              
-          
-              
-
-              
-                
-                
-                <a class="page-link " href="/music/">Music</a>
-              
-          
-              
-
-              
-                
-                
-                <a class="page-link " href="/about/">About</a>
-              
-          
-        </div>
-      </nav>
-    
-  </div>
-</header>
-
-
-    
-    
-    
-    
-
-    <main class="page-content " aria-label="Content">
-      <div class="wrapper">
-        <div class="home">
-  
-  
-
-  <div class="content-title">Posts</div>
-
-  <ul class="post-list">
-    
-      
-      
-      
-      
-      <li class="">
-        
-        <span class="post-meta">Apr 20, 2023</span>
-        <span><a class="post-link" href="/pblog/2023/04/20/update-coc-to-start-coc-tsserver.html">Resolving coc.nvim Compatibility for TypeScript Support</a></span>
-      </li>
-    
-      
-      
-      
-      
-      <li class="margin-between-posts">
-        
-        <span class="post-meta">Aug 22, 2022</span>
-        <span><a class="post-link" href="/linux/2022/08/22/command-line-habits-aliases.html">Command Line Habits - Aliases</a></span>
-      </li>
-    
-      
-      
-      
-      
-      <li class="">
-        
-        <span class="post-meta">Aug 19, 2022</span>
-        <span><a class="post-link" href="/pblog/2022/08/19/imagine-dragons-piano-cover.html">Have Fun Playing Bones By Imagine Dragons</a></span>
-      </li>
-    
-      
-      
-      
-      
-      <li class="">
-        
-        <span class="post-meta">Aug 17, 2022</span>
-        <span><a class="post-link" href="/pblog/2022/08/17/my-lovely-keyboard-device.html">My lovely keyboard</a></span>
-      </li>
-    
-      
-      
-      
-      
-      <li class="margin-between-posts">
-        
-        <span class="post-meta">Nov 14, 2021</span>
-        <span><a class="post-link" href="/pblog/2021/11/14/atlassian-cloud-development-failed-to-register-with-the-host.html">Atlassian Cloud Development | Failed to register with the host</a></span>
-      </li>
-    
-      
-      
-      
-      
-      <li class="">
-        
-        <span class="post-meta">Nov 05, 2021</span>
-        <span><a class="post-link" href="/pblog/2021/11/05/three-years-as-atlassian-developer.html">Three years as Atlassian developer</a></span>
-      </li>
-    
-      
-      
-      
-      
-      <li class="margin-between-posts">
-        
-        <span class="post-meta">Mar 01, 2019</span>
-        <span><a class="post-link" href="/pblog/2019/03/01/one-year-changelog.html">One Year Changelog</a></span>
-      </li>
-    
-      
-      
-      
-      
-      <li class="margin-between-posts">
-        
-        <span class="post-meta">Feb 18, 2018</span>
-        <span><a class="post-link" href="/pblog/2018/02/18/balanced-way-to-keep-motivated.html">Balanced Way To Keep Productive</a></span>
-      </li>
-    
-      
-      
-      
-      
-      <li class="">
-        
-        <span class="post-meta">Dec 12, 2017</span>
-        <span><a class="post-link" href="/pblog/2017/12/12/loopback-rest-apis-with-no-coding.html">LoopBack - REST APIs with no coding</a></span>
-      </li>
-    
-      
-      
-      
-      
-      <li class="">
-        
-        <span class="post-meta">Dec 10, 2017</span>
-        <span><a class="post-link" href="/linux/2017/12/10/command-line-habits-grep.html">Command Line Habits - Grep</a></span>
-      </li>
-    
-      
-      
-      
-      
-      <li class="">
-        
-        <span class="post-meta">Dec 08, 2017</span>
-        <span><a class="post-link" href="/linux/2017/12/08/command-line-habits-vim.html">Command Line Habits - Vim</a></span>
-      </li>
-    
-      
-      
-      
-      
-      <li class="">
-        
-        <span class="post-meta">Nov 14, 2017</span>
-        <span><a class="post-link" href="/pblog/2017/11/14/wedding-day.html">Wedding day &amp; New friend</a></span>
-      </li>
-    
-      
-      
-      
-      
-      <li class="">
-        
-        <span class="post-meta">Nov 02, 2017</span>
-        <span><a class="post-link" href="/pblog/2017/11/02/js-eight-years-ago.html">What you should have known about JS eight years ago</a></span>
-      </li>
-    
-      
-      
-      
-      
-      <li class="">
-        
-        <span class="post-meta">Oct 27, 2017</span>
-        <span><a class="post-link" href="/pblog/2017/10/27/row-talent-and-experience.html">Row Talent || Experience</a></span>
-      </li>
-    
-      
-      
-      
-      
-      <li class="">
-        
-        <span class="post-meta">Oct 26, 2017</span>
-        <span><a class="post-link" href="/pblog/2017/10/26/welcome-to-piskunov-im.html">Hello everyone!</a></span>
-      </li>
-    
-  </ul>
-
-<!--  -->
-<!--  <div class="pagination">-->
-<!--    -->
-<!--      <a href="/all-posts/">Show more posts -></a>-->
-<!--    -->
-<!--  </div>-->
-<!--  -->
-
-</div>
-
-      </div>
-    </main>
-
-    <footer class="site-footer">
-
-  <div class="wrapper footer-wrapper">
-
-    <div class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></div>
-
-    
-      <div>
-        <a href="mailto:mail@piskunov.im">
-    <span class="icon icon--email"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 96" width="14px" height="14px"><path d="M0 11.283V8a8 8 0 0 1 8-8h112a8 8 0 0 1 8 8v3.283l-64 40zm66.12 48.11a4.004 4.004 0 0 1-4.24 0L0 20.717V88a8 8 0 0 0 8 8h112a8 8 0 0 0 8-8V20.717z" data-name="Layer 2"></path></svg></span>
-    <span class="email-address">mail@piskunov.im</span>
-</a>
-
-<!--        <a href="mailto:mail@piskunov.im">mail@piskunov.im</a>-->
-      </div>
-    
-
-    
-      <div>
-        <a href="https://github.com/piskunovim"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
-</span><span class="username">piskunovim</span></a>
-
-      </div>
-    
-
-    
-    <div>
-      <a rel="me" href="https://fosstodon.org/@piskunovim"><span class="icon icon--mastodon"><?xml version="1.0" encoding="utf-8"?>
-<svg fill="#000000" width="35px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"><path d="M21.327 8.566c0-4.339-2.843-5.61-2.843-5.61-1.433-.658-3.894-.935-6.451-.956h-.063c-2.557.021-5.016.298-6.45.956 0 0-2.843 1.272-2.843 5.61 0 .993-.019 2.181.012 3.441.103 4.243.778 8.425 4.701 9.463 1.809.479 3.362.579 4.612.51 2.268-.126 3.541-.809 3.541-.809l-.075-1.646s-1.621.511-3.441.449c-1.804-.062-3.707-.194-3.999-2.409a4.523 4.523 0 0 1-.04-.621s1.77.433 4.014.536c1.372.063 2.658-.08 3.965-.236 2.506-.299 4.688-1.843 4.962-3.254.434-2.223.398-5.424.398-5.424zm-3.353 5.59h-2.081V9.057c0-1.075-.452-1.62-1.357-1.62-1 0-1.501.647-1.501 1.927v2.791h-2.069V9.364c0-1.28-.501-1.927-1.502-1.927-.905 0-1.357.546-1.357 1.62v5.099H6.026V8.903c0-1.074.273-1.927.823-2.558.566-.631 1.307-.955 2.228-.955 1.065 0 1.872.409 2.405 1.228l.518.869.519-.869c.533-.819 1.34-1.228 2.405-1.228.92 0 1.662.324 2.228.955.549.631.822 1.484.822 2.558v5.253z"/></svg></span><span class="username">piskunovim</span></a>
-    </div>
-    
-
-<!--    -->
-  </div>
-
-</footer>
-
-<script id="dsq-count-scr" src="//piskunov-im.disqus.com/count.js" async></script>
-
-
-  </body>
-
-</html>
+          gtag('config', GTAG_MEASUREMENT_ID);
+        })();</script>  </body> </html>
