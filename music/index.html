@@ -1,13 +1,28 @@
 <!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/_astro/favicon.DlnF0RSw.png"><meta name="generator" content="Astro v5.4.2"><!-- Canonical URL --><link rel="canonical" href="https://piskunov.dev/music/"><!-- Primary Meta Tags --><title>Music</title><meta name="title" content="Music"><meta name="description" content="I create music in the genres of acoustic pop and indie. Please feel free to utilize my compositions for your needs."><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://piskunov.dev/music/"><meta property="og:title" content="Music"><meta property="og:description" content="I create music in the genres of acoustic pop and indie. Please feel free to utilize my compositions for your needs."><meta property="og:image" content="https://piskunov.dev/syakir.webp"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://piskunov.dev/music/"><meta property="twitter:title" content="Music"><meta property="twitter:description" content="I create music in the genres of acoustic pop and indie. Please feel free to utilize my compositions for your needs."><meta property="twitter:image" content="https://piskunov.dev/syakir.webp"><script>
+	function observeElementInViewport(element, callback) {
+    	const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					callback(entry.target);
+					observer.disconnect();
+				}
+			});
+    	}, { threshold: 0.1 });
+    
+    	observer.observe(element);
+	}
+
 	function waitForIframe(selector, callback) {
-    	const interval = setInterval(() => {
+		const interval = setInterval(() => {
 			const iframe = document.querySelector(selector);
 			if (iframe && iframe.contentWindow) {
 				clearInterval(interval);
-				iframe.addEventListener('load', () => callback(iframe));
-				callback(iframe);
+				observeElementInViewport(iframe, () => {
+					iframe.addEventListener('load', () => callback(iframe));
+					callback(iframe);
+				});
 			}
-    	}, 200);
+		}, 1000);
 	}
 
 	function sendMessage(message) {
@@ -22,6 +37,7 @@
 			theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 			localStorage.setItem('theme', theme);
 		}
+
 
 		const isDark = theme === 'dark';
 		

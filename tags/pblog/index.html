@@ -1,13 +1,28 @@
 <!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/_astro/favicon.DlnF0RSw.png"><meta name="generator" content="Astro v5.4.2"><!-- Canonical URL --><link rel="canonical" href="https://piskunov.dev/tags/pblog/"><!-- Primary Meta Tags --><title>All Posts Tagged with Pblog</title><meta name="title" content="All Posts Tagged with Pblog"><meta name="description" content="All Posts Tagged with Pblog"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://piskunov.dev/tags/pblog/"><meta property="og:title" content="All Posts Tagged with Pblog"><meta property="og:description" content="All Posts Tagged with Pblog"><meta property="og:image" content="https://piskunov.dev/syakir.webp"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://piskunov.dev/tags/pblog/"><meta property="twitter:title" content="All Posts Tagged with Pblog"><meta property="twitter:description" content="All Posts Tagged with Pblog"><meta property="twitter:image" content="https://piskunov.dev/syakir.webp"><script>
+	function observeElementInViewport(element, callback) {
+    	const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					callback(entry.target);
+					observer.disconnect();
+				}
+			});
+    	}, { threshold: 0.1 });
+    
+    	observer.observe(element);
+	}
+
 	function waitForIframe(selector, callback) {
-    	const interval = setInterval(() => {
+		const interval = setInterval(() => {
 			const iframe = document.querySelector(selector);
 			if (iframe && iframe.contentWindow) {
 				clearInterval(interval);
-				iframe.addEventListener('load', () => callback(iframe));
-				callback(iframe);
+				observeElementInViewport(iframe, () => {
+					iframe.addEventListener('load', () => callback(iframe));
+					callback(iframe);
+				});
 			}
-    	}, 200);
+		}, 1000);
 	}
 
 	function sendMessage(message) {
@@ -22,6 +37,7 @@
 			theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 			localStorage.setItem('theme', theme);
 		}
+
 
 		const isDark = theme === 'dark';
 		
